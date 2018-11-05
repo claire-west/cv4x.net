@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Claire by Moonlight</title>
+    <link id="favicon" rel="icon" href="favicon.ico" />
+    <link href="http://lib.claire-west.ca/vend/fonts/fontawesome-all.min.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet"></link>
+    <link href="css/style.css" rel="stylesheet"></link>
+
+    <meta property="og:site_name" content="Claire by Moonlight">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:title" content="Claire by Moonlight"> -->
+    <!-- <meta property="og:description" content=""> -->
+    <!-- <meta property="og:image" content=""> -->
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-img"></div>
+        <nav class="top-bar-nav">
+            <div>
+                <div class="top-bar-left">
+                    <a href="#" class="button" z--class='{
+                        "class": "active",
+                        "path": "@app",
+                        "eq": "home"
+                    }'>
+                        <i class="fas fa-home" title="Home"></i>
+                        <span class="sr-only">Home</span>
+                    </a>
+                    <!-- <a href="#news" class="button">News</a> -->
+                    <a href="#docs" class="button" z--visible='{
+                        "path": "userInfo.roles",
+                        "fn": "isSerpens"
+                    }' z--class='{
+                        "class": "active",
+                        "path": "@app",
+                        "contains": "doc"
+                    }' style="display: none;">Docs</a>
+                    <!-- <a href="#media" class="button">Media</a> -->
+                </div>
+                <div class="top-bar-right">
+                    <a class="button" z--click="onLoginPress" z--visible="!userInfo">
+                        <span>Log In</span>
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a class="button active" z--click="onUserInfoPress" z--visible="!!userInfo" style="display: none;">
+                        <img src="static/logo.png" title="Verified House Serpens" z--visible='{
+                            "path": "userInfo.roles",
+                            "fn": "isSerpens"
+                        }'></i>
+                        <i class="far fa-check-circle" title="Verified Mod" z--visible='{
+                            "path": "userInfo.roles",
+                            "fn": "isModOrAdmin"
+                        }'></i>
+                        <i class="far fa-user" title="Account Info"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="top-bar-spacer"></div>
+
+    <section id="app-home" data-app="Claire by Moonlight" class="app defaultApp" hidden></section
+
+    <div class="modal" hidden><div class="dialog"></div></div>
+
+    <div class="cookie-indicator" z--visible="!cookieAcknowledge">
+        <p>
+            <span>This website uses cookies to keep track of your session&nbsp;</span>
+            <a z--click="onCookieAcknowledge">Okay</a>
+        </p>
+    </div>
+
+    <script
+        src="http://lib.claire-west.ca/core/js/dynCore.js"
+        data-res='{
+            "node": "https://node.serpens.house"
+        }'
+        data-ns='{
+            "serpens": "/"
+        }'>
+    </script>
+    <script>
+        (function(dynCore) {
+            dynCore.ready(function(modules) {
+                if (window.location.host === 'localhost') {
+                    dynCore.setResource('node', 'http://localhost:5000');
+                    var ns = dynCore.modules('core.namespace');
+                    ns.register({
+                        serpens: '/serpens'
+                    });
+                }
+                dynCore.require('serpens.appCore');
+            });
+        })(window.dynCore);
+    </script>
+</body>
