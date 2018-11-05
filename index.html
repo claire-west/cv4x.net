@@ -29,16 +29,6 @@
                         <i class="fas fa-home" title="Home"></i>
                         <span class="sr-only">Home</span>
                     </a>
-                    <!-- <a href="#news" class="button">News</a> -->
-                    <a href="#docs" class="button" z--visible='{
-                        "path": "userInfo.roles",
-                        "fn": "isSerpens"
-                    }' z--class='{
-                        "class": "active",
-                        "path": "@app",
-                        "contains": "doc"
-                    }' style="display: none;">Docs</a>
-                    <!-- <a href="#media" class="button">Media</a> -->
                 </div>
                 <div class="top-bar-right">
                     <a class="button" z--click="onLoginPress" z--visible="!userInfo">
@@ -46,14 +36,6 @@
                         <i class="fab fa-discord"></i>
                     </a>
                     <a class="button active" z--click="onUserInfoPress" z--visible="!!userInfo" style="display: none;">
-                        <img src="static/logo.png" title="Verified House Serpens" z--visible='{
-                            "path": "userInfo.roles",
-                            "fn": "isSerpens"
-                        }'></i>
-                        <i class="far fa-check-circle" title="Verified Mod" z--visible='{
-                            "path": "userInfo.roles",
-                            "fn": "isModOrAdmin"
-                        }'></i>
                         <i class="far fa-user" title="Account Info"></i>
                     </a>
                 </div>
