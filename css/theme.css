@@ -2,11 +2,20 @@ html {
     min-height: 100%;
 }
 
+body {
+    margin: 0 1rem 0.75rem;
+}
+
 body,
 body.light {
     background: url(/img/bg.jpg);
     background-position: center;
     background-size: cover;
+}
+
+.col {
+    padding-right: 1.1875rem;
+    padding-left: 1.1875rem;
 }
 
 .top-bar,
@@ -113,6 +122,10 @@ body.light .top-bar .top-bar-nav a.button:hover {
     background: none;
 }
 
+iframe {
+    border-radius: 1rem;
+}
+
 .fa-brands {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -139,7 +152,6 @@ i.svg-icon:hover {
     height: 2rem;
     width: 2rem;
 }
-
 .mal-icon:hover i {
     background: url('/img/icon/myanimelist-h.svg') no-repeat center center / contain;
 }
@@ -147,11 +159,29 @@ i.svg-icon:hover {
 .pixiv-icon i {
     background: url('/img/icon/pixiv.svg') no-repeat center center / contain;
 }
-
 .pixiv-icon:hover i {
     background: url('/img/icon/pixiv-h.svg') no-repeat center center / contain;
 }
 
-@media screen and (max-width: 640px) {
+/* medium format */
+@media screen and (max-width: 67rem) {
+    .col {
+        padding-right: .9375rem;
+        padding-left: .9375rem;
+    }
+}
 
+@media screen and (max-width: 680px) {
+    body {
+        margin: 0 0.75rem 0.825rem;
+    }
+
+    .app.row {
+        padding-top: 0.75rem;
+    }
+
+    .col .row .col {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
 }
