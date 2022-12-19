@@ -1,0 +1,157 @@
+html {
+    min-height: 100%;
+}
+
+body,
+body.light {
+    background: url(/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.top-bar,
+.top-bar .top-bar-nav,
+body.light .top-bar,
+body.light .top-bar .top-bar-nav {
+    height: 3.5rem;
+    background: none;
+}
+
+.link-bar-items {
+    justify-content: space-around;
+    max-width: 65rem;
+    padding: 0rem 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    background: #1d1d1d;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.link-bar-items a {
+    color: hsla(0,0%,100%,.85);
+    padding: 0.25rem 0.5rem;
+    display: flex;
+}
+
+.link-bar-items.flex {
+    flex-flow: wrap;
+    align-items: center;
+}
+
+#content {
+    background: #2f3136;
+}
+
+h2 + hr,
+h3 + hr {
+    margin-top: 0.25rem;
+}
+
+footer > div {
+    height: 2.8rem;
+    max-width: 65rem;
+    margin: 0 auto;
+    background: #1d1d1d;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+footer .flex {
+    align-items: center;
+}
+
+footer .flex p {
+    margin: 0;
+}
+
+body.light #content {
+    background: #fff;
+}
+
+body.light footer > div {
+    background: #2f3136;
+}
+
+
+body.light .link-bar-items {
+    background: #2f3136;
+}
+
+body.light .link-bar-items a {
+    color: hsla(0,0%,100%,.85);
+    border-bottom: none;
+}
+
+a {
+    color: #56ADE2;
+}
+
+a:hover,
+body.light .top-bar a:hover,
+body.light .link-bar-items a:hover {
+    color: #2199E8;
+}
+
+body.light a {
+    color: #1D84C4;
+}
+
+body.light a:hover,
+body.light .top-bar a:hover,
+body.light .link-bar-items a:hover {
+    color: #2199E8;
+}
+
+.top-bar .top-bar-nav a.button {
+    height: initial;
+    padding: 0.75rem;
+}
+.top-bar .top-bar-nav a.button:hover,
+body.light .top-bar .top-bar-nav a.button:hover {
+    color: #fff;
+    background: none;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.svg-icon i,
+i.svg-icon {
+    display: inline-block;
+    margin: -0.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    opacity: .85;
+}
+
+.svg-icon:hover i,
+i.svg-icon:hover {
+    opacity: 1;
+}
+
+.mal-icon i {
+    background: url('/img/icon/myanimelist.svg') no-repeat center center / contain;
+    height: 2rem;
+    width: 2rem;
+}
+
+.mal-icon:hover i {
+    background: url('/img/icon/myanimelist-h.svg') no-repeat center center / contain;
+}
+
+.pixiv-icon i {
+    background: url('/img/icon/pixiv.svg') no-repeat center center / contain;
+}
+
+.pixiv-icon:hover i {
+    background: url('/img/icon/pixiv-h.svg') no-repeat center center / contain;
+}
+
+@media screen and (max-width: 640px) {
+
+}

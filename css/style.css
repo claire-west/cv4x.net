@@ -16,12 +16,76 @@
     -moz-appearance: none;
 }
 
+label.inline {
+    display: flex;
+    align-items: center;
+    margin: 0.25rem;
+}
+
+label.inline input {
+    width: auto;
+}
+
+label.inline > *:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+.checkbox {
+    line-height: 2rem;
+    display: flex;
+    margin: 0.25rem;
+}
+
+.checkbox > label {
+    display: flex;
+}
+
+.checkbox [type=checkbox] {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.checkbox [type=checkbox] + span {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+i.help,
+i.warn {
+    line-height: inherit;
+    cursor: pointer;
+}
+
+i.help:hover {
+    color: #1b95e0;
+}
+
+i.warn:hover {
+    color: #cc4b37;
+}
+
+i.icon {
+    display: inline-block;
+}
+
+i.bi {
+    font-size: 1.5rem;
+}
+
+button i.bi {
+    font-size: 1rem;
+}
+
 option {
     background-color: #202225;
 }
 
-button, input, optgroup, select, textarea {
+button, optgroup, select {
     color: inherit;
+}
+
+input, textarea {
+    color: #2f3136;
     font: inherit;
 }
 
@@ -53,17 +117,64 @@ button:focus, button:hover {
     background-color: hsla(218,5%,47%,.6);
 }
 
-a:hover {
-    color: #FFF;
+button.transparent {
+    background-color: initial;
+}
+
+button.active {
+    color: #2a2a2a;
+    font-weight: bold;
+    background-color: #85BC38;
+}
+
+a {
+    color: #7db235;
     cursor: pointer;
+    overflow-wrap: break-word;
+}
+
+a:hover {
+    color: #85BC38;
+    cursor: pointer;
+}
+
+body.light a {
+    color: #606;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light a:hover {
+    color: #606;
+    border-bottom-color: #222;
+}
+
+body.light .top-bar a {
+    color: hsla(0,0%,100%,.85);
+    border-bottom: none;
+}
+
+body.light .top-bar a:hover {
+    color: hsla(0,0%,100%,.85);
 }
 
 .error {
     border: 1px solid #A30303;
 }
 
+.indent {
+    text-indent: 1rem;
+}
+
+.indent-full {
+    padding-left: 1rem;
+}
+
 .redText {
     color: #8A0407;
+}
+
+.confirm {
+    border: 1px solid #048a87;
 }
 
 .darkBackground {
@@ -93,13 +204,18 @@ a:hover {
     max-height: 100rem;
 }
 
+.app {
+    min-height: 815px;
+}
+
 .modal {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     top: 0;
     left: 0;
-    background-color: rgba(255,255,255,.7);
+    padding: 0.25rem;
+    background-color: rgba(127,127,127,.7);
     z-index: 9999;
 }
 
@@ -107,16 +223,21 @@ a:hover {
     background: #2f3136;
     width: 97.5%;
     max-width: 40rem;
+    max-height: 82.5%;
+    overflow-y: auto;
     position: relative;
-    top: 30%;
+    /*top: 20vh;*/
     padding: 1rem;
     border-radius: 0.25rem;
+    margin-top: calc(20vh - 1rem);
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 4rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
 }
 
 .modal .dialog h4 {
+    margin-top: 0;
     text-align: center
 }
 
@@ -125,11 +246,9 @@ a:hover {
 }
 
 .modal .dialog .options {
-    position: absolute;
+    position: relative;
     text-align: right;
     width: 100%;
-    bottom: 0;
-    left: 0;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -137,4 +256,70 @@ a:hover {
 .modal .dialog .options button {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+}
+
+.cookie-indicator {
+    width: 100%;
+    height: 2.5rem;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: #202225;
+}
+
+.cookie-indicator p {
+    height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentSection ol.toc {
+    padding-left: 2.5rem;
+    counter-reset: list-index;
+}
+
+.contentSection ol.toc > li {
+    list-style: none;
+    counter-increment: list-index;
+}
+
+.contentSection ol.toc > li::marker {
+    content: counter(list-index) ".\a0";
+}
+
+.contentSection ol.toc>li>ol {
+    padding-left: 2.5rem;
+    counter-reset: list-index-nested;
+}
+
+.contentSection ol.toc>li>ol > li {
+    counter-increment: list-index-nested;
+}
+
+.contentSection ol.toc>li>ol > li::marker {
+    content: counter(list-index) "." counter(list-index-nested) "\a0";
+}
+
+.contentSection span+h3 {
+    padding-left: 0.5rem;
+    margin-bottom: 0;
+}
+
+.contentSection img {
+    max-width: 100%;
+}
+
+/* small format */
+@media screen and (max-width: 680px) {
+    .modal .dialog {
+        margin-top: calc(10vh - 0.5rem);
+    }
+
+    .contentSection ol.toc,
+    .contentSection ol.toc>li>ol {
+        padding-left: 2rem;
+    }
 }
