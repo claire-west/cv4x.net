@@ -10,7 +10,8 @@ module.exports = function(grunt) {
           'img/**',
           'js/**',
           '*.html',
-          'favicon.ico'
+          '*.ico',
+          'sitemap.txt'
         ],
         dest: 'deploy/',
         expand: true

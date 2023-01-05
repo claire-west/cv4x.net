@@ -43,13 +43,213 @@ body.light .top-bar .top-bar-nav {
     display: flex;
 }
 
+.link-bar-items a i {
+    font-size: 1.5rem;
+}
+
 .link-bar-items.flex {
     flex-flow: wrap;
     align-items: center;
 }
 
-#content {
+#main {
+    align-items: stretch;
+    width: 100%;
+    max-width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main > nav {
+    flex-basis: 2.75rem;
+    padding-top: 0.5rem;
     background: #2f3136;
+    overflow-x: hidden;
+}
+
+body.nav #main > nav {
+    flex-basis: 10.5rem;
+}
+
+body.light #main > nav {
+    background: #fafafa;
+}
+
+#main > nav h3 {
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 0.125;
+    width: 1.5rem;
+    border-top: 1px solid hsla(0,0%,100%,.5);
+    border-bottom: 1px solid hsla(0,0%,100%,.5);
+
+    -webkit-transition: width 0.5s, line-height 0.25s;
+    transition: width 0.5s, line-height 0.25s;
+}
+
+body.light #main > nav h3 {
+    border-top-color: #4d4e53;
+    border-bottom-color: #4d4e53;
+}
+
+#main > nav h3 > span {
+    margin-bottom: 0;
+    opacity: 0;
+}
+
+#main > nav a {
+    color: hsla(0,0%,100%,.85);
+    position: relative;
+    width: 2rem;
+    text-align: center;
+}
+
+body.light #main > nav a {
+    color: #1D84C4;
+}
+
+body.light #main > nav a > span {
+    text-decoration: underline;
+    text-decoration-color: #ddd;
+}
+
+body.light #main > nav a:hover > span {
+    text-decoration-color: #222;
+}
+
+#main > nav a > span {
+    position: absolute;
+    padding: 0.375rem;
+    padding-right: 4.25rem;
+    left: 2rem;
+    white-space: nowrap;
+}
+
+#main > nav > div.flex-v {
+    gap: 0.5rem;
+}
+
+#content {
+    flex-basis: calc(100% - 3rem);
+    margin-right: 0;
+    background: #2f3136;
+}
+
+/* large format nav bar */
+@media screen and (min-width: 641px) {
+    #main > nav {
+        -webkit-transition: flex-basis 0.5s;
+        transition: flex-basis 0.5s;
+    }
+
+    #main > nav a {
+        -webkit-transition: margin-left 0.5s;
+        transition: margin-left 0.5s;
+    }
+
+
+    body.nav #main > nav a {
+        margin-left: -7.5rem;
+    }
+
+    #content {
+        -webkit-transition: flex-basis 0.5s;
+        transition: flex-basis 0.5s;
+    }
+
+    body.nav #main #content {
+        flex-basis: calc(100% - 10.75rem);
+    }
+
+    #main > nav h3 {
+        -webkit-transition: width 0.5s, line-height 0.25s 0.25s;
+        transition: width 0.5s, line-height 0.25s 0.25s;
+    }
+
+    #main > nav h3 > span {
+        -webkit-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+    }
+
+    body.nav #main > nav h3 {
+        line-height: 1.5;
+        width: 9rem;
+        -webkit-transition: width 0.5s, line-height 0.25s;
+        transition: width 0.5s, line-height 0.25s;
+    }
+
+    body.nav #main > nav h3 > span {
+        opacity: 1;
+        -webkit-transition: opacity 0.25s 0.25s;
+        transition: opacity 0.25s 0.25s;
+    }
+}
+
+/* small format nav bar */
+@media screen and (max-width: 640px) {
+    #main > nav {
+        margin-left: 0;
+        flex-basis: 10.5rem;
+
+        -webkit-transition: margin-left 0.5s;
+        transition: margin-left 0.5s;
+    }
+
+    #main > nav a {
+        margin-left: -7.5rem;
+    }
+
+    #content {
+        flex-basis: 100%;
+        margin-left: 0.25rem;
+        margin-right: -11.25rem;
+
+        -webkit-transition: margin-left 0.5s, margin-right 0.5s;
+        transition: margin-left 0.5s, margin-right 0.5s;
+    }
+
+    body.nav #main > nav {
+        margin-left: -11.25rem;
+    }
+
+    body.nav #main #content {
+        margin-left: 0.75rem;
+    }
+
+    #main > nav h3 {
+        line-height: 1.5;
+        width: 9rem;
+        -webkit-transition: width 0.5s, line-height 0.25s;
+        transition: width 0.5s, line-height 0.25s;
+    }
+
+    #main > nav h3 > span {
+        opacity: 1;
+        -webkit-transition: opacity 0.25s 0.25s;
+        transition: opacity 0.25s 0.25s;
+    }
+
+    body.nav #main > nav h3 {
+        -webkit-transition: width 0.5s, line-height 0.25s 0.25s;
+        transition: width 0.5s, line-height 0.25s 0.25s;
+    }
+
+    body.nav #main > nav h3 > span {
+        -webkit-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+    }
+
+    #content-blocker > div {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    body.nav #content-blocker > div {
+        display: none;
+    }
 }
 
 h2 + hr,
@@ -87,7 +287,8 @@ body.light .link-bar-items {
     background: #2f3136;
 }
 
-body.light .link-bar-items a {
+body.light .link-bar-items a,
+body.light nav a {
     color: hsla(0,0%,100%,.85);
     border-bottom: none;
 }
@@ -98,7 +299,9 @@ a {
 
 a:hover,
 body.light .top-bar a:hover,
-body.light .link-bar-items a:hover {
+body.light .link-bar-items a:hover,
+#main > nav a:hover,
+body.light #main > nav a:hover {
     color: #2199E8;
 }
 
@@ -126,7 +329,8 @@ iframe {
     border-radius: 1rem;
 }
 
-.fa-brands {
+nav .fa-brands,
+nav .fa {
     font-size: 1.5rem;
     line-height: 1.5;
 }

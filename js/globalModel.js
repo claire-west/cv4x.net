@@ -18,6 +18,11 @@
             }
         });
 
+        globalModel._set('onToggleNav', () => {
+            var $body = $('body');
+            $body.toggleClass('nav');
+        });
+
         globalModel._set('onCopy', function() {
             var text = $(this).next().text();
             if (text) {

@@ -447,12 +447,22 @@ label.row {
     align-items: baseline;
 }
 
+.flex-v {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .flex-right {
     margin-left: auto;
 }
 
 .align-center {
     align-items: center;
+}
+
+.align-end {
+    align-items: end;
 }
 
 .nopad, .row.nopad, .col.nopad, .col .row .col.nopad {
