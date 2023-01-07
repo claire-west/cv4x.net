@@ -79,3 +79,38 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
 #content-anime h3 + dl div:first-child dt {
     padding-top: 0;
 }
+
+#content-anime .wrap-up dd {
+    margin-left: 3rem;
+}
+#content-anime .wrap-up dl > div {
+    position: relative;
+    min-height: 6rem;
+}
+#content-anime .wrap-up dl > div > div {
+    height: 3.75rem;
+    width: 2.5rem;
+    position: absolute;
+    top: 2rem;
+}
+#content-anime .wrap-up dl > div > div span {
+    position: absolute;
+}
+#content-anime .wrap-up dl > div > div span:first-child {
+    width: 1.75rem;
+    font-size: 1.5rem;
+    left: -0.5rem;
+    top: 0;
+    text-align: center;
+}
+#content-anime .wrap-up dl > div > div span:nth-child(2) {
+    font-size: 2rem;
+    left: 0.25rem;
+    top: 0.25rem;
+}
+#content-anime .wrap-up dl > div > div span:last-child {
+    font-size: 1.5rem;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}

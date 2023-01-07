@@ -8,22 +8,42 @@
         dynCore.css('anime', 'app.anime');
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
+        var convertTZ = function(time, season) {
+            // parse hhmm as EST or EDT based on season
+            // toLocaleString baesd on browser time zone
+            // return in hhmm format
+            return new Date(new Date(Date.parse('1970-01-01T' + time.substr(0, 2) + ':' + time.substr(2, 2) + (season === '冬' || season === '秋' ? '-05:00' : '-04:00'))).toLocaleString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone })).toTimeString('hhmm').substr(0, 5).replace(':', '');
+        };
+
+        var convertScheduleTZs = function(season, schedule) {
+            for (var day in schedule) {
+                for (var i = 0; i < schedule[day].length; i++) {
+                    var text = schedule[day][i];
+                    // split into char array to account for multibyte emoji
+                    if (!text) {
+                        return '';
+                    }
+                    var chars = [...text];
+                    var time = convertTZ(chars.slice(1, 5).join(''), season);
+                    schedule[day][i] = chars[0] + time + chars.slice(5).join('');
+                }
+            }
+        }
+
         var years = {};
         var fetchYear = function(year) {
             if (!years[year]) {
                 years[year] = $.Deferred();
                 $.ajax('/json/anime/' + year + '.json').done(function(data) {
+                    for (var season in data) {
+                        if (data[season] && data[season].schedule) {
+                            convertScheduleTZs(season, data[season].schedule);
+                        }
+                    }
                     years[year].resolve(data);
                 });
             }
             return years[year];
-        };
-
-        var convertTZ = function(time, season) {
-            // parse hhmm as EST or EDT based on season
-            // toLocaleString baesd on browser time zone
-            // return in hhmm format
-            return new Date(new Date(Date.parse('1970-01-01T' + time.substr(0, 2) + ':' + time.substr(2, 2) + (season === '春' || season === '夏' ? '-05:00' : '-04:00'))).toLocaleString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone })).toTimeString('hhmm').substr(0, 5).replace(':', '');
         };
 
         var controller = {
@@ -93,26 +113,14 @@
                 setTab: function(model) {
                     model._set('tab', $(this).text().toLocaleLowerCase() || 'schedule');
                 },
-                getTime: function(text, prevText, season) {
-                    // split into char array to account for multibyte emoji
-                    if (!text) {
-                        return '';
-                    }
-                    var chars = [...text];
-                    var time = convertTZ(chars.slice(1, 5).join(''), season);
-                    text = chars[0] + time + chars.slice(5).join('');
-                    setTimeout(() => {
-                        twemoji.parse(this.get(0));
-                    }, 0);
-                    return text;
-                },
                 downloadSchedule: function(model) {
                     html2canvas($('#content-anime .weeklySchedule').get(0), {
                         useCORS: true
                     }).then(function(canvas) {
                         download(canvas.toDataURL(), model.year + ' (' + model.season + ').png');
                     });
-                }
+                },
+                twemojify: globalModel.twemojify // function binding doesn't traverse models (yet)
             }, globalModel)
         };
 

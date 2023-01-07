@@ -134,8 +134,7 @@
                         <div z--iterate="seasonData.schedule.日">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "args": "season",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -145,7 +144,7 @@
                         <div z--iterate="seasonData.schedule.月">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -155,7 +154,7 @@
                         <div z--iterate="seasonData.schedule.火">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -167,7 +166,7 @@
                         <div z--iterate="seasonData.schedule.水">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -177,7 +176,7 @@
                         <div z--iterate="seasonData.schedule.木">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -187,7 +186,7 @@
                         <div z--iterate="seasonData.schedule.金">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -199,7 +198,7 @@
                         <div z--iterate="seasonData.schedule.土">
                             <p z--template z--bind='{
                                 "path": ">",
-                                "fn": "getTime"
+                                "fn": "twemojify"
                             }'></p>
                         </div>
                     </div>
@@ -233,16 +232,18 @@
                     </div>
                 </dl>
             </div>
-            <div class="col" z--visible='{
+            <div class="col wrap-up" z--visible='{
                 "path": "tab",
                 "eq": "wrap-up"
             }'>
                 <h3>Season Wrap-up</h3>
-                <p>My final thoughts on the shows I watched go here</p>
+                <p>My final thoughts on the shows I watched go here. Shows are in order of completion.</p>
                 <dl z--iterate="seasonData.wrap-up">
                     <div z--template>
+                        <div z--visible="!!>rating"><span z--bind=">rating"></span><span>／</span><span>10</span></div>
                         <dt z--bind=">title"></dt>
                         <dd z--bind=">text"></dd>
+                        <dd z--bind=">line2" z--visible="!!>line2"></dd>
                     </div>
                 </dl>
             </div>

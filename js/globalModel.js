@@ -86,8 +86,13 @@
             return '';
         });
 
-        globalModel._set('twemojify', function() {
-            twemoji.parse(this);
+        globalModel._set('twemojify', function(text) {
+            setTimeout(() => {
+                twemoji.parse(this.get ? this.get(0) : this);
+            }, 0);
+            if (text) {
+                return text;
+            }
         });
 
         return globalModel;
