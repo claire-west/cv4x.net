@@ -86,6 +86,10 @@
             return '';
         });
 
+        globalModel._set('twemojify', function() {
+            twemoji.parse(this);
+        });
+
         return globalModel;
     });
 })(window.dynCore);

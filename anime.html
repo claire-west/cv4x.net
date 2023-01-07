@@ -13,6 +13,7 @@
     <link id="favicon" rel="icon" href="/favicon.ico" />
     <link href="https://lib.claire-west.ca/vend/fonts/fontawesome-all-6.2.0.min.css" rel="stylesheet" />
     <link href="https://lib.claire-west.ca/vend/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://lib.claire-west.ca/vend/js/twemoji.min.js"></script>
     <link href="/css/layout.css" rel="stylesheet"></link>
     <link href="/css/style.css" rel="stylesheet"></link>
     <link href="/css/theme.css" rel="stylesheet"></link>
@@ -25,10 +26,225 @@
     <nav hidden><z--frag-nav /></nav>
     <div id="content-blocker"><div z--click="onToggleNav"></div></div>
     <section id="content" class="app row" hidden>
-        <section id="content-anime">
-            <div class="col">
-                <h2>Anime</h2>
-                <p>I watch a LOT of anime! This page will soon* have stuff like first impressions of new seasonal anime and wrap-ups/ratings for seasons that have finished.</p>
+        <section id="content-anime" z--controller>
+            <div class="col flex align-center">
+                <div class="flex">
+                    <button class="button"
+                        title="Previous Year"
+                        z--click="prevYear"
+                        z--enabled='{
+                            "path": "year",
+                            "gt": "2022"
+                        }'><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="button active" z--text="year" disabled></button>
+                    <button class="button"
+                        title="Next Year"
+                        z--click="nextYear"
+                        z--enabled='{
+                            "path": "year",
+                            "fn": "isNotLastYear"
+                        }'><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="flex seasonButtons">
+                    <button class="button"
+                        title="Winter"
+                        z--click="setSeason"
+                        z--enabled="!!yearData.冬"
+                        z--class='{
+                            "class": "active",
+                            "path": "season",
+                            "eq": "冬"
+                        }'>冬</button>
+                    <button class="button"
+                        title="Spring"
+                        z--click="setSeason"
+                        z--enabled="!!yearData.春"
+                        z--class='{
+                            "class": "active",
+                            "path": "season",
+                            "eq": "春"
+                        }'>春</button>
+                    <button class="button"
+                        title="Summer"
+                        z--click="setSeason"
+                        z--enabled="!!yearData.夏"
+                        z--class='{
+                            "class": "active",
+                            "path": "season",
+                            "eq": "夏"
+                        }'>夏</button>
+                    <button class="button"
+                        title="Fall"
+                        z--click="setSeason"
+                        z--enabled="!!yearData.秋"
+                        z--class='{
+                            "class": "active",
+                            "path": "season",
+                            "eq": "秋"
+                        }'>秋</button>
+                </div>
+                <div class="flex align-center">
+                    <button class="button"
+                        title="Weekly Schedule"
+                        z--click="setTab"
+                        z--enabled="!!seasonData.schedule"
+                        z--class='{
+                            "class": "active",
+                            "path": "tab",
+                            "eq": "schedule"
+                        }'><i class="fa bi-calendar-week"></i></button>
+                    <button class="button"
+                        z--click="setTab"
+                        z--enabled="!!seasonData.impressions"
+                        z--class='{
+                            "class": "active",
+                            "path": "tab",
+                            "eq": "impressions"
+                        }'>Impressions</button>
+                    <button class="button"
+                        z--click="setTab"
+                        z--enabled="!!seasonData.wrap-up"
+                        z--class='{
+                            "class": "active",
+                            "path": "tab",
+                            "eq": "wrap-up"
+                        }'>Wrap-up</button>
+                </div>
+                <div class="flex align-center">
+                    <button class="button screenshotButton"
+                        title="Download Schedule"
+                        z--click="downloadSchedule"
+                        z--visible='{
+                            "path": "tab",
+                            "eq": "schedule"
+                        }'><i class="fa bi-camera"></i></button>
+                </div>
+            </div>
+
+            <div class="col weeklySchedule" z--visible='{
+                "path": "tab",
+                "eq": "schedule"
+            }'>
+                <h3>Weekly Schedule</h3>
+                <p z--bind="^twemojify">🟠 Crunchyroll / 🟦 HIDIVE / 💫 Disney+</p>
+                <div class="row">
+                    <div class="col m4">
+                        <h4>日 Sunday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.日">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "args": "season",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <h4>月 Monday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.月">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <h4>火 Tuesday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.火">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m4">
+                        <h4>水 Wednesday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.水">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <h4>木 Thursday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.木">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                    <div class="col m4">
+                        <h4>金 Friday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.金">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>土 Saturday</h4>
+                        <hr/>
+                        <div z--iterate="seasonData.schedule.土">
+                            <p z--template z--bind='{
+                                "path": ">",
+                                "fn": "getTime"
+                            }'></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col impressions" z--visible='{
+                "path": "tab",
+                "eq": "impressions"
+            }'>
+                <p>Each season I watch 1-2 episodes of most shows. This is a list of my early impressions, in order of how invested I am based on that first look.</p>
+                <h3>Probably Watching</h3>
+                <dl z--iterate="seasonData.impressions.watching">
+                    <div z--template>
+                        <dt z--bind=">title"></dt>
+                        <dd z--bind=">text"></dd>
+                    </div>
+                </dl>
+                <h3>If I Have Time</h3>
+                <dl z--iterate="seasonData.impressions.maybe">
+                    <div z--template>
+                        <dt z--bind=">title"></dt>
+                        <dd z--bind=">text"></dd>
+                    </div>
+                </dl>
+                <h3>Skipping</h3>
+                <dl z--iterate="seasonData.impressions.skipping">
+                    <div z--template>
+                        <dt z--bind=">title"></dt>
+                        <dd z--bind=">text"></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="col" z--visible='{
+                "path": "tab",
+                "eq": "wrap-up"
+            }'>
+                <h3>Season Wrap-up</h3>
+                <p>My final thoughts on the shows I watched go here</p>
+                <dl z--iterate="seasonData.wrap-up">
+                    <div z--template>
+                        <dt z--bind=">title"></dt>
+                        <dd z--bind=">text"></dd>
+                    </div>
+                </dl>
             </div>
         </section>
     </section>

@@ -11,6 +11,9 @@
                         e.preventDefault();
                         if (this.href !== location.href) {
                             window.history.pushState({},'', this.href.replace(location.origin, ''));
+                            if (window.innerWidth < 641) {
+                                $('body').addClass('nav');
+                            }
                             hashless();
                         }
                     }

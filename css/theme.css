@@ -135,6 +135,25 @@ body.light #main > nav a:hover > span {
     background: #2f3136;
 }
 
+/* large format scrolling */
+@media screen and (min-width: 641px) {
+    #content {
+        overflow-y: scroll;
+        max-height: 83vh;
+    }
+}
+
+button.active {
+    color: inherit;
+    font-weight: initial;
+    background-color: #2B4880;
+}
+
+button[disabled] {
+    cursor: initial;
+    background-color: #1d1d1d;
+}
+
 /* large format nav bar */
 @media screen and (min-width: 641px) {
     #main > nav {
@@ -255,6 +274,12 @@ body.light #main > nav a:hover > span {
 h2 + hr,
 h3 + hr {
     margin-top: 0.25rem;
+}
+
+img.emoji {
+    height: 1rem;
+    margin: 0 0.1em;
+    vertical-align: text-top;
 }
 
 footer > div {

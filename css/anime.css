@@ -1,0 +1,81 @@
+#content-anime .weeklySchedule {
+    background-color: #2f3136;
+}
+
+body.light #content-anime .weeklySchedule {
+    background-color: #fff;
+}
+
+#content-anime .seasonButtons button,
+#content-anime .seasonButtons + div > button:first-child,
+#content-anime button.screenshotButton {
+    padding: 0.3rem 0.75rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+#content-anime .seasonButtons + div > button:first-child,
+#content-anime button.screenshotButton {
+    padding: 0.25rem 0.75rem 0.35rem;
+}
+#content-anime > div:first-child button[disabled]:not(.active) {
+    color: hsla(218,5%,47%,.6);
+}
+
+body.light #content-anime > div:first-child button {
+    color: #2a2a2a;
+    background-color: hsla(218,5%,47%,.6)
+}
+
+body.light #content-anime > div:first-child button:not(.active),
+body.light #content-anime > div:first-child button:not([disabled]) {
+    color: hsla(0,0%,100%,.85);
+}
+body.light #content-anime > div:first-child button:not([disabled]) {
+    background-color: #2f3136;
+}
+body.light #content-anime > div:first-child button.active:not([disabled]) {
+    background-color: #2B4880;
+}
+
+#content-anime > .flex {
+    gap: 0 1.25rem;
+    flex-wrap: wrap;
+}
+
+#content-anime > .flex button {
+    margin-bottom: 0.25rem;
+}
+
+#content-anime > div:not(:first-child){
+    padding-top: 0.75rem;
+    padding-bottom: 0.25rem;
+}
+
+#content-anime .weeklySchedule .row {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#content-anime .weeklySchedule .col {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+#content-anime .weeklySchedule h4,
+#content-anime .weeklySchedule p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+#content-anime .weeklySchedule hr {
+    margin: 0.5rem auto;
+}
+
+#content-anime .impressions p:first-child {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+#content-anime h3 + dl div:first-child dt {
+    padding-top: 0;
+}

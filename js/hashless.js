@@ -87,6 +87,12 @@
             });
         });
 
-        return init;
+        return function(fn) {
+            if (typeof(fn) === 'function') {
+
+            } else {
+                init.call(this);
+            }
+        }
     });
 })(window.dynCore);
