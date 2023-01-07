@@ -8,14 +8,14 @@
         dynCore.css('anime', 'app.anime');
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
-        var convertTZ = function(time, season) {
-            // parse hhmm as EST or EDT based on season
-            // toLocaleString baesd on browser time zone
+        var convertTZ = function(time) {
+            // parse hhmm as UTC+0
+            // toTimeString uses browser time zone
             // return in hhmm format
-            return new Date(new Date(Date.parse('1970-01-01T' + time.substr(0, 2) + ':' + time.substr(2, 2) + (season === '冬' || season === '秋' ? '-05:00' : '-04:00'))).toLocaleString('en-US', { timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone })).toTimeString('hhmm').substr(0, 5).replace(':', '');
+            return new Date(Date.parse('1970-01-01T' + time.substr(0, 2) + ':' + time.substr(2, 2) + '-00:00')).toTimeString('hhmm').substr(0, 5).replace(':', '');
         };
 
-        var convertScheduleTZs = function(season, schedule) {
+        var convertScheduleTZs = function(schedule) {
             for (var day in schedule) {
                 for (var i = 0; i < schedule[day].length; i++) {
                     var text = schedule[day][i];
@@ -24,7 +24,7 @@
                         return '';
                     }
                     var chars = [...text];
-                    var time = convertTZ(chars.slice(1, 5).join(''), season);
+                    var time = convertTZ(chars.slice(1, 5).join(''));
                     schedule[day][i] = chars[0] + time + chars.slice(5).join('');
                 }
             }
@@ -37,7 +37,7 @@
                 $.ajax('/json/anime/' + year + '.json').done(function(data) {
                     for (var season in data) {
                         if (data[season] && data[season].schedule) {
-                            convertScheduleTZs(season, data[season].schedule);
+                            convertScheduleTZs(data[season].schedule);
                         }
                     }
                     years[year].resolve(data);
