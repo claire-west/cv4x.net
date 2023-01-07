@@ -113,6 +113,25 @@
                 setTab: function(model) {
                     model._set('tab', $(this).text().toLocaleLowerCase() || 'schedule');
                 },
+                hideUnmarked: localStorage.getItem('anime.hideUnmarked') === "true",
+                toggleShowHide: function(model) {
+                    model._set('hideUnmarked', !model.hideUnmarked);
+                },
+                marked: {},
+                toggleMarked: function(text, marked, model) {
+                    var title = text.substr(text.indexOf(' ') + 1);
+                    if (marked.hasOwnProperty(title)) {
+                        delete model.marked[title];
+                    } else {
+                        model.marked[title] = true;
+                    }
+                    localStorage.setItem('anime.markedItems', JSON.stringify(marked));
+                    model._set('updateMarked', model.updateMarked + 1);
+                },
+                updateMarked: 0,
+                isMarked: function(updateMarked, prev, marked, text) {
+                    return marked[text.substr(text.indexOf(' ') + 1)] === true;
+                },
                 downloadSchedule: function(model) {
                     html2canvas($('#content-anime .weeklySchedule').get(0), {
                         useCORS: true
@@ -124,16 +143,27 @@
             }, globalModel)
         };
 
-        //controller.refresh();
+        try {
+            var markedItems = localStorage.getItem('anime.markedItems');
+            if (markedItems) {
+                controller.model.marked = JSON.parse(markedItems);
+            }
+        } catch (e) {
+            controller.model.marked = {}
+        }
+
         controller.model._track('year', function() {
             controller.refresh();
         });
         controller.model._track('season', function() {
             controller.refreshSeason();
         });
+        controller.model._track('hideUnmarked', function(hideUnmarked) {
+            localStorage.setItem('anime.hideUnmarked', hideUnmarked);
+        });
 
         var $page = $('#content-anime');
-        bind($page, controller.model).done(function() {
+        return bind($page, controller.model).done(function() {
             controller.model._refresh();
         });
     });

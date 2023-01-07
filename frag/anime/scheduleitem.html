@@ -1,0 +1,14 @@
+<p z--click='{
+    "path": "toggleMarked",
+    "args": [ "marked", "./" ]
+}'
+z--class='{
+    "class": "marked",
+    "path": "updateMarked",
+    "args": [ "marked", ">" ],
+    "fn": "isMarked"
+}'
+z--bind='{
+    "path": ">",
+    "fn": "twemojify"
+}'></p>

@@ -111,6 +111,16 @@
                         }'>Wrap-up</button>
                 </div>
                 <div class="flex align-center">
+                    <button class="button showHideButton"
+                        title="Only Show Marked Items"
+                        z--click="toggleShowHide"
+                        z--visible='{
+                            "path": "tab",
+                            "eq": "schedule"
+                        }'>
+                        <i class="fa bi-eye-slash" z--visible="!hideUnmarked"></i>
+                        <i class="fa bi-eye" z--visible="hideUnmarked"></i>
+                    </button>
                     <button class="button screenshotButton"
                         title="Download Schedule"
                         z--click="downloadSchedule"
@@ -121,10 +131,15 @@
                 </div>
             </div>
 
-            <div class="col weeklySchedule" z--visible='{
-                "path": "tab",
-                "eq": "schedule"
-            }'>
+            <div class="col weeklySchedule"
+                z--class='{
+                    "class": "hideUnmarked",
+                    "path": "hideUnmarked"
+                }'
+                z--visible='{
+                    "path": "tab",
+                    "eq": "schedule"
+                }'>
                 <h3>Weekly Schedule</h3>
                 <p z--bind="^twemojify">🟠 Crunchyroll / 🟦 HIDIVE / 💫 Disney+</p>
                 <div class="row">
@@ -132,30 +147,21 @@
                         <h4>日 Sunday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.日">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                     <div class="col m4">
                         <h4>月 Monday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.月">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                     <div class="col m4">
                         <h4>火 Tuesday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.火">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                 </div>
@@ -164,30 +170,21 @@
                         <h4>水 Wednesday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.水">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                     <div class="col m4">
                         <h4>木 Thursday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.木">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                     <div class="col m4">
                         <h4>金 Friday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.金">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                 </div>
@@ -196,10 +193,7 @@
                         <h4>土 Saturday</h4>
                         <hr/>
                         <div z--iterate="seasonData.schedule.土">
-                            <p z--template z--bind='{
-                                "path": ">",
-                                "fn": "twemojify"
-                            }'></p>
+                            <z--frag-anime-scheduleitem z--template />
                         </div>
                     </div>
                 </div>
