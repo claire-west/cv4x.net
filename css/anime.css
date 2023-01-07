@@ -82,6 +82,9 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
 #content-anime .weeklySchedule > div p.marked:first-child {
     margin-top: -0.125rem;
 }
+#content-anime .weeklySchedule:not(.hideUnmarked) > div p {
+    cursor: pointer;
+}
 #content-anime .weeklySchedule.hideUnmarked > div p.marked {
     background: none;
 }

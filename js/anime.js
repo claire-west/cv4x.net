@@ -119,6 +119,9 @@
                 },
                 marked: {},
                 toggleMarked: function(text, marked, model) {
+                    if (model.hideUnmarked) {
+                        return;
+                    }
                     var title = text.substr(text.indexOf(' ') + 1);
                     if (marked.hasOwnProperty(title)) {
                         delete model.marked[title];
