@@ -204,23 +204,29 @@
                 "eq": "impressions"
             }'>
                 <p>Each season I watch 1-2 episodes of most shows. This is a list of my early impressions, in order of how invested I am based on that first look.</p>
+                <hr/>
                 <h3>Probably Watching</h3>
+                <hr/>
                 <dl z--iterate="seasonData.impressions.watching">
-                    <div z--template>
+                    <div z--template z--visible="!!>title">
                         <dt z--bind=">title"></dt>
                         <dd z--bind=">text"></dd>
                     </div>
                 </dl>
+                <hr/>
                 <h3>If I Have Time</h3>
+                <hr/>
                 <dl z--iterate="seasonData.impressions.maybe">
-                    <div z--template>
+                    <div z--template z--visible="!!>title">
                         <dt z--bind=">title"></dt>
                         <dd z--bind=">text"></dd>
                     </div>
                 </dl>
+                <hr/>
                 <h3>Skipping</h3>
+                <hr/>
                 <dl z--iterate="seasonData.impressions.skipping">
-                    <div z--template>
+                    <div z--template z--visible="!!>title">
                         <dt z--bind=">title"></dt>
                         <dd z--bind=">text"></dd>
                     </div>
@@ -232,6 +238,7 @@
             }'>
                 <h3>Season Wrap-up</h3>
                 <p>My final thoughts on the shows I watched go here. Shows are in order of completion.</p>
+                <hr/>
                 <dl z--iterate="seasonData.wrap-up">
                     <div z--template>
                         <div z--visible="!!>rating"><span z--bind=">rating"></span><span>／</span><span>10</span></div>

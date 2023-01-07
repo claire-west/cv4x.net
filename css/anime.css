@@ -97,10 +97,25 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
     margin-bottom: 1rem;
 }
 
+#content-anime .impressions p + hr,
+#content-anime .impressions dl + hr {
+    margin-bottom: 0.5rem;
+}
+#content-anime .impressions h3 + hr {
+    margin-bottom: 0;
+}
+#content-anime .impressions hr + dl {
+    margin-top: 0;
+}
+
 #content-anime h3 + dl div:first-child dt {
     padding-top: 0;
 }
 
+#content-anime .wrap-up h3 + p + hr {
+    margin-top: 0.75rem;
+    margin-bottom: -0.75rem;
+}
 #content-anime .wrap-up dd {
     margin-left: 3rem;
 }
