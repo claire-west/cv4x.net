@@ -22,6 +22,9 @@
                 "🟦1430 The Eminence in Shadow",
                 "🟠1500 Bofuri s2",
                 "🟦1600 Tsurune s2",
+                "🟠1530 Bungo Stray Dogs s4",
+                "🟠1600 The Ice Guy and His Cool Female Colleague",
+                "🟠1730 Technoroid Overmind",
                 "🟠1800 Tomo-chan Is a Girl!",
                 "🟠1830 Kaina of the Great Snow Sea"
             ],
@@ -35,6 +38,8 @@
                 "🟦1300 Farming Life in Another World",
                 "🟠1430 D4DJ All Mix",
                 "🟠1500 Sugar Apple Fairy Tale",
+                "🟠1530 Trails of Cold Steel - Northern War",
+                "🟠1830 Buddy Daddies",
                 "🟦1730 Giant Beasts of Ars",
                 "🟦1825 The Latest on Tsundere Villainess Lieselotte"
             ],
@@ -58,14 +63,15 @@
         "impressions": {
             "watching": [
                 {
-                    "title": "Tsurune season 2"
-                },
-                {
-                    "title": "Bofuri season 2"
-                },
-                {
                     "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
-                    "text": "I’m biased because I liked the LN, but so far this seems like a good adaptation. The animation, storyboarding, direction, and voice work all give me a good impression."
+                    "text": "I'm biased because I liked the LN, but so far this seems like a good adaptation. The animation, storyboarding, direction, and voice work all give me a good impression."
+                },
+                {
+                    "title": "Trigun Stampede",
+                    "text": "New heavy-CG anime by Orange, the studio behind Land of the Lustrous. They're doing some cool stuff with reflections, along with the solid movement and camerawork Orange is known for. Animation style aside, the story and characters show promise and I am intrigued to see more."
+                },
+                {
+                    "title": "Tsurune season 2"
                 },
                 {
                     "title": "Giant Beasts of Ars",
@@ -78,6 +84,9 @@
             ],
             "maybe": [
                 {
+                    "title": "Bofuri season 2"
+                },
+                {
                     "title": "Vinland Saga season 2"
                 },
                 {
@@ -88,12 +97,16 @@
                     "text": "Non-isekai fantasy. Guy is kicked out of his party and dumped by his girlfriend. Meets 3 other similarly downtrodden adventurers at a tavern, they form a party. Seems very D&D."
                 },
                 {
-                    "title": "The Iceblade Sorcerer Shall Rule the World",
-                    "text": "Non-isekai fantasy. Protag is the first \"Ordinary\" (non-noble and not decended from a sorcerer) to be admitted to the magic academy. Seems interesting. It's not a harem anime yet but looks like it'll become one."
+                    "title": "The Angel Next Door Spoils Me Rotten",
+                    "text": "Guy lends his (cute, popular) classmate an umbrella and she insists on returning the favor by tending to him when he gets sick. She realizes he's shit at taking care of himself so she starts giving him food so he'll eat better. Seems like a comfy romcom with light banter."
                 },
                 {
                     "title": "Endo and Kobayashi Live! The Latest on Tsundere Villainess Lieselotte",
                     "text": "When two otome gamers decide to commentate over a game as if it were a sporting event, suddenly one of the in-game characters can hear them and the gameplay changes in response to their commentary. They decide to try and create a route where the villainess isn't doomed."
+                },
+                {
+                    "title": "Saving 80,000 Gold in Another World for My Retirement",
+                    "text": "Female protag is not OP but she has the \"superpower\" of leveraging the memories of her otaku brother's knowledge of isekai. Unlike most isekai she can actually freely go back home and take stuff back and forth, so she plans to use this ability to make money instead of just staying on Earth and going to university."
                 },
                 {
                     "title": "Tomo-chan is a Girl!",
@@ -101,7 +114,23 @@
                 },
                 {
                     "title": "Spy Classroom",
-                    "text": "I read the first volume of the LN. Post-war spy stuff. A bunch of underachieving spies-in-training are called to form a new team under the instruction of the “world’s greatest spy”. The adaptation seems fine, but I don’t have high hopes for it."
+                    "text": "I read the first volume of the LN. Post-war spy stuff. A bunch of underachieving spies-in-training are called to form a new team under the instruction of the \"world's greatest spy\". The adaptation seems fine, but I don't have high hopes for it."
+                },
+                {
+                    "title": "The Iceblade Sorcerer Shall Rule the World",
+                    "text": "Non-isekai fantasy. Protag is the first \"Ordinary\" (non-noble and not decended from a sorcerer) to be admitted to the magic academy. Seems okay. It's not a harem anime yet but looks like it'll become one."
+                },
+                {
+                    "title": "The Reincarnation of the Strongest Exorcist in Another World",
+                    "text": "Reborn in a world of magic, protag has no magic power, but he still has his spiritual power from his previous life as an exorcist. Seems pretty generic."
+                },
+                {
+                    "title": "NieR:Automata Ver1.1a",
+                    "text": "Anime adaptation of the game. Most of the CG is acceptable but not great, however there are some instances where it results in pretty bad style clash (seriously, what's with those flight units?). Otherwise they keep doing a really weird thing where they use game-like camera angles for a very unusual but cool effect."
+                },
+                {
+                    "title": "",
+                    "text": ""
                 },
                 {
                     "title": "",
@@ -111,27 +140,31 @@
             "skipping": [
                 {
                     "title": "Sugar Apple Fairy Tale",
-                    "text": "Humans subjugated fairies long ago, and now treat them as slaves. Protag is from a family of confectioners, and her mother teaches her to respect fairies. She buys a warrior fairy to protect her while travelling to a confectioners' festival/competition, with the intent of freeing him once they arrive."
+                    "text": "Humans subjugated fairies long ago, and now treat them as slaves. Protag is from a family of confectioners, and her mother teaches her to respect fairies. She buys a warrior fairy to protect her while travelling to a confectioners' festival/competition, with the intent of freeing him once they arrive. Seems like a competent show, but the whole \"I'm not like the other slave owners\" trope is so extremely tired."
                 },
                 {
                     "title": "Revenger",
-                    "text": "First ep is all setup. Not sure what it’s actually about yet. There's nothing there to hook me yet."
+                    "text": "First ep is all setup. Not sure what it's actually about yet. There's nothing there to hook me yet."
                 },
                 {
                     "title": "The Ice Guy and His Cool Female Colleague",
-                    "text": "When he gets emotional he causes a localized blizzard. His coworker is cute but stoic. They get kinda blushy for each other. It’s cute but feels more like a montage of short skits than anything."
+                    "text": "When he gets emotional he causes a localized blizzard. His coworker is cute but stoic. They get kinda blushy for each other. It's cute but feels more like a montage of short skits than anything."
                 },
                 {
                     "title": "Farming Life in Another World",
                     "text": "I WANT A GOOD FARMING ISEKAI. This probably isn't it."
                 },
                 {
-                    "title": "Onimai: I’m Now Your Sister!",
-                    "text": "An eroge gamer NEET is secretly given an experimental drug by his genius sister and wakes up as a girl. I'll watch one episode of any gender-themed anime but this one doesn’t really have anything going for it."
+                    "title": "Onimai: I'm Now Your Sister!",
+                    "text": "An eroge gamer NEET is secretly given an experimental drug by his genius sister and wakes up as a girl. I'll watch one episode of any gender-themed anime but this one doesn't really have anything going for it."
+                },
+                {
+                    "title": "Chillin' in My 30s after Getting Fired from the Demon King's Army",
+                    "text": "Yeah I mean it sure is right there in the title isn't it? Also the camera angles are set up to show the female lead's boobs at every possible opportunity, to an almost hilarious degree."
                 },
                 {
                     "title": "Technoroid: Overmind",
-                    "text": "BOYS BOYS BOYS. In a futuristic world where global warming is real, so are android idols! Also they’re in debt because apparently nobody told them that things cost money (has nobody been collecting rent?? how did they go so long without anybody mentioning this??)."
+                    "text": "BOYS BOYS BOYS. In a futuristic world where global warming is real, so are android idols! Also they're in debt because apparently nobody told them that things cost money (has nobody been collecting rent?? how did they go so long without anybody mentioning this??)."
                 },
                 {
                     "title": "",

@@ -72,6 +72,9 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
 #content-anime .weeklySchedule hr {
     margin: 0.5rem auto;
 }
+#content-anime .weeklySchedule.hideUnmarked hr {
+    margin: 0.5rem auto 0.375rem;
+}
 
 #content-anime .weeklySchedule > div p.marked {
     background-color: hsla(218,5%,47%,.25);
@@ -79,7 +82,7 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
     padding: 0.125rem 0.25rem;
     margin: 0.375rem -0.25rem -0.125rem;
 }
-#content-anime .weeklySchedule > div p.marked:first-child {
+#content-anime .weeklySchedule:not(.hideUnmarked) > div p.marked:first-child {
     margin-top: -0.125rem;
 }
 #content-anime .weeklySchedule:not(.hideUnmarked) > div p {
