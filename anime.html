@@ -248,7 +248,15 @@
                 <dl z--iterate="seasonData.wrap-up">
                     <div z--template>
                         <div z--visible="!!>rating"><span z--bind=">rating"></span><span>／</span><span>10</span></div>
-                        <dt z--bind=">title"></dt>
+                        <dt>
+                            <span z--bind=">title"></span>
+                            <span z--visible=">episodes"> - <span z--bind=">episodes"></span> episodes</span>
+                            <a class="svg-icon mal-icon" target="_blank" z--visible=">mal"
+                                z--bind='{
+                                    "path": ">mal",
+                                    "fn": "malHref"
+                                }'><i></i></a>
+                        </dt>
                         <dd z--bind=">text"></dd>
                         <dd z--bind=">line2" z--visible="!!>line2"></dd>
                     </div>

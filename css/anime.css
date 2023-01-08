@@ -119,6 +119,15 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
     margin-top: 0.75rem;
     margin-bottom: -0.75rem;
 }
+#content-anime .wrap-up dt span:not(:first-child) {
+    font-weight: normal;
+}
+#content-anime .wrap-up dt .svg-icon {
+    margin-left: 0.5rem;
+}
+#content-anime .wrap-up dt .svg-icon i {
+    vertical-align: bottom;
+}
 #content-anime .wrap-up dd {
     margin-left: 3rem;
 }

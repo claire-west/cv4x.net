@@ -142,6 +142,9 @@
                         download(canvas.toDataURL(), model.year + ' (' + model.season + ').png');
                     });
                 },
+                malHref: function(mal) {
+                    return 'https://myanimelist.net/anime/' + mal;
+                },
                 twemojify: globalModel.twemojify // function binding doesn't traverse models (yet)
             }, globalModel)
         };
