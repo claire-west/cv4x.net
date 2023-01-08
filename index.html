@@ -27,7 +27,7 @@
     <nav hidden><z--frag-nav /></nav>
     <div id="content-blocker"><div z--click="onToggleNav"></div></div>
     <section id="content" class="app row" hidden>
-        <section id="content-home">
+        <section id="content-home" z--controller>
             <div class="col m8">
                 <h2>Welcome!</h2>
                 <p>Heyo, I'm Claire, and this is my homepage. Sometimes I do things on the internet and this website is probably the best way to find and keep up with that.</p>
@@ -39,17 +39,22 @@
                 <p class="text-center margin-top-0">she/her・1992・Canada</p>
                 <br/>
             </div>
-            <div class="col m8">
+            <div class="col m8 activity">
                 <h3 class="margin-bottom-0">What I've Been Up To</h3>
                 <hr/>
                 <p><span class="small">2022.12.18</span>Today I made this website! With Twitter attempting to block other platforms and things like Linktree, it seems now's the time to finally get this up and running.</p>
                 <p>I probably won't update this super often, but lately I've been trying to learn more about music production, in addition to my usual excessive anime-watching.</p>
                 <p>I at least know enough about SynthV to have made an info site about it (<a href="https://synthv.info">synthv.info</a>), so that's pretty neat. I hope to expand that knowledge to include other engines like Vocaloid and CeVIO.</p>
             </div>
-            <div class="col m4">
-                <h3 class="margin-bottom-0">Chatbox</h3>
+            <div class="col m4 changelog">
+                <h3 class="margin-bottom-0">Change Log</h3>
                 <hr/>
-                <iframe src="https://www3.cbox.ws/box/?boxid=3524052&boxtag=w4KAMc" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                <div z--iterate="changelog">
+                    <p z--template z--visible=">text">
+                        <span class="small" z--bind=">date"></span><br/>
+                        <span z--bind=">text"></span>
+                    </p>
+                </div>
             </div>
         </section>
     </section>

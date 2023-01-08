@@ -1,0 +1,7 @@
+#content-home .changelog > div p:not(:first-child) {
+    margin: 0.5rem auto;
+}
+
+#content-home .changelog p span.small {
+
+}

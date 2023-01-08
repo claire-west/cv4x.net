@@ -1,11 +1,13 @@
 ((dynCore) => {
-    dynCore.declare('app.anime', dynCore.require([
-        'lib.bind',
-        'lib.model',
-        'app.globalModel',
-        'lib.download'
-    ]), (modules, bind, model, globalModel, download) => {
-        dynCore.css('anime', 'app.anime');
+    dynCore.when(
+        dynCore.require([
+            'lib.bind',
+            'lib.model',
+            'app.globalModel',
+            'lib.download'
+        ]),
+        dynCore.css('anime', 'app.anime')
+    ).done((modules, bind, model, globalModel, download) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var convertTZ = function(time) {
@@ -171,6 +173,7 @@
         var $page = $('#content-anime');
         return bind($page, controller.model).done(function() {
             controller.model._refresh();
+            dynCore.declare('app.anime');
         });
     });
 })(window.dynCore);

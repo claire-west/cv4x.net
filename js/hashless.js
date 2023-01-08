@@ -40,7 +40,7 @@
 
                     if (typeof($page.attr('z--controller')) !== 'undefined') {
                         $page.removeAttr('z--controller');
-                        dynCore.js(app).done(() => {
+                        dynCore.require(app).done(() => {
                             $page.show();
                             promise.resolve();
                         });
@@ -68,7 +68,7 @@
         var $inner = $content.children('[z--controller]');
         if ($inner.length) {
             $inner.removeAttr('z--controller');
-            dynCore.js('app.' + initialPage).done(function() {
+            dynCore.require('app.' + initialPage).done(function() {
                 bind($('body'), globalModel).done(function() {
                     initialBinding.resolve();
                 });

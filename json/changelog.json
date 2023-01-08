@@ -1,0 +1,26 @@
+[
+    {
+        "date": "2022.12.18",
+        "text": "Initial version online!"
+    },
+    {
+        "date": "2023.01.05",
+        "text": "Add left side navigation panel."
+    },
+    {
+        "date": "2023.01.06",
+        "text": "Add Anime page with schedule for seasonal shows."
+    },
+    {
+        "date": "2023.01.07",
+        "text": "Various improvements to the anime page including time zone conversion and wrap-ups for past seasons."
+    },
+    {
+        "date": "2023.01.08",
+        "text": "Minor fixes for the anime page, and swapped this change log in place of the chatbox (rip)."
+    },
+    {
+        "date": "",
+        "text": ""
+    }
+]
