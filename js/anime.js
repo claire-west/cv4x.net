@@ -4,10 +4,11 @@
             'lib.bind',
             'lib.model',
             'app.globalModel',
-            'lib.download'
+            'lib.download',
+            'lib.hashWatch'
         ]),
         dynCore.css('anime', 'app.anime')
-    ).done((modules, bind, model, globalModel, download) => {
+    ).done((modules, bind, model, globalModel, download, hashWatch) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var convertTZ = function(time) {
@@ -30,7 +31,7 @@
                     schedule[day][i] = chars[0] + time + chars.slice(5).join('');
                 }
             }
-        }
+        };
 
         var years = {};
         var fetchYear = function(year) {
@@ -49,47 +50,60 @@
         };
 
         var controller = {
+            changeHash: function(year, season, tab) {
+                var hash = [ year, season, tab ].filter(n => n).join('/');
+                window.location.replace('#' + hash);
+            },
             refresh: function() {
+                if (!this.model.year) {
+                    this.changeHash(globalModel.year);
+                    return;
+                }
                 fetchYear(this.model.year).done((yearData) => {
                     if (this.model.yearData === yearData) {
                         return;
                     }
                     this.model.yearData = yearData;
-                    // validate current season setting
+                    // validate current season setting has data
                     if (!yearData[this.model.season]) {
+                        var season = null;
                         if (yearData.冬) {
-                            this.model.season = '冬';
+                            season = '冬';
                         } else if (yearData.春) {
-                            this.model.season = '春';
+                            season = '春';
                         } else if (yearData.夏) {
-                            this.model.season = '夏';
+                            season = '夏';
                         } else if (yearData.秋) {
-                            this.model.season = '秋';
-                        } else {
-                            this.model.season = null;
+                            season = '秋';
                         }
+                        // season changed, update the hash and return to avoid refreshing twice
+                        this.changeHash(this.model.year, season);
+                        return;
                     }
                     this.refreshSeason();
                 });
             },
             refreshSeason: function() {
+                if (!this.model.year) {
+                    return;
+                }
                 fetchYear(this.model.year).done((yearData) => {
                     var seasonData = yearData[this.model.season];
-                    if (this.model.seasonData === seasonData) {
+                    if (!seasonData || this.model.seasonData === seasonData) {
                         return;
                     }
                     if (this.model.season) {
-                        // validate current tab setting
+                        // validate current tab setting has data
                         if (!seasonData[this.model.tab]) {
+                            var tab = null;
                             if (seasonData.schedule) {
-                                this.model.tab = 'schedule';
+                                tab = 'schedule';
                             } else if (seasonData.impressions) {
-                                this.model.tab = 'impressions';
+                                tab = 'impressions';
                             } else if (seasonData['wrap-up']) {
-                                this.model.tab = 'wrap-up';
-                            } else {
-                                this.model.tab = null;
+                                tab = 'wrap-up';
                             }
+                            this.changeHash(this.model.year, this.model.season, tab);
                         }
                     }
                     this.model.seasonData = seasonData;
@@ -97,23 +111,22 @@
                 });
             },
             model: model({
-                year: globalModel.year,
                 isNotLastYear: function(year) {
                     return year < globalModel.year;
                 },
+                // change hash based on navigation controls
                 prevYear: function(model) {
-                    model.season = '秋';
-                    model._set('year', model.year - 1);
+                    controller.changeHash(Number(model.year) - 1, '秋');
                 },
                 nextYear: function(model) {
-                    model.season = '冬';
-                    model._set('year', model.year + 1);
+                    controller.changeHash(Number(model.year) + 1, '冬');
                 },
                 setSeason: function(model) {
-                    model._set('season', $(this).text());
+                    controller.changeHash(model.year, $(this).text());
                 },
                 setTab: function(model) {
-                    model._set('tab', $(this).text().toLocaleLowerCase() || 'schedule');
+                    controller.changeHash(model.year, model.season,
+                        $(this).text().toLocaleLowerCase() || 'schedule');
                 },
                 hideUnmarked: localStorage.getItem('anime.hideUnmarked') === "true",
                 toggleShowHide: function(model) {
@@ -160,16 +173,41 @@
             controller.model.marked = {}
         }
 
+        // when the model is updated (by hash changes), refresh the associated data
         controller.model._track('year', function() {
             controller.refresh();
         });
         controller.model._track('season', function() {
             controller.refreshSeason();
         });
+        // keep localstorage in sync as the model is updated
         controller.model._track('hideUnmarked', function(hideUnmarked) {
             localStorage.setItem('anime.hideUnmarked', hideUnmarked);
         });
 
+        // watch hash for changes - all layout for this page is dictated by this
+        // it runs once when registering the handler to process the initial hash state
+        hashWatch((args) => {
+            return window.location.pathname.substr(1) === 'anime';
+        }, (year, season, tab) => {
+            season = decodeURIComponent(season);
+            var hashChanged = false;
+            if (year !== controller.model.year) {
+                controller.model.year = year;
+                hashChanged = true;
+            }
+            if (season !== controller.model.season) {
+                controller.model.season = season;
+                hashChanged = true;
+            }
+            if (tab !== controller.model.tab) {
+                controller.model.tab = tab;
+                hashChanged = true;
+            }
+            hashChanged && controller.model._refresh();
+        });
+
+        // do binding and declare app to dynCore
         var $page = $('#content-anime');
         return bind($page, controller.model).done(function() {
             controller.model._refresh();
