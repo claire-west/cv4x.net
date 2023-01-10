@@ -11,9 +11,11 @@
                 "🟦1735 Mou Ippon!"
             ],
             "月": [
-                "🟠1500 Mononogatari",
-                "🟠1530 Vinland Saga s2",
-                "🟠1715 Reborn to Master the Blade"
+                "🟠1330 High Card",
+                "🟠1500 The Vampire Dies in No Time s2",
+                "🟠1630 Vinland Saga s2",
+                "🟠1800 Mononogatari",
+                "🟠1915 Reborn to Master the Blade"
             ],
             "火": [
                 "🟦1530 Kubo-san Won't Let Me Be Invisible",
@@ -65,6 +67,10 @@
         "impressions": {
             "watching": [
                 {
+                    "title": "The Eminence in Shadow, Blue Lock",
+                    "text": "(continuing from last season)"
+                },
+                {
                     "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
                     "text": "I'm biased because I liked the LN, but so far this seems like a good adaptation. The animation, storyboarding, direction, and voice work all give me a good impression."
                 },
@@ -77,11 +83,20 @@
                     "text": "I've been looking forward to this. The first season focused on Happy Around, Peaky P-key, and Photon Maiden, while the OVA focused on RONDO and Merm4aid, and it looks like the second season adds Lyrical Lily to the mix. \"The gang's all here\", as they say. This is still one of the most unexpected series to do CG right and has some of the best performances of any \"idol\"-type anime."
                 },
                 {
-                    "title": "Tsurune season 2"
+                    "title": "Tsurune season 2",
+                    "text": "The boys are back."
+                },
+                {
+                    "title": "High Card",
+                    "text": "A deck of magic cards are scattered across the land like dragon balls. Each grants the holder a different special ability. Protag comes into possession of one of these cards and gets in over his head."
                 },
                 {
                     "title": "Giant Beasts of Ars",
                     "text": "Protag is a \"prototype\" who escapes from some facility. Beast Hunters are people who fight Giant Beasts. Presumably they will meet at some point. First episode was promising."
+                },
+                {
+                    "title": "Reborn to Master the Blade",
+                    "text": "The Hero-King dies of old age after serving his people for many years, his last wish to be reborn so he can live for himself instead of for others. The goddess reincarnates him, but as a girl! Honestly I'm here for it."
                 },
                 {
                     "title": "",
@@ -90,10 +105,12 @@
             ],
             "maybe": [
                 {
-                    "title": "Bofuri season 2"
+                    "title": "Bofuri season 2",
+                    "text": ""
                 },
                 {
-                    "title": "Vinland Saga season 2"
+                    "title": "Vinland Saga season 2",
+                    "text": "I had a few complaints about the first season, but I enjoyed it enough to want more. Still funny that s1 e24 was called \"End of the Prologue\"."
                 },
                 {
                     "title": "Handyman Saitou in Another World",
@@ -146,9 +163,17 @@
                 {
                     "title": "",
                     "text": ""
+                },
+                {
+                    "title": "",
+                    "text": ""
                 }
             ],
             "skipping": [
+                {
+                    "title": "Mononogatari",
+                    "text": "Protag is the heir to a family of exorcists, but instead of sending the tsukumogami back peacefully like his grandfather does, he beats them up. He is sent to live with six \"friendly\" tsukumogami in order to teach him to not be so violent toward the spirits."
+                },
                 {
                     "title": "The Tale of Outcasts",
                     "text": "1800s London, an orphan girl meets an immortal demon normally invisible to humans. When she's sold off in the slave trade, he decides to rescue her, which results in them forming a pact where he must stay by her side but she loses her vision."
