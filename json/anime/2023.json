@@ -19,8 +19,9 @@
             ],
             "火": [
                 "🟦1530 Kubo-san Won't Let Me Be Invisible",
-                "🟠1500 Campfire Cooking in Another World with My Absurd Skill",
-                "🟠1600 Adventurers Who Don't Believe in Humanity Will Save the World"
+                "🟠1530 The Ice Guy and His Cool Female Colleague",
+                "🟠1600 Adventurers Who Don't Believe in Humanity Will Save the World",
+                "🟠1730 Campfire Cooking in Another World with My Absurd Skill"
             ],
             "水": [
                 "🟠1400 The Magical Revolution of the Reincarnated Princess",
@@ -28,7 +29,6 @@
                 "🟠1500 Bofuri s2",
                 "🟦1600 Tsurune s2",
                 "🟠1530 Bungo Stray Dogs s4",
-                "🟠1600 The Ice Guy and His Cool Female Colleague",
                 "🟠1730 Technoroid Overmind",
                 "🟠1800 Tomo-chan Is a Girl!",
                 "🟠1830 Kaina of the Great Snow Sea"
@@ -97,13 +97,13 @@
                 {
                     "title": "Reborn to Master the Blade",
                     "text": "The Hero-King dies of old age after serving his people for many years, his last wish to be reborn so he can live for himself instead of for others. The goddess reincarnates him, but as a girl! Honestly I'm here for it."
-                },
-                {
-                    "title": "",
-                    "text": ""
                 }
             ],
             "maybe": [
+                {
+                    "title": "Kubo-san Won't Let Me Be Invisible",
+                    "text": "Okay it's really cute. I don't know if I'm super into the premise yet but the execution seems very good."
+                },
                 {
                     "title": "Bofuri season 2",
                     "text": ""
@@ -113,12 +113,16 @@
                     "text": "I had a few complaints about the first season, but I enjoyed it enough to want more. Still funny that s1 e24 was called \"End of the Prologue\"."
                 },
                 {
-                    "title": "Handyman Saitou in Another World",
-                    "text": "Isekai where the protag has modern-day skills in a fantasy world, however without the adjacent overpowered abilities to undermine what makes that interesting. Animation quality is promising and I like the characters, but it's adapted from a 4-koma which means it's kind of a montage of disconnected scenes and the pacing is a bit odd."
+                    "title": "Campfire Cooking in Another World with My Absurd Skill",
+                    "text": "Culinary isekai. It seems pretty good but I'll need to see episode 2 before I decide whether to watch or not."
                 },
                 {
                     "title": "Adventurers Who Don't Believe in Humanity Will Save the World",
-                    "text": "Non-isekai fantasy. Guy is kicked out of his party and dumped by his girlfriend. Meets 3 other similarly downtrodden adventurers at a tavern, they form a party. Big D&D vibes."
+                    "text": "Non-isekai fantasy. Four downtrodden downtrodden adventurers meet at a tavern, they form a party. Big D&D vibes. The cleric's backstory is kinda shit but otherwise this looks solid."
+                },
+                {
+                    "title": "Handyman Saitou in Another World",
+                    "text": "Isekai where the protag has modern-day skills in a fantasy world, however without the adjacent overpowered abilities to undermine what makes that interesting. Animation quality is promising and I like the characters, but it's adapted from a 4-koma which means it's kind of a rapid-fire sequence of disconnected micro-skits and the pacing is a bit odd."
                 },
                 {
                     "title": "The Angel Next Door Spoils Me Rotten",
@@ -149,27 +153,27 @@
                     "text": "I read the first volume of the LN. Post-war spy stuff. A bunch of underachieving spies-in-training are called to form a new team under the instruction of the \"world's greatest spy\". The adaptation seems fine, but I don't have high hopes for it."
                 },
                 {
+                    "title": "Kaina of the Great Snow Sea",
+                    "text": "(not yet aired)"
+                },
+                {
+                    "title": "The Fire Hunter",
+                    "text": "(not yet aired)"
+                }
+            ],
+            "skipping": [
+                {
                     "title": "The Iceblade Sorcerer Shall Rule the World",
                     "text": "Non-isekai fantasy. Protag is the first \"Ordinary\" (non-noble and not decended from a sorcerer) to be admitted to the magic academy. Seems okay. It's not a harem anime yet but looks like it'll become one."
                 },
                 {
                     "title": "The Reincarnation of the Strongest Exorcist in Another World",
-                    "text": "Reborn in a world of magic, protag has no magic power, but he still has his spiritual power from his previous life as an exorcist. Seems pretty generic."
+                    "text": "Reborn in a world of magic, protag has no magic power, but he still has his spiritual power from his previous life as an exorcist. I'm not opposed to watching somewhat-generic isekai, but there are a lot of better options this season."
                 },
                 {
                     "title": "NieR:Automata Ver1.1a",
                     "text": "Anime adaptation of the game. Most of the CG is acceptable but not great, however there are some instances where it results in pretty bad style clash (seriously, what's with those flight units?). Otherwise they keep doing a really weird thing where they use game-like camera angles for a very unusual but cool effect."
                 },
-                {
-                    "title": "",
-                    "text": ""
-                },
-                {
-                    "title": "",
-                    "text": ""
-                }
-            ],
-            "skipping": [
                 {
                     "title": "Mononogatari",
                     "text": "Protag is the heir to a family of exorcists, but instead of sending the tsukumogami back peacefully like his grandfather does, he beats them up. He is sent to live with six \"friendly\" tsukumogami in order to teach him to not be so violent toward the spirits."
@@ -205,10 +209,6 @@
                 {
                     "title": "Technoroid: Overmind",
                     "text": "BOYS BOYS BOYS. In a futuristic world where global warming is real, so are android idols! Also they're in debt because apparently nobody told them that things cost money (has nobody been collecting rent?? how did they go so long without anybody mentioning this??)."
-                },
-                {
-                    "title": "",
-                    "text": ""
                 }
             ]
         },
