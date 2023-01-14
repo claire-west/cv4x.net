@@ -51,7 +51,7 @@
             "土": [
                 "🟠1030 Boku no Hero Academia s6",
                 "🟠1300 Welcome to Demon School! Iruma-kun s3",
-                "🟠1400 The Fire Hunter",
+                "🟠1430 The Fire Hunter",
                 "🟠1600 The Angel Next Door Spoils Me Rotten",
                 "🟠1630 Trigun Stampede",
                 "🟠1700 UniteUp!",
@@ -92,8 +92,8 @@
                     "text": "A deck of magic cards are scattered across the land like dragon balls. Each grants the holder a different special ability. Protag comes into possession of one of these cards and gets in over his head."
                 },
                 {
-                    "title": "Giant Beasts of Ars",
-                    "text": "Protag is a \"prototype\" who escapes from some facility. Beast Hunters are people who fight Giant Beasts. Presumably they will meet at some point. First episode was promising."
+                    "title": "The Fire Hunter",
+                    "text": "A young girl comes into posession of a fire hunter's dog and sickle when he dies. She now must make the five month trip to the capital to return them."
                 },
                 {
                     "title": "Reborn to Master the Blade",
@@ -101,6 +101,10 @@
                 }
             ],
             "maybe": [
+                {
+                    "title": "Giant Beasts of Ars",
+                    "text": "Protag is a \"prototype\" who escapes from some facility. Beast Hunters are people who fight Giant Beasts. Presumably they will meet at some point. First episode was promising."
+                },
                 {
                     "title": "Bofuri season 2",
                     "text": "Bofuri is literally just a show about people playing a video game and yet it's great because it captures the feeling of early 2000s MMOs and weird game-breaking exploits in a fun way that doesn't really exist in the modern design landscape."
@@ -122,16 +126,16 @@
                     "text": "Culinary isekai. It seems pretty good but I'll need to see episode 2 before I decide whether to watch or not."
                 },
                 {
+                    "title": "The Angel Next Door Spoils Me Rotten",
+                    "text": "Guy lends his (cute, popular) classmate an umbrella and she insists on returning the favor by tending to him when he gets sick. She realizes he's shit at taking care of himself so she starts giving him food so he'll eat better. Seems like a comfy romcom with light banter."
+                },
+                {
                     "title": "Adventurers Who Don't Believe in Humanity Will Save the World",
                     "text": "Non-isekai fantasy. Four downtrodden downtrodden adventurers meet at a tavern, they form a party. Big D&D vibes. The cleric's backstory is kinda shit but otherwise this looks solid."
                 },
                 {
                     "title": "Handyman Saitou in Another World",
                     "text": "Isekai where the protag has modern-day skills in a fantasy world, however without the adjacent overpowered abilities to undermine what makes that interesting. Animation quality is promising and I like the characters, but it's adapted from a 4-koma which means it's kind of a rapid-fire sequence of disconnected micro-skits and the pacing is a bit odd."
-                },
-                {
-                    "title": "The Angel Next Door Spoils Me Rotten",
-                    "text": "Guy lends his (cute, popular) classmate an umbrella and she insists on returning the favor by tending to him when he gets sick. She realizes he's shit at taking care of himself so she starts giving him food so he'll eat better. Seems like a comfy romcom with light banter."
                 },
                 {
                     "title": "Endo and Kobayashi Live! The Latest on Tsundere Villainess Lieselotte",
@@ -144,10 +148,6 @@
                 {
                     "title": "In/Spectre season 2",
                     "text": "The first season was interesting, but very heavy on dialog. This seems to have similar pacing issues, so it's not super high on my list but I'm interested to see more if I ever have time."
-                },
-                {
-                    "title": "The Fire Hunter",
-                    "text": "(not yet aired)"
                 }
             ],
             "skipping": [
