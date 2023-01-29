@@ -392,6 +392,15 @@ i.svg-icon:hover {
     background: url('/img/icon/pixiv-h.svg') no-repeat center center / contain;
 }
 
+.kofi-icon i {
+    background: url('/img/icon/ko-fi.svg') no-repeat center center / contain;
+    height: 2rem;
+    width: 2rem;
+}
+.kofi-icon:hover i {
+    background: url('/img/icon/ko-fi-h.svg') no-repeat center center / contain;
+}
+
 /* medium format */
 @media screen and (max-width: 67rem) {
     .col {

@@ -1,4 +1,6 @@
 ((dynCore) => {
+    var hrefRegex = /\[(.*)\]\(([^\)]*)\)/g;
+
     dynCore.when(
         dynCore.require([
             'lib.bind',
@@ -20,6 +22,13 @@
             activity: json.activity.sort(dateCompare),
             changelog: json.changelog.sort(dateCompare),
             parseHref: function(text) {
+                var matches = text.matchAll(hrefRegex);
+                var match = matches.next();
+                while (!match.done) {
+                    text = text.replace(match.value[0], '<a href="' + match.value[2] + '">' + match.value[1] + '</a>')
+
+                    match = matches.next();
+                }
                 return text;
             }
         }, globalModel);

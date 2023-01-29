@@ -1,7 +1,11 @@
-#content-home .changelog > div p:not(:first-child) {
-    margin: 0.5rem auto;
+#content-home .activity > div > div:not(:first-child) > p:first-child {
+    margin-top: 1.5rem;
 }
 
-#content-home .changelog p span.small {
+#content-home .activity > div > div > p:not(:first-child) span.small {
+    display: none;
+}
 
+#content-home .changelog > div p:not(:first-child) {
+    margin: 0.5rem auto;
 }

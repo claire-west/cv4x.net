@@ -42,9 +42,17 @@
             <div class="col m8 activity">
                 <h3 class="margin-bottom-0">What I've Been Up To</h3>
                 <hr/>
-                <p><span class="small">2022.12.18</span>Today I made this website! With Twitter attempting to block other platforms and things like Linktree, it seems now's the time to finally get this up and running.</p>
-                <p>I probably won't update this super often, but lately I've been trying to learn more about music production, in addition to my usual excessive anime-watching.</p>
-                <p>I at least know enough about SynthV to have made an info site about it (<a href="https://synthv.info">synthv.info</a>), so that's pretty neat. I hope to expand that knowledge to include other engines like Vocaloid and CeVIO.</p>
+                <div z--iterate="activity">
+                    <div z--template z--visible=">date" z--iterate=">text">
+                        <p z--template z--visible=">">
+                            <span class="small" z--bind=".date"></span>
+                            <span z--html='{
+                                "path": ">",
+                                "fn": "parseHref"
+                            }'></span>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col m4 changelog">
                 <h3 class="margin-bottom-0">Change Log</h3>
