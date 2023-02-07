@@ -98,8 +98,6 @@
                             var tab = null;
                             if (seasonData.schedule) {
                                 tab = 'schedule';
-                            } else if (seasonData.impressions) {
-                                tab = 'impressions';
                             } else if (seasonData['wrap-up']) {
                                 tab = 'wrap-up';
                             }

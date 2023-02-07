@@ -92,7 +92,7 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
     background: none;
 }
 #content-anime .weeklySchedule.hideUnmarked > div p:not(.marked) {
-    display: none;
+    display: none !important;
 }
 
 #content-anime .impressions p:first-child {
