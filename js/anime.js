@@ -60,6 +60,7 @@
                 var hash = [ year, season, tab ].filter(n => n).join('/');
                 window.location.replace('#' + hash);
             },
+
             refresh: function() {
                 if (!this.model.year) {
                     this.changeHash(globalModel.year);
@@ -92,6 +93,7 @@
                     this.refreshSeason();
                 });
             },
+
             refreshSeason: function() {
                 if (!this.model.year) {
                     return;
@@ -117,29 +119,40 @@
                     this.model._refresh();
                 });
             },
+
             model: model({
                 isNotLastYear: function(year) {
                     return year < globalModel.year;
                 },
+
                 // change hash based on navigation controls
                 prevYear: function(model) {
                     controller.changeHash(Number(model.year) - 1, '秋');
                 },
+
                 nextYear: function(model) {
                     controller.changeHash(Number(model.year) + 1, '冬');
                 },
+
                 setSeason: function(model) {
-                    controller.changeHash(model.year, $(this).text());
+                    var $this = $(this);
+                    if (!$this.hasClass('active')) {
+                        controller.changeHash(model.year, $this.text());
+                    }
                 },
+
                 setTab: function(model) {
                     controller.changeHash(model.year, model.season,
                         $(this).text().toLocaleLowerCase() || 'schedule');
                 },
+
                 hideUnmarked: localStorage.getItem('anime.hideUnmarked') === "true",
                 toggleShowHide: function(model) {
                     model._set('hideUnmarked', !model.hideUnmarked);
                 },
+
                 marked: {},
+                updateMarked: 0,
                 toggleMarked: function(text, marked, model) {
                     if (model.hideUnmarked) {
                         return;
@@ -153,10 +166,12 @@
                     localStorage.setItem('anime.markedItems', JSON.stringify(marked));
                     model._set('updateMarked', model.updateMarked + 1);
                 },
-                updateMarked: 0,
+
                 isMarked: function(updateMarked, prev, marked, text) {
+                    if (!text) return false;
                     return marked[text.substr(text.indexOf(' ') + 1)] === true;
                 },
+
                 downloadSchedule: function(model) {
                     html2canvas($('#content-anime .weeklySchedule').get(0), {
                         useCORS: true
@@ -164,9 +179,11 @@
                         download(canvas.toDataURL(), model.year + ' (' + model.season + ').png');
                     });
                 },
+
                 malHref: function(mal) {
                     return 'https://myanimelist.net/anime/' + mal;
                 },
+
                 twemojify: globalModel.twemojify // function binding doesn't traverse models (yet)
             }, globalModel)
         };
@@ -211,7 +228,10 @@
                 controller.model.tab = tab;
                 hashChanged = true;
             }
-            hashChanged && controller.model._refresh();
+            if (hashChanged) {
+                controller.model.updateMarked++;
+                controller.model._refresh();
+            }
         });
 
         // do binding and declare app to dynCore
