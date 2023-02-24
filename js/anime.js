@@ -33,6 +33,12 @@
             }
         };
 
+        var getCurrentSeason = function() {
+            var seasons = [ "冬", "春", "夏", "秋" ];
+            var month = new Date().getMonth();
+            return seasons[Math.floor(month / 3)];
+        };
+
         var years = {};
         var fetchYear = function(year) {
             if (!years[year]) {
@@ -66,15 +72,18 @@
                     this.model.yearData = yearData;
                     // validate current season setting has data
                     if (!yearData[this.model.season]) {
-                        var season = null;
-                        if (yearData.冬) {
-                            season = '冬';
-                        } else if (yearData.春) {
-                            season = '春';
-                        } else if (yearData.夏) {
-                            season = '夏';
-                        } else if (yearData.秋) {
-                            season = '秋';
+                        var season = getCurrentSeason();
+                        // if no data for current season, find a season with data
+                        if (!yearData[season]) {
+                            if (yearData.冬) {
+                                season = '冬';
+                            } else if (yearData.春) {
+                                season = '春';
+                            } else if (yearData.夏) {
+                                season = '夏';
+                            } else if (yearData.秋) {
+                                season = '秋';
+                            }
                         }
                         // season changed, update the hash and return to avoid refreshing twice
                         this.changeHash(this.model.year, season);

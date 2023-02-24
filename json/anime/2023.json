@@ -65,157 +65,73 @@
                 "🟠1945 Saving 80,000 Gold in Another World for My Retirement"
             ]
         },
-        "impressions": {
-            "watching": [
-                {
-                    "title": "The Eminence in Shadow, Blue Lock",
-                    "text": "(continuing from last season)"
-                },
-                {
-                    "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
-                    "text": "I'm biased because I liked the LN, but so far this seems like a good adaptation. The animation, storyboarding, direction, and voice work all give me a good impression."
-                },
-                {
-                    "title": "Trigun Stampede",
-                    "text": "New heavy-CG anime by Orange, the studio behind Land of the Lustrous. They're doing some cool stuff with reflections, along with the solid movement and camerawork Orange is known for. Animation style aside, the story and characters show promise and I am intrigued to see more."
-                },
-                {
-                    "title": "D4DJ All Mix (season 2)",
-                    "text": "I've been looking forward to this. The first season focused on Happy Around, Peaky P-key, and Photon Maiden, while the OVA focused on RONDO and Merm4aid, and it looks like the second season adds Lyrical Lily to the mix. \"The gang's all here\", as they say. This is still one of the most unexpected series to do CG right and has some of the best performances of any \"idol\"-type anime."
-                },
-                {
-                    "title": "Tsurune season 2",
-                    "text": "The boys are back."
-                },
-                {
-                    "title": "High Card",
-                    "text": "A deck of magic cards are scattered across the land like dragon balls. Each grants the holder a different special ability. Protag comes into possession of one of these cards and gets in over his head."
-                },
-                {
-                    "title": "The Fire Hunter",
-                    "text": "A young girl comes into posession of a fire hunter's dog and sickle when he dies. She now must make the five month trip to the capital to return them."
-                },
-                {
-                    "title": "Reborn to Master the Blade",
-                    "text": "The Hero-King dies of old age after serving his people for many years, his last wish to be reborn so he can live for himself instead of for others. The goddess reincarnates him, but as a girl! Honestly I'm here for it."
-                }
+        "wrap-up": null
+    },
+    "春": {
+        "schedule": {
+            "日": [
+                "❓1500 A Galaxy Next Door",
+                "❓1500 My Clueless First Friend",
+                "❓1500 Summoned to Another World for a Second Time"
             ],
-            "maybe": [
-                {
-                    "title": "Giant Beasts of Ars",
-                    "text": "Protag is a \"prototype\" who escapes from some facility. Beast Hunters are people who fight Giant Beasts. Presumably they will meet at some point. First episode was promising."
-                },
-                {
-                    "title": "Bofuri season 2",
-                    "text": "Bofuri is literally just a show about people playing a video game and yet it's great because it captures the feeling of early 2000s MMOs and weird game-breaking exploits in a fun way that doesn't really exist in the modern design landscape."
-                },
-                {
-                    "title": "Vinland Saga season 2",
-                    "text": "I had a few complaints about the first season, but I enjoyed it enough to want more. Still funny that s1 e24 was called \"End of the Prologue\"."
-                },
-                {
-                    "title": "Kaina of the Great Snow Sea",
-                    "text": "Some sort of... post-apocalyptic \"canopy\" where a small community lives supported by a \"spire tree\" above the snow sea. Protag is the youngest among them and does the hunting, but there are holes forming in the canopy. The CG-heavy style is generally good, but the snow effects are a bit odd. The settings and premise is very interesting though."
-                },
-                {
-                    "title": "Kubo-san Won't Let Me Be Invisible",
-                    "text": "Okay it's really cute. I don't know if I'm super into the premise yet but the execution seems very good."
-                },
-                {
-                    "title": "Campfire Cooking in Another World with My Absurd Skill",
-                    "text": "Culinary isekai. It seems pretty good but I'll need to see episode 2 before I decide whether to watch or not."
-                },
-                {
-                    "title": "The Angel Next Door Spoils Me Rotten",
-                    "text": "Guy lends his (cute, popular) classmate an umbrella and she insists on returning the favor by tending to him when he gets sick. She realizes he's shit at taking care of himself so she starts giving him food so he'll eat better. Seems like a comfy romcom with light banter."
-                },
-                {
-                    "title": "Adventurers Who Don't Believe in Humanity Will Save the World",
-                    "text": "Non-isekai fantasy. Four downtrodden downtrodden adventurers meet at a tavern, they form a party. Big D&D vibes. The cleric's backstory is kinda shit but otherwise this looks solid."
-                },
-                {
-                    "title": "Handyman Saitou in Another World",
-                    "text": "Isekai where the protag has modern-day skills in a fantasy world, however without the adjacent overpowered abilities to undermine what makes that interesting. Animation quality is promising and I like the characters, but it's adapted from a 4-koma which means it's kind of a rapid-fire sequence of disconnected micro-skits and the pacing is a bit odd."
-                },
-                {
-                    "title": "Endo and Kobayashi Live! The Latest on Tsundere Villainess Lieselotte",
-                    "text": "When two otome gamers decide to commentate over a game as if it were a sporting event, suddenly one of the in-game characters can hear them and the gameplay changes in response to their commentary. They decide to try and create a route where the villainess isn't doomed."
-                },
-                {
-                    "title": "Mou Ippon!",
-                    "text": "Girls' judo. Seems like pretty standard sports-anime fare, but could be good."
-                },
-                {
-                    "title": "In/Spectre season 2",
-                    "text": "The first season was interesting, but very heavy on dialog. This seems to have similar pacing issues, so it's not super high on my list but I'm interested to see more if I ever have time."
-                }
+            "月": [
+                "❓1500 The Reason Why Raeliana Ended up at the Duke's Mansion"
             ],
-            "skipping": [
-                {
-                    "title": "Spy Classroom",
-                    "text": "I read the first volume of the LN. Post-war spy stuff. A bunch of underachieving spies-in-training are called to form a new team under the instruction of the \"world's greatest spy\". The adaptation seems fine, but I don't have high hopes for it."
-                },
-                {
-                    "title": "Saving 80,000 Gold in Another World for My Retirement",
-                    "text": "Female protag is not OP but she has the \"superpower\" of leveraging the memories of her otaku brother's knowledge of isekai. Unlike most isekai she can freely go back home and take stuff back and forth, so she plans to use this ability to make money instead of just staying on Earth and going to university."
-                },
-                {
-                    "title": "Tomo-chan is a Girl!",
-                    "text": "idk yet. I feel like I could really like a good tomboy romcom, but the delivery here feels lacking. Maybe the real problem is that the friend is more interesting than the leads (The Shikimori Effect)."
-                },
-                {
-                    "title": "The Iceblade Sorcerer Shall Rule the World",
-                    "text": "Non-isekai fantasy. Protag is the first \"Ordinary\" (non-noble and not decended from a sorcerer) to be admitted to the magic academy. Seems okay. It's not a harem anime yet but looks like it'll become one."
-                },
-                {
-                    "title": "The Reincarnation of the Strongest Exorcist in Another World",
-                    "text": "Reborn in a world of magic, protag has no magic power, but he still has his spiritual power from his previous life as an exorcist. I'm not opposed to watching somewhat-generic isekai, but there are a lot of better options this season."
-                },
-                {
-                    "title": "Revenger",
-                    "text": "First ep is all setup. Not sure what it's actually about yet. Seems like a competent samurai anime but doesn't really do anything to stand out."
-                },
-                {
-                    "title": "NieR:Automata Ver1.1a",
-                    "text": "Anime adaptation of the game. Most of the CG is acceptable but not great, however there are some instances where it results in pretty bad style clash (seriously, what's with those flight units?). Otherwise they keep doing a really weird thing where they use game-like camera angles for a very unusual but cool effect."
-                },
-                {
-                    "title": "Mononogatari",
-                    "text": "Protag is the heir to a family of exorcists, but instead of sending the tsukumogami back peacefully like his grandfather does, he beats them up. He is sent to live with six \"friendly\" tsukumogami in order to teach him to not be so violent toward the spirits."
-                },
-                {
-                    "title": "The Tale of Outcasts",
-                    "text": "1800s London, an orphan girl meets an immortal demon normally invisible to humans. When she's sold off in the slave trade, he decides to rescue her, which results in them forming a pact where he must stay by her side but she loses her vision."
-                },
-                {
-                    "title": "Sugar Apple Fairy Tale",
-                    "text": "Humans subjugated fairies long ago, and now treat them as slaves. Protag is from a family of confectioners, and her mother teaches her to respect fairies. She buys a warrior fairy to protect her while travelling to a confectioners' festival/competition, with the intent of freeing him once they arrive. Seems like a competent show, but the whole \"I'm not like the other slave owners\" trope is so extremely tired."
-                },
-                {
-                    "title": "The Ice Guy and His Cool Female Colleague",
-                    "text": "When he gets emotional he causes a localized blizzard. His coworker is cute but stoic. They get kinda blushy for each other. It's cute but feels more like a montage of short skits than anything."
-                },
-                {
-                    "title": "Farming Life in Another World",
-                    "text": "I WANT A GOOD FARMING ISEKAI. This probably isn't it."
-                },
-                {
-                    "title": "Onimai: I'm Now Your Sister!",
-                    "text": "An eroge gamer NEET is secretly given an experimental drug by his genius sister and wakes up as a girl. I'll watch one episode of any gender-themed anime but this one doesn't really have anything going for it."
-                },
-                {
-                    "title": "Chillin' in My 30s after Getting Fired from the Demon King's Army",
-                    "text": "Yeah I mean it sure is right there in the title isn't it? Also the camera angles are set up to show the female lead's boobs at every possible opportunity, to an almost hilarious degree."
-                },
-                {
-                    "title": "Technoroid: Overmind",
-                    "text": "BOYS BOYS BOYS. In a futuristic world where global warming is real, so are android idols! Also they're in debt because apparently nobody told them that things cost money (has nobody been collecting rent?? how did they go so long without anybody mentioning this??)."
-                }
+            "火": [
+                "❓1500 Kizuna no Allele"
+            ],
+            "水": [
+
+            ],
+            "木": [
+                "❓1500 The IDOLM@STER Cinderella Girls: U149",
+                "❓1500 The Ancient Magus' Bride s2"
+            ],
+            "金": [
+                "❓1500 Birdie Wing s2",
+                "❓1500 I Got a Cheat Skill in Another World",
+                "❓1500 \"Oshi no Ko\"",
+                "❓1500 Opus.COLORs"
+            ],
+            "土": [
+                "❓1500 Otaku Elf",
+                "❓1500 My One-Hit Kill Sister"
+            ],
+            "❓": [
+                "❓1500 Kimetsu no Yaiba: Swordsmith Village Arc",
+                "❓1500 Dr. Stone s3",
+                "❓1500 Tonikawa s2",
+                "❓1500 Jigokuraku",
+                "❓1500 KonoSuba: An Explosion on This Wonderful World!",
+                "❓1500 Ousama Ranking s2",
+                "❓1500 Mashle: Magic and Muscles",
+                "❓1500 Kuma Kuma Kuma Bear s2",
+                "❓1500 Loving Yamada at Lv999",
+                "❓1500 Insomniacs After School",
+                "❓1500 Edens Zero s2",
+                "❓1500 My Home Hero",
+                "❓1500 The Dangers in My Heart",
+                "🟠1500 Mobile Suit Gundam: The Witch from Mercury s2",
+                "❓1500 Dead Mount Death Play",
+                "🟠1500 Skip and Loafer",
+                "❓1500 Yuri is My Job!",
+                "❓1500 The Legendary Hero Is Dead!",
+                "❓1500 The Aristocrat's Otherworldly Adventure",
+                "❓1500 Sacrificial Princess and the King of Beasts",
+                "❓1500 Heavenly Delusion",
+                "❓1500 Blue Orchestra",
+                "❓1500 The Café Terrace and Its Goddesses",
+                "❓1500 Magical Girl Magical Destroyers ",
+                "❓1500 The Marginal Service",
+                "❓1500 Tokyo Mew Mew New ♡ s2",
+                "❓1500 Kawaisugi Crisis",
+                "❓1500 Kamikatsu",
+                "❓1500 Alice Gear Aegis Expansion",
+                "❓1500 In Another World With My Smartphone s2"
             ]
         },
         "wrap-up": null
     },
-    "春": null,
     "夏": null,
     "秋": null
 }
