@@ -12,6 +12,9 @@
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var convertTZ = function(time) {
+            if (time === '0000') {
+                return '????';
+            }
             // parse hhmm as UTC+0
             // toTimeString uses browser time zone
             // return in hhmm format

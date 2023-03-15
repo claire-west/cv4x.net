@@ -65,69 +65,167 @@
                 "🟠1945 Saving 80,000 Gold in Another World for My Retirement"
             ]
         },
-        "wrap-up": null
+        "wrap-up (draft)": [
+            {
+                "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+                "episodes": 12,
+                "text": "I love the light novel version and the anime adaptation absolutely did it justice. Highlight of the season for me.",
+                "line2": "",
+                "rating": 9,
+                "mal": 52736
+            },
+            {
+                "title": "Kaina of the Great Snow Sea",
+                "episodes": 11,
+                "text": "The CG animation is good but not great, and the story is a bit generic, but the setting is very interesting and I enjoyed it.",
+                "line2": "",
+                "rating": 6,
+                "mal": 50864
+            },
+            {
+                "title": "The Angel Next Door Spoils Me Rotten",
+                "episodes": 12,
+                "text": "I generally enjoy contrived-premise romcoms but this one is genuinely great. Like sure, the setup is a bit silly, but that doesn't detract from some really great interactions and characterization.",
+                "line2": "",
+                "rating": 8,
+                "mal": 49596
+            },
+            {
+                "title": "Blue Lock",
+                "episodes": 24,
+                "text": "It's like a death game but instead of dying you just don't get to play pro soccer.",
+                "line2": "A silly, overdramatic, but still very good sports anime.",
+                "rating": 8,
+                "mal": 49596
+            },
+            {
+                "title": "In/Spectre s2",
+                "episodes": 12,
+                "text": "Dialog-heavy mystery, but well executed.",
+                "line2": "Better than the first season, but its strengths are still in its quirky protagonist and unusual take on what would otherwise be a boring detective show.",
+                "rating": 7,
+                "mal": 44204
+            },
+            {
+                "title": "D4DJ All Mix",
+                "episodes": 12,
+                "text": "The decision to split the focus between all the units meant that none of the characters or dynamics got enough attention to really shine. Not nearly as good as the first season, imo.",
+                "line2": "",
+                "rating": 0,
+                "mal": 51586
+            },
+            {
+                "title": "Trigun Stampede",
+                "episodes": 12,
+                "text": "Orange once again demonstrates the potential of CG anime. I wouldn't rate it as high as Land of the Lustrous, but it's pretty darn good.",
+                "line2": "I wasn't a fan of the stormtrooper aim, bullets that do nothing unless the plot dictates it, and a few other minor gripes.",
+                "rating": 8,
+                "mal": 52093
+            },
+            {
+                "title": "Tsurune: The Linking Shot",
+                "episodes": 13,
+                "text": "Actually one of the best sports anime. The first season was already good but I adored every episode of this season.",
+                "line2": "",
+                "rating": 9,
+                "mal": 52826
+            },
+            {
+                "title": "High Card",
+                "episodes": 12,
+                "text": "52 cards, each granting the holder a unique power. Interesting premise, but somewhat generic execution.",
+                "line2": "It just didn't do anything special.",
+                "rating": 6,
+                "mal": 49154
+            },
+            {
+                "title": "Reborn to Master the Blade",
+                "episodes": 12,
+                "text": "When I was looking for light novels with female protagonists this was on the bottom of many recommendation lists, and now I see why.",
+                "line2": "The characters are fine, but the story is a bit of a mess.",
+                "rating": 4,
+                "mal": 50481
+            },
+            {
+                "title": "The Reincarnation of the Strongest Exorcist in Another World",
+                "episodes": 13,
+                "text": "It's... interesting enough, but not very good. Lots of bad CG, weird character arcs",
+                "line2": "",
+                "rating": 0,
+                "mal": 50932
+            },
+            {
+                "title": "Bofuri s2",
+                "episodes": 12,
+                "text": "",
+                "line2": "",
+                "rating": 0,
+                "mal": 41514
+            }
+        ]
     },
     "春": {
         "schedule": {
             "日": [
-                "❓1500 A Galaxy Next Door",
-                "❓1500 My Clueless First Friend",
-                "❓1500 Summoned to Another World for a Second Time"
+                "🟠1400 My Clueless First Friend",
+                "🟠0000 My Home Hero",
+                "❓0000 A Galaxy Next Door",
+                "❓0000 Summoned to Another World for a Second Time"
             ],
             "月": [
-                "❓1500 The Reason Why Raeliana Ended up at the Duke's Mansion"
+                "🟠1630 Vinland Saga s2",
+                "❓1800 Alice Gear Aegis Expansion",
+                "❓0000 The Reason Why Raeliana Ended up at the Duke's Mansion",
+                "❓0000 Kuma Kuma Kuma Bear s2"
             ],
             "火": [
-                "❓1500 Kizuna no Allele"
+                "🟦1530 Kubo-san Won't Let Me Be Invisible",
+                "❓1630 The Marginal Service",
+                "❓0000 Kizuna no Allele"
             ],
             "水": [
-
+                "❓1530 Kamikatsu: What God Does in a World Without Gods"
             ],
             "木": [
-                "❓1500 The IDOLM@STER Cinderella Girls: U149",
-                "❓1500 The Ancient Magus' Bride s2"
+                "❓1400 The Ancient Magus' Bride s2",
+                "🟠1530 Dr. Stone s3",
+                "🟠0000 Yuri is My Job!",
+                "❓0000 The IDOLM@STER Cinderella Girls: U149"
             ],
             "金": [
-                "❓1500 Birdie Wing s2",
-                "❓1500 I Got a Cheat Skill in Another World",
-                "❓1500 \"Oshi no Ko\"",
-                "❓1500 Opus.COLORs"
+                "❓1800 Magical Girl Magical Destroyers",
+                "🟠0000 Tonikawa s2",
+                "❓0000 Birdie Wing s2",
+                "❓0000 I Got a Cheat Skill in Another World",
+                "❓0000 \"Oshi no Ko\"",
+                "❓0000 Opus.COLORs"
             ],
             "土": [
-                "❓1500 Otaku Elf",
-                "❓1500 My One-Hit Kill Sister"
+                "❓1530 Loving Yamada at Lv999",
+                "❓0000 The Dangers in My Heart",
+                "❓0000 Otaku Elf",
+                "❓0000 My One-Hit Kill Sister"
             ],
             "❓": [
-                "❓1500 Kimetsu no Yaiba: Swordsmith Village Arc",
-                "❓1500 Dr. Stone s3",
-                "❓1500 Tonikawa s2",
-                "❓1500 Jigokuraku",
-                "❓1500 KonoSuba: An Explosion on This Wonderful World!",
-                "❓1500 Ousama Ranking s2",
-                "❓1500 Mashle: Magic and Muscles",
-                "❓1500 Kuma Kuma Kuma Bear s2",
-                "❓1500 Loving Yamada at Lv999",
-                "❓1500 Insomniacs After School",
-                "❓1500 Edens Zero s2",
-                "❓1500 My Home Hero",
-                "❓1500 The Dangers in My Heart",
-                "🟠1500 Mobile Suit Gundam: The Witch from Mercury s2",
-                "❓1500 Dead Mount Death Play",
-                "🟠1500 Skip and Loafer",
-                "❓1500 Yuri is My Job!",
-                "❓1500 The Legendary Hero Is Dead!",
-                "❓1500 The Aristocrat's Otherworldly Adventure",
-                "❓1500 Sacrificial Princess and the King of Beasts",
-                "❓1500 Heavenly Delusion",
-                "❓1500 Blue Orchestra",
-                "❓1500 The Café Terrace and Its Goddesses",
-                "❓1500 Magical Girl Magical Destroyers ",
-                "❓1500 The Marginal Service",
-                "❓1500 Tokyo Mew Mew New ♡ s2",
-                "❓1500 Kawaisugi Crisis",
-                "❓1500 Kamikatsu",
-                "❓1500 Alice Gear Aegis Expansion",
-                "❓1500 In Another World With My Smartphone s2"
+                "🟠0000 Mobile Suit Gundam: The Witch from Mercury s2",
+                "🟠0000 Skip and Loafer",
+                "❓0000 Kimetsu no Yaiba: Swordsmith Village Arc",
+                "❓0000 Jigokuraku",
+                "❓0000 KonoSuba: An Explosion on This Wonderful World!",
+                "❓0000 Ousama Ranking s2",
+                "❓0000 Mashle: Magic and Muscles",
+                "❓0000 Insomniacs After School",
+                "❓0000 Edens Zero s2",
+                "❓0000 Dead Mount Death Play",
+                "❓0000 The Legendary Hero Is Dead!",
+                "❓0000 The Aristocrat's Otherworldly Adventure",
+                "❓0000 Sacrificial Princess and the King of Beasts",
+                "❓0000 Heavenly Delusion",
+                "❓0000 Blue Orchestra",
+                "❓0000 The Café Terrace and Its Goddesses",
+                "❓0000 Tokyo Mew Mew New ♡ s2",
+                "❓0000 Kawaisugi Crisis",
+                "❓0000 In Another World With My Smartphone s2"
             ]
         },
         "wrap-up": null
