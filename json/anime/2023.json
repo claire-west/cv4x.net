@@ -69,7 +69,7 @@
             {
                 "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
                 "episodes": 12,
-                "text": "I love the light novel version and the anime adaptation absolutely did it justice. Highlight of the season for me.",
+                "text": "",
                 "line2": "",
                 "rating": 9,
                 "mal": 52736
@@ -168,13 +168,14 @@
         "schedule": {
             "日": [
                 "🟠1400 My Clueless First Friend",
+                "🟠0000 Mobile Suit Gundam: The Witch from Mercury s2",
                 "🟠0000 My Home Hero",
                 "❓0000 A Galaxy Next Door",
                 "❓0000 Summoned to Another World for a Second Time"
             ],
             "月": [
                 "🟠1630 Vinland Saga s2",
-                "❓1800 Alice Gear Aegis Expansion",
+                "🟦1800 Alice Gear Aegis Expansion",
                 "❓0000 The Reason Why Raeliana Ended up at the Duke's Mansion",
                 "❓0000 Kuma Kuma Kuma Bear s2"
             ],
@@ -194,27 +195,28 @@
             ],
             "金": [
                 "❓1800 Magical Girl Magical Destroyers",
+                "🟦0000 \"Oshi no Ko\"",
                 "🟠0000 Tonikawa s2",
                 "❓0000 Birdie Wing s2",
                 "❓0000 I Got a Cheat Skill in Another World",
-                "❓0000 \"Oshi no Ko\"",
                 "❓0000 Opus.COLORs"
             ],
             "土": [
                 "❓1530 Loving Yamada at Lv999",
-                "❓0000 The Dangers in My Heart",
-                "❓0000 Otaku Elf",
+                "🟦0000 The Dangers in My Heart",
+                "🟦0000 Otaku Elf",
                 "❓0000 My One-Hit Kill Sister"
             ],
             "❓": [
-                "🟠0000 Mobile Suit Gundam: The Witch from Mercury s2",
                 "🟠0000 Skip and Loafer",
+                "🟦0000 Insomniacs After School",
+                "🟦0000 Tokyo Mew Mew New ♡ s2",
+                "🟦0000 Kawaisugi Crisis",
                 "❓0000 Kimetsu no Yaiba: Swordsmith Village Arc",
                 "❓0000 Jigokuraku",
                 "❓0000 KonoSuba: An Explosion on This Wonderful World!",
                 "❓0000 Ousama Ranking s2",
                 "❓0000 Mashle: Magic and Muscles",
-                "❓0000 Insomniacs After School",
                 "❓0000 Edens Zero s2",
                 "❓0000 Dead Mount Death Play",
                 "❓0000 The Legendary Hero Is Dead!",
@@ -223,8 +225,6 @@
                 "❓0000 Heavenly Delusion",
                 "❓0000 Blue Orchestra",
                 "❓0000 The Café Terrace and Its Goddesses",
-                "❓0000 Tokyo Mew Mew New ♡ s2",
-                "❓0000 Kawaisugi Crisis",
                 "❓0000 In Another World With My Smartphone s2"
             ]
         },
