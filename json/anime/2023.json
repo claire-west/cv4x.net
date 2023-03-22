@@ -167,66 +167,71 @@
     "春": {
         "schedule": {
             "日": [
+                "🟠0900 Mobile Suit Gundam: The Witch from Mercury s2",
+                "❓0900 Blue Orchestra",
                 "🟠1400 My Clueless First Friend",
-                "🟠0000 Mobile Suit Gundam: The Witch from Mercury s2",
-                "🟠0000 My Home Hero",
-                "❓0000 A Galaxy Next Door",
-                "❓0000 Summoned to Another World for a Second Time"
+                "🟠1500 Kimetsu no Yaiba: Swordsmith Village Arc",
+                "❓1500 World Dai Star",
+                "🟠1530 My Home Hero",
+                "🟠1600 The Aristocrat's Otherworldly Adventure",
+                "❓1800 In Another World With My Smartphone s2"
             ],
             "月": [
+                "🟠1330 Why Raeliana Ended up at the Duke's Mansion",
+                "🟠1400 Kuma Kuma Kuma Bear s2",
+                "🟦1600 Insomniacs After School",
+                "🟠1600 Dead Mount Death Play",
                 "🟠1630 Vinland Saga s2",
-                "🟦1800 Alice Gear Aegis Expansion",
-                "❓0000 The Reason Why Raeliana Ended up at the Duke's Mansion",
-                "❓0000 Kuma Kuma Kuma Bear s2"
+                "🟦1800 Alice Gear Aegis Expansion"
             ],
             "火": [
+                "🟠1500 Skip and Loafer",
                 "🟦1530 Kubo-san Won't Let Me Be Invisible",
+                "🟦1600 Tokyo Mew Mew New ♡ s2",
                 "❓1630 The Marginal Service",
-                "❓0000 Kizuna no Allele"
+                "❓1730 Kizuna no Allele",
+                "🟠0000 X&Y"
             ],
             "水": [
-                "❓1530 Kamikatsu: What God Does in a World Without Gods"
+                "❓1230 Sorcerous Stabber Orphen s4",
+                "🟠1730 Kamikatsu: What God Does in a World Without Gods",
+                "🟠1600 Sacrificial Princess and the King of Beasts",
+                "❓1600 The IDOLM@STER Cinderella Girls: U149"
             ],
             "木": [
-                "❓1400 The Ancient Magus' Bride s2",
+                "🟠1400 The Ancient Magus' Bride s2",
+                "🟠1430 Yuri is My Job!",
                 "🟠1530 Dr. Stone s3",
-                "🟠0000 Yuri is My Job!",
-                "❓0000 The IDOLM@STER Cinderella Girls: U149"
+                "❓1600 Opus.COLORs",
+                "🟠1630 Ousama Ranking s2",
+                "🟠1700 KonoSuba: An Explosion on This Wonderful World!",
+                "🟠1700 The Legendary Hero Is Dead!"
             ],
             "金": [
-                "❓1800 Magical Girl Magical Destroyers",
-                "🟦0000 \"Oshi no Ko\"",
-                "🟠0000 Tonikawa s2",
-                "❓0000 Birdie Wing s2",
-                "❓0000 I Got a Cheat Skill in Another World",
-                "❓0000 Opus.COLORs"
+                "🟦1430 \"Oshi no Ko\"",
+                "🟦1430 Kawaisugi Crisis",
+                "🟠1600 Mashle: Magic and Muscles",
+                "🟠1630 I Got a Cheat Skill in Another World",
+                "🟠1700 Birdie Wing s2",
+                "🟠1700 Tonikawa s2",
+                "🟠1730 The Café Terrace and Its Goddesses",
+                "🟠1800 Magical Girl Magical Destroyers",
+                "🟦1830 Otaku Elf",
+                "🟠1730 Rokudo's Bad Girls"
             ],
             "土": [
+                "🟠0930 Mix: Meisei Story s2",
+                "❓1400 Heavenly Delusion",
+                "🟠1430 My One-Hit Kill Sister",
+                "🟠1500 Hell's Paradise: Jigokuraku",
                 "❓1530 Loving Yamada at Lv999",
-                "🟦0000 The Dangers in My Heart",
-                "🟦0000 Otaku Elf",
-                "❓0000 My One-Hit Kill Sister"
+                "❓1700 Edens Zero s2",
+                "🟦1730 The Dangers in My Heart",
+                "🟠1730 A Galaxy Next Door",
+                "🟠1800 Summoned to Another World for a Second Time",
+                "❓0100 Tousouchuu: Great Mission"
             ],
-            "❓": [
-                "🟠0000 Skip and Loafer",
-                "🟦0000 Insomniacs After School",
-                "🟦0000 Tokyo Mew Mew New ♡ s2",
-                "🟦0000 Kawaisugi Crisis",
-                "❓0000 Kimetsu no Yaiba: Swordsmith Village Arc",
-                "❓0000 Jigokuraku",
-                "❓0000 KonoSuba: An Explosion on This Wonderful World!",
-                "❓0000 Ousama Ranking s2",
-                "❓0000 Mashle: Magic and Muscles",
-                "❓0000 Edens Zero s2",
-                "❓0000 Dead Mount Death Play",
-                "❓0000 The Legendary Hero Is Dead!",
-                "❓0000 The Aristocrat's Otherworldly Adventure",
-                "❓0000 Sacrificial Princess and the King of Beasts",
-                "❓0000 Heavenly Delusion",
-                "❓0000 Blue Orchestra",
-                "❓0000 The Café Terrace and Its Goddesses",
-                "❓0000 In Another World With My Smartphone s2"
-            ]
+            "❓": []
         },
         "wrap-up": null
     },
