@@ -131,6 +131,9 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
 #content-anime .wrap-up dd {
     margin-left: 3rem;
 }
+#content-anime .wrap-up dd:last-child {
+    margin-top: 0.35rem;
+}
 #content-anime .wrap-up dl > div {
     position: relative;
     min-height: 6rem;
