@@ -75,6 +75,13 @@
                 "mal": 52736
             },
             {
+                "title": "Tsurune: The Linking Shot",
+                "episodes": 13,
+                "text": "Season 1 was already great, but this sequel is even better and easily makes for one of the best sports anime out there.",
+                "rating": 9,
+                "mal": 52826
+            },
+            {
                 "title": "The Eminence in Shadow",
                 "episodes": 20,
                 "text": "A ridiculous, comically-edgy isekai about a kid living his dream of being a background character who's secretly a mysterious all-powerful edgelord operating in the shadows.",
@@ -139,6 +146,13 @@
                 "mal": 51586
             },
             {
+                "title": "The Reincarnation of the Strongest Exorcist in Another World",
+                "episodes": 13,
+                "text": "Just good enough to keep me from getting bored. A decent isekai to turn your brain off to, if you don't mind some really bad CG every once in a while.",
+                "rating": 5,
+                "mal": 50932
+            },
+            {
                 "title": "High Card",
                 "episodes": 12,
                 "text": "52 cards, each granting the holder a unique power. Interesting and stylish premise, but extremely generic and predictable execution.",
@@ -153,24 +167,6 @@
                 "line2": "I appreciate that it's at least trying to do something different, but I honestly only finished this through sheer inertia.",
                 "rating": 3,
                 "mal": 50481
-            }
-        ],
-        "wrap-up (draft)": [
-            {
-                "title": "Tsurune: The Linking Shot",
-                "episodes": 13,
-                "text": "The first season was already good but I adored every episode of this follow-up.",
-                "line2": "",
-                "rating": 10,
-                "mal": 52826
-            },
-            {
-                "title": "The Reincarnation of the Strongest Exorcist in Another World",
-                "episodes": 13,
-                "text": "It's... interesting enough, but not very good. Lots of bad CG.",
-                "line2": "A decent isekai to turn your brain off to.",
-                "rating": 5,
-                "mal": 50932
             }
         ]
     },
