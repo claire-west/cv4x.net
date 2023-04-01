@@ -95,6 +95,15 @@
             }
         });
 
+        globalModel._set('twemojify_custom', function(text) {
+            setTimeout(() => {
+                twemojiCustom.parse(this.get ? this.get(0) : this);
+            }, 0);
+            if (text) {
+                return text;
+            }
+        });
+
         return globalModel;
     });
 })(window.dynCore);

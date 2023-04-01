@@ -18,7 +18,7 @@
             // parse hhmm as UTC+0
             // toTimeString uses browser time zone
             // return in hhmm format
-            return new Date(Date.parse('1970-01-01T' + time.substr(0, 2) + ':' + time.substr(2, 2) + '-00:00')).toTimeString('hhmm').substr(0, 5).replace(':', '');
+            return new Date(Date.parse(new Date().toISOString().substr(0, 10) + 'T' + time.substr(0, 2) + ':' + time.substr(2, 2) + 'Z')).toTimeString().substr(0, 5).replace(':', '');
         };
 
         var convertScheduleTZs = function(schedule) {
@@ -187,7 +187,7 @@
                     return 'https://myanimelist.net/anime/' + mal;
                 },
 
-                twemojify: globalModel.twemojify // function binding doesn't traverse models (yet)
+                twemojify: globalModel.twemojify_custom // function binding doesn't traverse models (yet)
             }, globalModel)
         };
 
