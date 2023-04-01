@@ -12,7 +12,7 @@ body.light #content-anime .weeklySchedule {
 #content-anime button.screenshotButton {
     padding: 0.3rem 0.75rem;
     font-size: 1.3rem;
-    line-height: 1.4;
+    line-height: 1.4065;
 }
 #content-anime .seasonButtons + div > button:first-child,
 #content-anime button.showHideButton,
@@ -48,14 +48,27 @@ body.light #content-anime > div:first-child button.active:not([disabled]) {
     margin-bottom: 0.25rem;
 }
 
-#content-anime > div:not(:first-child){
+#content-anime > .flex button i.fa-solid {
+    line-height: 0;
+}
+
+#content-anime > div.wrap-up {
     padding-top: 0.75rem;
     padding-bottom: 0.25rem;
+}
+
+#content-anime > div.weeklySchedule {
+    padding-top: 0.25rem;
+    padding-bottom: 0rem;
 }
 
 #content-anime .weeklySchedule .row {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+#content-anime .weeklySchedule .row:last-child {
+    padding-bottom: 0.75rem;
 }
 
 #content-anime .weeklySchedule .col {
