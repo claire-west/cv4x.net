@@ -46,7 +46,7 @@
         var fetchYear = function(year) {
             if (!years[year]) {
                 years[year] = $.Deferred();
-                $.ajax('/json/anime/' + year + '.json').done(function(data) {
+                $.ajax('/json/anime/' + year + '.json?_=' + Date.now()).done(function(data) {
                     for (var season in data) {
                         if (data[season] && data[season].schedule) {
                             convertScheduleTZs(data[season].schedule);
@@ -59,8 +59,8 @@
         };
 
         var controller = {
-            changeHash: function(year, season, tab) {
-                var hash = [ year, season, tab ].filter(n => n).join('/');
+            changeHash: function() {
+                var hash = [...arguments].join('/');
                 window.location.replace('#' + hash);
             },
 
@@ -179,6 +179,7 @@
                     var $element = $('#content-anime .weeklySchedule');
                     html2canvas($element.get(0), {
                         useCORS: true,
+                        scale: 3,
                         height: $element.height() - 1
                     }).then(function(canvas) {
                         download(canvas.toDataURL(), model.year + ' (' + model.season + ').png');
