@@ -1,11 +1,3 @@
-#content-anime .weeklySchedule {
-    background-color: #2f3136;
-}
-
-body.light #content-anime .weeklySchedule {
-    background-color: #fff;
-}
-
 #content-anime .seasonButtons button,
 #content-anime .seasonButtons + div > button:first-child,
 #content-anime button.showHideButton,

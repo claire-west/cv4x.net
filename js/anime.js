@@ -176,11 +176,10 @@
                 },
 
                 downloadSchedule: function(model) {
-                    var $element = $('#content-anime .weeklySchedule');
-                    html2canvas($element.get(0), {
+                    html2canvas($('#content-anime .weeklySchedule').get(0), {
                         useCORS: true,
                         scale: 3,
-                        height: $element.height() - 1
+                        backgroundColor: $('body').hasClass('light') ? '#fff' : '#2f3136'
                     }).then(function(canvas) {
                         download(canvas.toDataURL(), model.year + ' (' + model.season + ').png');
                     });
