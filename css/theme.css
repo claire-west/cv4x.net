@@ -29,7 +29,7 @@ body.light .top-bar .top-bar-nav {
 .link-bar-items {
     justify-content: space-around;
     max-width: 65rem;
-    padding: 0rem 0.5rem;
+    padding: 0rem 0.2rem;
     margin-left: auto;
     margin-right: auto;
     background: #1d1d1d;
@@ -421,5 +421,31 @@ i.svg-icon:hover {
     .col .row .col {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .link-bar-items a i {
+        font-size: 1.25rem;
+    }
+
+    .link-bar-items .mal-icon i,
+    .link-bar-items .pixiv-icon i,
+    .link-bar-items .kofi-icon i {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .link-bar-items a i {
+        font-size: 1rem;
+    }
+
+    .link-bar-items .mal-icon i,
+    .link-bar-items .pixiv-icon i,
+    .link-bar-items .kofi-icon i {
+        height: 1rem;
+        width: 1rem;
     }
 }
