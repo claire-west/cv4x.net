@@ -240,6 +240,109 @@
         },
         "wrap-up": null
     },
-    "夏": null,
-    "秋": null
+    "夏": {
+        "schedule": {
+            "日": [
+            ],
+            "月": [
+            ],
+            "火": [
+            ],
+            "水": [
+            ],
+            "木": [
+            ],
+            "金": [
+            ],
+            "土": [
+            ],
+            "❓": [
+                "❓0000 Jujutsu Kaisen s2",
+                "❓0000 Mushoku Tensei s2",
+                "❓0000 Masamune-kun no Revenge s2",
+                "❓0000 Bleach: Thousand-Year Blood War 2nd cour",
+                "❓0000 Rent-a-Girlfriend s3",
+                "❓0000 Atelier Ryza",
+                "❓0000 Horimiya: Piece",
+                "❓0000 Bungou Stray Dogs s5",
+                "❓0000 Helck",
+                "❓0000 Reborn as a Vending Machine",
+                "❓0000 Zom 100: Bucket List of the Dead",
+                "❓0000 The Duke of Death and His Maid s2",
+                "❓0000 My Happy Marriage",
+                "❓0000 The Girl I Like Forgot Her Glasses",
+                "❓0000 Liar Liar",
+                "❓0000 Rurouni Kenshin",
+                "❓0000 Reign of the Seven Spellblades",
+                "❓0000 Class Room✿For Heroes",
+                "❓0000 Saint Cecilia and Pastor Lawrence",
+                "❓0000 My Unique Skill Makes Me OP Even at Level 1",
+                "❓0000 My Company's Small Senpai",
+                "❓0000 Sugar Apple Fairy Tale part 2",
+                "❓0000 The Most Heretical Last Boss Queen",
+                "❓0000 Dark Gathering",
+                "❓0000 Hataraku Maou-sama!! s2",
+                "❓0000 The Dreaming Boy is a Realist",
+                "❓0000 Am I Actually the Strongest?",
+                "❓0000 Yohane of the Parhelion",
+                "❓0000 Tsuyokute New Saga",
+                "❓0000 The Great Cleric: White-Collar Survival in Another World",
+                "❓0000 Sweet Reincarnation",
+                "❓0000 TenPuru: No One Can Live on Loneliness",
+                "❓0000 The Masterful Cat Is Depressed Again Today",
+                "❓0000 Undead Girl Murder Farce",
+                "❓0000 Mononogatari s2",
+                "❓0000 The Gene of AI",
+                "❓0000 The iDOLM@STER Million Live!",
+                "❓0000 Ayaka: A Story of Bonds and Wounds",
+                "❓0000 Spy Classroom s2",
+                "❓0000 Synduality: Noir",
+                "❓0000 Cardfight!! Vanguard: will+Dress s3",
+                "❓0000 Shadowverse Flame 5th cour"
+            ]
+        }
+    },
+    "秋": {
+        "schedule": {
+            "日": [
+            ],
+            "月": [
+            ],
+            "火": [
+            ],
+            "水": [
+            ],
+            "木": [
+            ],
+            "金": [
+            ],
+            "土": [
+            ],
+            "❓": [
+                "❓0000 Spy x Family s2",
+                "❓0000 The Rising of the Shield Hero s3",
+                "❓0000 The Faraway Paladin s2",
+                "❓0000 Frieren: Beyond Journey's End",
+                "❓0000 The Seven Deadly Sins s6",
+                "❓0000 Girlfriend, Girlfriend s2",
+                "❓0000 Undead Unluck",
+                "❓0000 Ron Kamonohashi: Deranged Detective",
+                "❓0000 Shangri-La Frontier",
+                "❓0000 The Vexations of a Shut-In Vampire Princess",
+                "❓0000 Dead Mount Death Play part 2",
+                "❓0000 The Kingdoms of Ruin",
+                "❓0000 Under Ninja",
+                "❓0000 A Girl & Her Guard Dog",
+                "❓0000 Leading the Young Lady I Picked Up Astray",
+                "❓0000 Tearmoon Empire",
+                "❓0000 Paradox Live the Animation",
+                "❓0000 The Family Circumstances of the Mismatched Witches ",
+                "❓0000 Captain Tsubasa: Junior Youth-hen",
+                "❓0000 GOD.app",
+                "❓0000 Hypnosis Mic: Division Rap Battle s2",
+                "❓0000 Migi & Dali",
+                "❓0000 Firefighter Daigo"
+            ]
+        }
+    }
 }
