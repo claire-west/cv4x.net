@@ -12,7 +12,7 @@
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var convertTZ = function(time) {
-            if (time === '0000') {
+            if (time === '0000' || time === '????') {
                 return '????';
             }
             // parse hhmm as UTC+0
