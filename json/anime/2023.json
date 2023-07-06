@@ -74,20 +74,20 @@
                 "mal": 52826
             },
             {
-                "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
-                "episodes": 12,
-                "text": "At its core this is a queer story about reducing the divide between commonfolk and nobility, with a heavy focus on the characters' emotional struggles as they discover and pursue their aspirations.",
-                "line2": "As someone who has read the novels, this adaptation was everything I could have hoped for. The animation and voicework was great all-around, the writing was well-adapted (especially in the places where the novels had pacing issues!), and they didn't water down the themes as I had feared. I absolutely recommend it.",
-                "rating": 9,
-                "mal": 52736
-            },
-            {
                 "title": "The Eminence in Shadow",
                 "episodes": 20,
                 "text": "A ridiculous, comically-edgy isekai about a kid living his dream of being a background character who's secretly a mysterious all-powerful edgelord operating in the shadows.",
                 "line2": "Great, if you can buy into the premise.",
                 "rating": 9,
                 "mal": 48316
+            },
+            {
+                "title": "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+                "episodes": 12,
+                "text": "At its core this is a queer story about reducing the divide between commonfolk and nobility, with a heavy focus on the characters' emotional struggles as they discover and pursue their aspirations.",
+                "line2": "As someone who has read the novels, I'm quite happy with the adaptation. The animation and voicework was great all-around, the writing was well-adapted (especially in the places where the novels had pacing issues), and they didn't water down the themes.",
+                "rating": 9,
+                "mal": 52736
             },
             {
                 "title": "Welcome to Demon School! Iruma-kun s3",
@@ -243,64 +243,64 @@
     "夏": {
         "schedule": {
             "日": [
-                "📉0800 Zom 100: Bucket List of the Dead",
-                "❓1430 Yohane of the Parhelion",
-                "❓1500 Class Room✿For Heroes",
-                "❓1600 Mushoku Tensei s2",
+                "🟠0800 Zom 100: Bucket List of the Dead",
+                "🟠1400 The Duke of Death and His Maid s2",
+                "🟠1430 Yohane of the Parhelion",
+                "🟠1500 Class Room✿For Heroes",
+                "🟠1530 Mushoku Tensei s2",
                 "🟦1700 Dark Gathering"
             ],
             "月": [
                 "🟦1330 Level 1 Demon Lord and One Room Hero",
-                "❓1500 Masamune-kun no Revenge s2",
-                "❓1600 Synduality: Noir",
-                "❓1600 Mononogatari s2",
-                "❓1730 Sweet Reincarnation",
-                "❓1800 The Dreaming Boy is a Realist"
+                "🟠1300 Masamune-kun no Revenge s2",
+                "💫1600 Synduality: Noir",
+                "🟠1700 Mononogatari s2",
+                "🟠1830 Sweet Reincarnation",
+                "🟦1800 The Dreaming Boy is a Realist"
             ],
             "火": [
-                "❓1500 The Girl I Like Forgot Her Glasses",
+                "🟠1500 The Girl I Like Forgot Her Glasses",
                 "🟦1730 Helck"
             ],
             "水": [
-                "❓1400 Reborn as a Vending Machine",
-                "❓1500 Bungou Stray Dogs s5",
-                "❓1530 My Happy Marriage",
+                "🟠1400 Reborn as a Vending Machine",
+                "🟠1500 Bungou Stray Dogs s5",
+                "📉1530 My Happy Marriage",
                 "🟠1630 Saint Cecilia and Pastor Lawrence",
-                "❓1700 Undead Girl Murder Farce"
+                "🟠1725 Undead Girl Murder Farce"
             ],
             "木": [
-                "❓1500 BanG Dream! It's MyGO!!!!!",
-                "❓1530 Hataraku Maou-sama!! s2",
-                "❓1600 Jujutsu Kaisen s2",
-                "🟦1600 The Most Heretical Last Boss Queen",
-                "🟠1700 Rurouni Kenshin",
-                "❓1730 The Great Cleric: White-Collar Survival in Another World"
+                "🟠1430 Hataraku Maou-sama!! s2",
+                "❓1430 Spy Classroom s2",
+                "🟦1530 The Most Heretical Last Boss Queen",
+                "🟠1700 Jujutsu Kaisen s2",
+                "🟠1730 BanG Dream! It's MyGO!!!!!",
+                "🟠1730 The Great Cleric: White-Collar Survival in Another World",
+                "🟠1800 Rurouni Kenshin",
+                "🟠???? Link Click s2"
             ],
             "金": [
-                "❓1330 Sugar Apple Fairy Tale part 2",
+                "🟠1330 Sugar Apple Fairy Tale part 2",
                 "❓1600 Noble Farmer",
-                "❓1630 Reign of the Seven Spellblades",
-                "❓1800 The Gene of AI",
-                "❓1830 The Masterful Cat Is Depressed Again Today"
+                "🟠1630 Reign of the Seven Spellblades",
+                "🟠1800 The Gene of AI",
+                "🟠1830 The Masterful Cat Is Depressed Again Today",
+                "🟦2310 Cardfight!! Vanguard: will+Dress s3"
             ],
             "土": [
-                "❓2340 Cardfight!! Vanguard: will+Dress s3",
-                "❓0330 Shadowverse Flame 5th cour",
-                "❓1400 My Unique Skill Makes Me OP Even at Level 1",
-                "❓1430 Liar Liar",
+                "🟠0330 Shadowverse Flame 5th cour",
+                "🟠1400 My Unique Skill Makes Me OP Even at Level 1",
+                "🟠1430 Liar Liar",
                 "🟠1500 Bleach: Thousand-Year Blood War 2nd cour",
-                "❓1530 Horimiya: Piece",
-                "🟠1600 Atelier Ryza",
-                "❓1700 Ayaka: A Story of Bonds and Wounds",
-                "❓1730 Rent-a-Girlfriend s3",
-                "❓1730 TenPuru: No One Can Live on Loneliness",
-                "❓1730 My Tiny Senpai",
-                "❓1800 Am I Actually the Strongest?"
+                "🟠1600 Horimiya: Piece",
+                "🟠1630 Atelier Ryza",
+                "🟠1730 Rent-a-Girlfriend s3",
+                "🟠1730 Ayaka: A Story of Bonds and Wounds",
+                "🟠1730 TenPuru: No One Can Live on Loneliness",
+                "🟠1815 My Tiny Senpai",
+                "🟠1845 Am I Actually the Strongest?"
             ],
-            "❓": [
-                "❓0000 The Duke of Death and His Maid s2",
-                "❓0000 Spy Classroom s2"
-            ]
+            "❓": []
         }
     },
     "秋": {
