@@ -157,6 +157,10 @@ body.light .top-bar a:hover {
     color: hsla(0,0%,100%,.85);
 }
 
+tr.v-top {
+    vertical-align: top;
+}
+
 .error {
     border: 1px solid #A30303;
 }

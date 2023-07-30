@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hi, I'm Claire</title>
+    <meta property="og:site_name" name="og:site_name" content="MoonlitClaire">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Claire's favorite media">
+    <meta property="og:description" name="description" type="description" content="Claire's favorite vocal synth songs and other media">
+    <meta property="og:image" name="twitter:image" content="https://moonlitclaire.com/img/claire-s.png">
+    <meta name="twitter:card" content="summary"></meta>
+
+    <link id="favicon" rel="icon" href="/favicon.ico" />
+    <link href="https://lib.claire-west.ca/vend/fonts/fontawesome-all-6.2.0.min.css" rel="stylesheet" />
+    <link href="https://lib.claire-west.ca/vend/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://lib.claire-west.ca/vend/js/twemoji.min.js"></script>
+    <script src="/js/twemoji.min.js"></script>
+    <link href="/css/layout.css" rel="stylesheet"></link>
+    <link href="/css/style.css" rel="stylesheet"></link>
+    <link href="/css/theme.css" rel="stylesheet"></link>
+</head>
+<body class="nav">
+
+<header><z--frag-header /></header>
+
+<div id="main" class="flex">
+    <nav hidden><z--frag-nav /></nav>
+    <div id="content-blocker"><div z--click="onToggleNav"></div></div>
+    <section id="content" class="app row" hidden>
+        <section id="content-faves" z--controller>
+            <!-- <div class="col flex align-center">
+                <div class="flex">
+                    <button class="button"
+                        data-tab="music"
+                        z--click="setTab"
+                        z--class='{
+                            "class": "active",
+                            "path": "tab",
+                            "eq": "music"
+                        }'>Vocal Synth Music</button>
+                    <button class="button"
+                        data-tab="music2"
+                        z--click="setTab"
+                        z--class='{
+                            "class": "active",
+                            "path": "tab",
+                            "eq": "music2"
+                        }'>Other Music</button>
+                </div>
+            </div> -->
+
+            <z--frag-faves-vocalsynthmusic
+                z--visible='{
+                    "path": "tab",
+                    "eq": "music"
+                }' />
+
+            <div class="col"
+                z--visible='{
+                    "path": "tab",
+                    "eq": "music2"
+                }'>
+                <p>Nothing here yet</p>
+            </div>
+        </section>
+    </section>
+</div>
+
+<footer><z--frag-footer /></footer>
+
+<div class="modal" hidden><div class="dialog"></div></div>
+
+<script src="https://lib.claire-west.ca/vend/js/jquery.min.js"></script>
+<script>
+    var theme = localStorage.getItem('theme');
+    if (theme) {
+        $('body').addClass(theme);
+    }
+</script>
+<script
+    src="https://lib.claire-west.ca/core/js/dynCore.js"
+    data-main="app.hashless"
+    data-ns='{
+        "app": "/"
+    }'
+    data-preload='[
+        "lib"
+    ]'>
+</script>
+<!-- <script
+    src="/js-lib/core/js/dynCore.js"
+    data-main="app.hashless"
+    data-ns='{
+        "app": "/",
+        "lib": "/js-lib/util"
+    }'>
+</script> -->
+</body>
+</html>
