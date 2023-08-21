@@ -457,12 +457,32 @@ label.row {
     margin-left: auto;
 }
 
+.align-start {
+    align-items: start;
+}
+
 .align-center {
     align-items: center;
 }
 
 .align-end {
     align-items: end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-noshrink {
+    flex-shrink: 0;
 }
 
 .nopad, .row.nopad, .col.nopad, .col .row .col.nopad {

@@ -1,0 +1,107 @@
+#content-tierlist .tierlist-category,
+#content-tierlist .tierlist-item {
+    width: 8rem;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#content-tierlist .tierlist-category {
+    min-height: 6rem;
+    color: #111;
+    background-color: #858585;
+    border: 1px solid #000;
+    padding: 0;
+}
+
+/*#content-tierlist div.tierlist-content > div {
+    border-top: 1px solid #000;
+}
+#content-tierlist div.tierlist-content > div:last-child {
+    border-bottom: 1px solid #000;
+}*/
+
+#content-tierlist div.tierlist-content {
+    padding-bottom: 1.25rem;
+}
+
+#content-tierlist div.tierlist-content h2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.125rem;
+}
+
+#content-tierlist div.tierlist-content p {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+#content-tierlist div.tierlist-content > div:nth-child(3) .tierlist-category { background-color: #FF7F7F; }
+#content-tierlist div.tierlist-content > div:nth-child(4) .tierlist-category { background-color: #FFBF7F; }
+#content-tierlist div.tierlist-content > div:nth-child(5) .tierlist-category { background-color: #FFDF7F; }
+#content-tierlist div.tierlist-content > div:nth-child(6) .tierlist-category { background-color: #FFFF7F; }
+#content-tierlist div.tierlist-content > div:nth-child(7) .tierlist-category { background-color: #BFFF7F; }
+#content-tierlist div.tierlist-content > div:nth-child(8) .tierlist-category { background-color: #7FBFFF; }
+#content-tierlist div.tierlist-content > div:nth-child(9) .tierlist-category { background-color: #7F7FFF; }
+#content-tierlist div.tierlist-content > div:nth-child(10) .tierlist-category { background-color: #BF7FBF; }
+
+#content-tierlist .tierlist-item {
+    height: 6.5rem;
+    color: #222;
+    background-color: #efefef;
+    border: 1px solid #333;
+}
+
+#content-tierlist .tierlist-trash {
+    color: inherit;
+    background-color: hsla(218,5%,47%,.3);
+}
+#content-tierlist .tierlist-trash i {
+    font-size: 2rem;
+}
+
+#content-tierlist .tierlist-item span,
+#content-tierlist .tierlist-item img {
+    align-self: center;
+}
+
+#content-tierlist .tierlist-item textarea {
+    height: 100%;
+    width: 100%;
+    padding: 0.125rem;
+    margin: 0;
+    resize: none;
+    text-align: center;
+    border: none;
+}
+
+#content-tierlist div.tierlist-content > div:nth-child(3) .tierlist-reorder i:nth-child(2) {
+    margin-top: 1.9rem;
+}
+#content-tierlist .tierlist-reorder {
+    margin-left: auto;
+}
+#content-tierlist .tierlist-reorder i {
+    width: 2rem;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    cursor: pointer;
+}
+#content-tierlist .tierlist-reorder i:hover {
+    background-color: hsla(218,5%,47%,.6);
+}
+
+#content-tierlist div.tierlist-unassigned {
+    margin-bottom: 1.25rem;
+}
+#content-tierlist div.tierlist-unassigned > div {
+    ali
+}
+
+#content-tierlist .tierlist-toolbox button:not(:last-child) {
+    margin-right: 1px;
+}
+#content-tierlist .tierlist-toolbox i {
+    font-size: 1.4rem;
+    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}

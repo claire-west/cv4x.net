@@ -1,0 +1,90 @@
+[
+    {
+        "title": "Seasonal Anime – Spring 2023",
+        "description": null,
+        "tiers": [
+            {
+                "text": "Peak media",
+                "items": [
+                    "Skip and Loafer",
+                    "Gundam: The Witch from Mercury s2"
+                ]
+            },
+            {
+                "text": "Good shit",
+                "items": [
+                    "The Ancient Magus' Bride s2",
+                    "\"Oshi no Ko\""
+                ]
+            },
+            {
+                "text": "I enjoyed it",
+                "items": [
+                    "Kimetsu no Yaiba: Swordsmith Village Arc",
+                    "Dead Mount Death Play",
+                    "Birdie Wing s2",
+                    "My Love Story with Yamada-kun at Lv999",
+                    "Aiyou de Mishi (X&Y)"
+                ]
+            },
+            {
+                "text": "A little disappointing",
+                "items": [
+                    "Hell's Paradise: Jigokuraku"
+                ]
+            },
+            {
+                "text": "Fell behind, but plan to finish",
+                "items": [
+                    "Heavenly Delusion",
+                    "Insomniacs After School"
+                ]
+            },
+            {
+                "text": "Lost interest",
+                "items": [
+                    "KonoSuba: An Explosion on This Wonderful World!",
+                    "Mashle: Magic and Muscles",
+                    "Magical Girl Magical Destroyers"
+                ]
+            }
+        ],
+        "unassigned": [ "test" ]
+    },
+    {
+        "title": "Seasonal Anime – Summer 2023 (mid-season)",
+        "description": null,
+        "tiers": [
+            {
+                "text": "Peak media",
+                "items": [
+                    "Undead Girl Murder Farce",
+                    "Jujutsu Kaisen s2"
+                ]
+            },
+            {
+                "text": "Good shit",
+                "items": [
+                    "Zom 100: Bucket List of the Dead",
+                    "Rent-a-Girlfriend s3"
+                ]
+            },
+            {
+                "text": "So far so good",
+                "items": [
+                    "Reborn as a Vending Machine",
+                    "Helck"
+                ]
+            },
+            {
+                "text": "Hmm",
+                "items": [
+                    "Reign of the Seven Spellblades",
+                    "The Most Heretical Last Boss Queen",
+                    "Dark Gathering"
+                ]
+            }
+        ],
+        "unassigned": [ "https://synthv.info/img/eleanor-s.png", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6" ]
+    }
+]

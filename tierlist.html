@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>It's like TierMaker, but slightly less shit</title>
+    <meta property="og:site_name" name="og:site_name" content="MoonlitClaire">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="It's like TierMaker, but slightly less shit">
+    <meta property="og:description" name="description" type="description" content="A tierlist tool">
+    <meta property="og:image" name="twitter:image" content="https://moonlitclaire.com/img/claire-s.png">
+    <meta name="twitter:card" content="summary"></meta>
+
+    <link id="favicon" rel="icon" href="/favicon.ico" />
+    <link href="https://lib.claire-west.ca/vend/fonts/fontawesome-all-6.2.0.min.css" rel="stylesheet" />
+    <link href="https://lib.claire-west.ca/vend/bootstrap-icons.css" rel="stylesheet" />
+    <script src="https://lib.claire-west.ca/vend/js/twemoji.min.js"></script>
+    <script src="/js/twemoji.min.js"></script>
+    <link href="/css/layout.css" rel="stylesheet"></link>
+    <link href="/css/style.css" rel="stylesheet"></link>
+    <link href="/css/theme.css" rel="stylesheet"></link>
+</head>
+<body class="nav">
+
+<header><z--frag-header /></header>
+
+<div id="main" class="flex">
+    <nav hidden><z--frag-nav /></nav>
+    <div id="content-blocker"><div z--click="onToggleNav"></div></div>
+    <section id="content" class="app row" hidden>
+        <section id="content-tierlist" z--controller>
+            <div class="col tierlist-content flex-v align-stretch" z--iterate="list.tiers">
+                <h2 class="text-center" z--bind="list.title"></h2>
+                <p class="text-center" z--bind="list.description" z--visible="!!list.description"></p>
+                <div class="flex align-stretch" z--template>
+                    <div class="flex align-center flex-noshrink tierlist-category">
+                        <span z--bind='{
+                            "path": ">text",
+                            "fn": "bindContentEdit"
+                        }' z--change="onCategoryNameChange" contenteditable="true"></span>
+                    </div>
+                    <div class="flex flex-wrap align-center" z--iterate=">items">
+                        <div class="flex tierlist-item" z--template>
+                            <span z--bind=">"></span>
+                        </div>
+                    </div>
+                    <div class="flex-v align-center justify-center flex-noshrink tierlist-reorder" z--visible="!takingScreenshot">
+                        <i class="bi bi-chevron-compact-up" z--visible='{
+                            "path": "list.tiers",
+                            "fn": "isTopTier",
+                            "eq": false
+                        }' z--click="moveUp"></i>
+                        <i class="bi bi-x" z--click="deleteTier"></i>
+                        <i class="bi bi-chevron-compact-down" z--visible='{
+                            "path": "list.tiers",
+                            "fn": "isBottomTier",
+                            "eq": false
+                        }' z--click="moveDown"></i>
+                        <i class="bi bi-plus-lg" z--visible='{
+                            "path": "list.tiers",
+                            "fn": "isBottomTier"
+                        }' z--click="addTier"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col tierlist-unassigned flex align-start">
+                <div class="flex-v flex-noshrink">
+                    <div class="flex tierlist-item tierlist-add align-center">
+                        <textarea placeholder="Enter text or a link to an image, then press enter" z--bind="newItem"></textarea>
+                    </div>
+                    <div class="flex tierlist-item tierlist-trash align-center">
+                        <i class="bi bi-trash3"></i>
+                    </div>
+                </div>
+                <div class="flex flex-wrap align-center" z--iterate="list.unassigned">
+                    <div class="flex tierlist-item" z--template>
+                        <span z--bind=">" z--visible='{
+                            "path": ">",
+                            "fn": "isImageLink",
+                            "eq": false
+                        }'></span>
+                        <img z--bind='{
+                            "path": ">",
+                            "fn": "filterImageLink"
+                        }' z--visible='{
+                            "path": ">",
+                            "fn": "isImageLink"
+                        }' />
+                    </div>
+                </div>
+            </div>
+            <div class="col flex justify-center">
+                <div class="tierlist-toolbox flex align-center">
+                    <button class="button" title="Add Item" z--click="addItem" z--enabled="!!newItem">
+                        <i class="bi bi-plus-square"></i>
+                    </button>
+                    <button class="button" title="Download Screenshot" z--click="saveScreenshot">
+                        <i class="bi bi-camera"></i>
+                    </button>
+                    <button class="button" title="Download Tier List" z--click="saveTierList">
+                        <i class="bi bi-download"></i>
+                    </button>
+                    <label class="button" title="Load Tier List" for="tierListFileLoader">
+                        <i class="bi bi-folder2-open"></i>
+                    </label>
+                    <input id="tierListFileLoader" type="file" accept="application/json" z--change="loadTierList" hidden />
+                    <button class="button" title="New Tier List" z--click="newTierList">
+                        <i class="bi bi-file-earmark-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col mOffset3 m6">
+                <select class="appearance-auto" name="tierlist" z--iterate="allLists" z--bind='{
+                    "path": "=list.title",
+                    "fn": "onSetSelectedList"
+                }' z--change="onSelectChange">
+                    <option z--bind=">title" z--text=">title" z--template></option>
+                </select>
+            </div>
+            <div class="col">
+                <p>(hi there, this page is still under construction... you can't actually drag items around, delete them, or change the title yet)</p>
+            </div>
+        </section>
+    </section>
+</div>
+
+<footer><z--frag-footer /></footer>
+
+<div class="modal" hidden><div class="dialog"></div></div>
+
+<script src="https://lib.claire-west.ca/vend/js/jquery.min.js"></script>
+<script>
+    var theme = localStorage.getItem('theme');
+    if (theme) {
+        $('body').addClass(theme);
+    }
+</script>
+<script
+    src="https://lib.claire-west.ca/core/js/dynCore.js"
+    data-main="app.hashless"
+    data-ns='{
+        "app": "/"
+    }'
+    data-preload='[
+        "lib"
+    ]'>
+</script>
+<!-- <script
+    src="/js-lib/core/js/dynCore.js"
+    data-main="app.hashless"
+    data-ns='{
+        "app": "/",
+        "lib": "/js-lib/util"
+    }'>
+</script> -->
+</body>
+</html>

@@ -16,6 +16,11 @@
     -moz-appearance: none;
 }
 
+.appearance-auto {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
 label.inline {
     display: flex;
     align-items: center;
@@ -76,12 +81,28 @@ button i.bi {
     font-size: 1rem;
 }
 
-option {
-    background-color: #202225;
-}
-
 button, optgroup, select {
     color: inherit;
+}
+
+select {
+    border-radius: 0.25rem;
+    background-color: #43464C;
+    cursor: pointer;
+}
+
+option {
+    background-color: #43464C;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+body.light select {
+    background-color: #efefef;
+}
+
+body.light option {
+    background-color: #efefef;
 }
 
 input, textarea {
@@ -98,7 +119,7 @@ textarea {
     height: auto;
 }
 
-button {
+button, label.button {
     display: inline-block;
     text-align: center;
     line-height: 1;
@@ -113,7 +134,7 @@ button {
     font-size: .9rem;
     background-color: hsla(218,5%,47%,.3);
 }
-button:focus, button:hover {
+button:focus, button:hover, label.button:focus, label.button:hover {
     background-color: hsla(218,5%,47%,.6);
 }
 
