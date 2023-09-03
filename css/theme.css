@@ -22,7 +22,7 @@ body.light {
 .top-bar .top-bar-nav,
 body.light .top-bar,
 body.light .top-bar .top-bar-nav {
-    height: 3.5rem;
+    height: 3.125rem;
     background: none;
 }
 

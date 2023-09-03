@@ -174,10 +174,8 @@ img, iframe {
 }
 
 .top-bar {
-    height: 5rem;
     width: 100%;
-    height: 5rem;
-    padding-top: 0.25rem;
+    padding-top: 0.125rem;
     top: 0px;
     left: 0px;
     display: flex;

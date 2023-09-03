@@ -230,7 +230,8 @@ tr.v-top {
 }
 
 .app {
-    min-height: 815px;
+    /*min-height: 815px;*/
+    min-height: calc(100vh - 9.5rem);
 }
 
 .modal {
