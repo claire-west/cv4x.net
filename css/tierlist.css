@@ -1,5 +1,7 @@
 #content-tierlist .tierlist-category,
-#content-tierlist .tierlist-item {
+#content-tierlist .tierlist-item,
+#content-tierlist .tierlist-add,
+#content-tierlist .tierlist-trash {
     width: 8rem;
     text-align: center;
     justify-content: center;
@@ -7,7 +9,7 @@
 }
 
 #content-tierlist .tierlist-category {
-    min-height: 6rem;
+    min-height: 6.5rem;
     color: #111;
     background-color: #858585;
     border: 1px solid #000;
@@ -44,11 +46,22 @@
 #content-tierlist div.tierlist-content > div:nth-child(9) .tierlist-category { background-color: #7F7FFF; }
 #content-tierlist div.tierlist-content > div:nth-child(10) .tierlist-category { background-color: #BF7FBF; }
 
-#content-tierlist .tierlist-item {
+#content-tierlist .tierlist-item,
+#content-tierlist .tierlist-add,
+#content-tierlist .tierlist-trash {
     height: 6.5rem;
     color: #222;
     background-color: #efefef;
     border: 1px solid #333;
+}
+
+#content-tierlist .tierlist-item {
+    cursor: pointer;
+}
+
+#content-tierlist .tierlist-item span,
+#content-tierlist .tierlist-item img {
+    align-self: center;
 }
 
 #content-tierlist .tierlist-trash {
@@ -58,13 +71,11 @@
 #content-tierlist .tierlist-trash i {
     font-size: 2rem;
 }
-
-#content-tierlist .tierlist-item span,
-#content-tierlist .tierlist-item img {
-    align-self: center;
+#content-tierlist .tierlist-trash .tierlist-item {
+    display: none;
 }
 
-#content-tierlist .tierlist-item textarea {
+#content-tierlist .tierlist-add textarea {
     height: 100%;
     width: 100%;
     padding: 0.125rem;
@@ -94,11 +105,8 @@
 #content-tierlist div.tierlist-unassigned {
     margin-bottom: 1.25rem;
 }
-#content-tierlist div.tierlist-unassigned > div {
-    ali
-}
 
-#content-tierlist .tierlist-toolbox button:not(:last-child) {
+#content-tierlist .tierlist-toolbox > *:not(:last-child) {
     margin-right: 1px;
 }
 #content-tierlist .tierlist-toolbox i {

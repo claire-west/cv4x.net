@@ -7,8 +7,10 @@
             'lib.download'
         ]),
         dynCore.jsonBundle('app.json.tierlist', {
+            blank: 'blank',
             anime: 'anime'
         }),
+        dynCore.js('https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js'),
         dynCore.css('tierlist', 'app.tierlist')
     ).done((modules, bind, model, globalModel, download, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
@@ -34,11 +36,15 @@
             }
 
             return String.fromCharCode(i);
-        }
+        };
+
+        function newTierlist() {
+            return JSON.parse(JSON.stringify(json.blank));
+        };
 
         var model = model({
             allLists: [],
-            list: json.anime[json.anime.length - 1],
+            list: newTierlist(),
 
             onSelectChange: function(model) {
                 model._set('list', model._get('allLists')[this.selectedIndex])
@@ -51,7 +57,8 @@
 
             addTier: function() {
                 model.list.tiers.push({
-                    text: getTierLetter(model.list.tiers.length)
+                    text: getTierLetter(model.list.tiers.length),
+                    items: []
                 });
                 model._refresh();
             },
@@ -71,7 +78,7 @@
             deleteTier: function() {
                 var index = $(this).parent().parent().attr('z--index');
                 var tier = model.list.tiers[index];
-                // move items to the bench
+                model.list.unassigned.unshift(...tier.items);
                 model.list.tiers.splice(index, 1);
                 model._refresh();
             },
@@ -100,21 +107,32 @@
 
                 this.on('blur', function(event) {
                     var $this = $(this);
-                    var index = $this.parent().parent().attr('z--index');
-                    if (!$this.text().trim()) {
-                        var letter = getTierLetter($this.parent().parent().attr('z--index'));
-                        $this.text(letter || $this.data('z--undo'));
+                    var path = 'list.title';
+                    if ($this.parent().hasClass('tierlist-category')) {
+                        var index = $this.parent().parent().attr('z--index');
+                        path = 'list.tiers.' + index + '.text';
+                        if (!$this.text().trim()) {
+                            var letter = getTierLetter($this.parent().parent().attr('z--index'));
+                            $this.text(letter || $this.data('z--undo'));
+                        }
+                    } else if (!$this.text().trim()) {
+                        $this.text('New Tier List');
                     }
+
                     $this.removeData('z--undo');
-                    if ($this.text() !== model.list.tiers[index].text) {
+                    if ($this.text() !== model._get(path)) {
                         $this.trigger('change');
                     }
                 });
 
                 this.on('keyup input paste', function() {
                     var $this = $(this);
-                    var index = $this.parent().parent().attr('z--index');
-                    if ($this.text() !== model.list.tiers[index].text) {
+                    var path = 'list.title';
+                    if ($this.parent().hasClass('tierlist-category')) {
+                        var index = $this.parent().parent().attr('z--index');
+                        path = 'list.tiers.' + index + '.text';
+                    }
+                    if ($this.text() !== model._get(path)) {
                         $this.trigger('change');
                     }
                 });
@@ -127,6 +145,11 @@
                 var $this = $(this);
                 var index = $this.parent().parent().attr('z--index');
                 model.list.tiers[index].text = $this.text();
+            },
+
+            onTitleChange: function() {
+                var $this = $(this);
+                model.list.title = $this.text();
             },
 
             isTopTier: function() {
@@ -177,33 +200,10 @@
             },
 
             newTierList: function() {
-                model._set('list', {
-                    title: "My New Tier List",
-                    description: null,
-                    tiers: [
-                        {
-                            "text": "S",
-                            "items": []
-                        },
-                        {
-                            "text": "A",
-                            "items": []
-                        },
-                        {
-                            "text": "B",
-                            "items": []
-                        },
-                        {
-                            "text": "C",
-                            "items": []
-                        },
-                        {
-                            "text": "D",
-                            "items": []
-                        }
-                    ],
-                    "unassigned": []
-                });
+                model._set('newItem', '');
+                model._set('list.title', '');
+                model._set('list.tiers', []);
+                model._set('list', newTierlist());
             }
         }, globalModel);
 
@@ -211,8 +211,16 @@
             model.allLists = model.allLists.concat(json[prop]);
         }
 
+        function addUnassignedItems(input) {
+            if (typeof(input) === 'string') {
+                var values = input.split('\n');
+                model.list.unassigned.push(...values);
+                model._refresh();
+            }
+        };
+
         var $page = $('#content-tierlist');
-        $page.find('.tierlist-item textarea').on('keydown', function(e) {
+        $page.find('.tierlist-add textarea').on('keydown', function(e) {
             var $this = $(this);
             var val = $this.val();
 
@@ -225,17 +233,76 @@
                 $this.trigger('blur');
             }
 
-            if (e.which === 13) {
-                model.list.unassigned.push(val);
-                model._refresh();
+            if (e.which === 13 && val) {
+                addUnassignedItems(val);
             }
 
             return e.which !== 13;
+        }).on('paste', function(e) {
+            var val = e.originalEvent.clipboardData.getData('Text');
+            if (val) {
+                addUnassignedItems(val);
+            }
+            e.preventDefault();
         });
+
+        var trash = $page.find('.tierlist-trash').get(0);
+        // make trash a drop target
+        new Sortable(trash, {
+            group: 'tierlist-sortable',
+            filter: 'i'
+        });
+
+        function onSort(e) {
+            // undo the move in html (https://github.com/SortableJS/Sortable/issues/837#issuecomment-894882604)
+            e.clone.remove();
+            var items = e.from.getElementsByTagName(e.item.tagName);
+            if (e.oldIndex > e.newIndex) {
+                e.from.insertBefore(e.item, items[e.oldIndex + 1]);
+            } else {
+                e.from.insertBefore(e.item, items[e.oldIndex]);
+            }
+
+            // process reorder in the model instead
+            var origin = model.list.unassigned;
+            if (!e.from.parentElement.className.includes('tierlist-unassigned')) {
+                origin = model.list.tiers[e.from.parentElement.getAttribute('z--index')].items;
+            }
+
+            var item = origin.splice(e.oldIndex, 1)[0];
+
+            // if not deleting the item, insert it at the correct position
+            if (e.to !== trash) {
+                var destination = model.list.unassigned;
+                if (!e.to.parentElement.className.includes('tierlist-unassigned')) {
+                    destination = model.list.tiers[e.to.parentElement.getAttribute('z--index')].items;
+                }
+
+                destination.splice(e.newIndex, 0, item);
+            }
+
+            model._refresh();
+        };
+
+        function makeSortable() {
+            var sortables = $page.find('.tierlist-sortable').get();
+            for (var sortable of sortables) {
+                new Sortable(sortable, {
+                    group: 'tierlist-sortable',
+                    draggable: '.tierlist-item',
+                    animation: 20,
+                    onEnd: onSort
+                });
+            }
+        };
 
         return bind($page, model).done(function() {
             model._refresh();
             dynCore.declare('app.tierlist');
+
+            makeSortable();
+            model._track('list', makeSortable);
+            model._track('list.tiers', makeSortable);
         });
     });
 })(window.dynCore);

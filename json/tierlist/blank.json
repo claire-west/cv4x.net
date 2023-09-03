@@ -1,0 +1,12 @@
+{
+    "title": "New Tier List",
+    "description": null,
+    "tiers": [
+        { "text": "S", "items": [] },
+        { "text": "A", "items": [] },
+        { "text": "B", "items": [] },
+        { "text": "C", "items": [] },
+        { "text": "D", "items": [] }
+    ],
+    "unassigned": []
+}

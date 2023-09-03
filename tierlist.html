@@ -30,7 +30,10 @@
     <section id="content" class="app row" hidden>
         <section id="content-tierlist" z--controller>
             <div class="col tierlist-content flex-v align-stretch" z--iterate="list.tiers">
-                <h2 class="text-center" z--bind="list.title"></h2>
+                <h2 class="text-center" z--bind='{
+                    "path": "list.title",
+                    "fn": "bindContentEdit"
+                }' z--change="onTitleChange" contenteditable="true"></h2>
                 <p class="text-center" z--bind="list.description" z--visible="!!list.description"></p>
                 <div class="flex align-stretch" z--template>
                     <div class="flex align-center flex-noshrink tierlist-category">
@@ -39,10 +42,8 @@
                             "fn": "bindContentEdit"
                         }' z--change="onCategoryNameChange" contenteditable="true"></span>
                     </div>
-                    <div class="flex flex-wrap align-center" z--iterate=">items">
-                        <div class="flex tierlist-item" z--template>
-                            <span z--bind=">"></span>
-                        </div>
+                    <div class="flex flex-wrap flex-grow align-center tierlist-sortable" z--iterate=">items">
+                        <z--frag-tierlist-item z--template />
                     </div>
                     <div class="flex-v align-center justify-center flex-noshrink tierlist-reorder" z--visible="!takingScreenshot">
                         <i class="bi bi-chevron-compact-up" z--visible='{
@@ -65,33 +66,23 @@
             </div>
             <div class="col tierlist-unassigned flex align-start">
                 <div class="flex-v flex-noshrink">
-                    <div class="flex tierlist-item tierlist-add align-center">
-                        <textarea placeholder="Enter text or a link to an image, then press enter" z--bind="newItem"></textarea>
+                    <div class="flex tierlist-add align-center">
+                        <textarea z--bind="newItem"
+                            placeholder="Enter text or a link to an image, then press enter"
+                            title="Tip: Paste multi-line text to add many items at once.">
+                        </textarea>
                     </div>
-                    <div class="flex tierlist-item tierlist-trash align-center">
+                    <div class="flex tierlist-trash align-center">
                         <i class="bi bi-trash3"></i>
                     </div>
                 </div>
-                <div class="flex flex-wrap align-center" z--iterate="list.unassigned">
-                    <div class="flex tierlist-item" z--template>
-                        <span z--bind=">" z--visible='{
-                            "path": ">",
-                            "fn": "isImageLink",
-                            "eq": false
-                        }'></span>
-                        <img z--bind='{
-                            "path": ">",
-                            "fn": "filterImageLink"
-                        }' z--visible='{
-                            "path": ">",
-                            "fn": "isImageLink"
-                        }' />
-                    </div>
+                <div class="flex flex-wrap flex-grow align-center tierlist-sortable" z--iterate="list.unassigned">
+                    <z--frag-tierlist-item z--template />
                 </div>
             </div>
             <div class="col flex justify-center">
                 <div class="tierlist-toolbox flex align-center">
-                    <button class="button" title="Add Item" z--click="addItem" z--enabled="!!newItem">
+                    <button class="button" title="Add Item" z--click="addItem" z--enabled="!!newItem" hidden>
                         <i class="bi bi-plus-square"></i>
                     </button>
                     <button class="button" title="Download Screenshot" z--click="saveScreenshot">
@@ -116,9 +107,6 @@
                 }' z--change="onSelectChange">
                     <option z--bind=">title" z--text=">title" z--template></option>
                 </select>
-            </div>
-            <div class="col">
-                <p>(hi there, this page is still under construction... you can't actually drag items around, delete them, or change the title yet)</p>
             </div>
         </section>
     </section>

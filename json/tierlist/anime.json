@@ -49,7 +49,7 @@
                 ]
             }
         ],
-        "unassigned": [ "test" ]
+        "unassigned": []
     },
     {
         "title": "Seasonal Anime – Summer 2023 (mid-season)",
@@ -85,6 +85,6 @@
                 ]
             }
         ],
-        "unassigned": [ "https://synthv.info/img/eleanor-s.png", "Test 2", "Test 3", "Test 4", "Test 5", "Test 6" ]
+        "unassigned": []
     }
 ]

@@ -1,0 +1,14 @@
+<div class="flex tierlist-item">
+    <span z--bind=">" z--visible='{
+        "path": ">",
+        "fn": "isImageLink",
+        "eq": false
+    }'></span>
+    <img z--bind='{
+        "path": ">",
+        "fn": "filterImageLink"
+    }' z--visible='{
+        "path": ">",
+        "fn": "isImageLink"
+    }' />
+</div>

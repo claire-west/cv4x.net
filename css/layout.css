@@ -479,6 +479,10 @@ label.row {
     flex-wrap: wrap;
 }
 
+.flex-grow {
+    flex-grow: 1;
+}
+
 .flex-noshrink {
     flex-shrink: 0;
 }
