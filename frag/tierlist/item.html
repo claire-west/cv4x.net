@@ -1,4 +1,16 @@
-<div class="flex tierlist-item">
+<div class="flex tierlist-item"
+    z--class='[
+        {
+            "class": "square",
+            "path": "list.aspect",
+            "eq": "square"
+        },
+        {
+            "class": "portrait",
+            "path": "list.aspect",
+            "eq": "portrait"
+        }
+    ]'>
     <span z--bind=">" z--visible='{
         "path": ">",
         "fn": "isImageLink",

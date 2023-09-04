@@ -185,7 +185,7 @@
                 return this.parent().parent().attr('z--index') === String(model.list.tiers.length - 1);
             },
             isImageLink: function(text) {
-                return text && text.startsWith('http') && imageRegex.test(text);
+                return !!text && text.startsWith('http') && imageRegex.test(text);
             },
             filterImageLink: function(text) {
                 if (model.isImageLink(text)) {
@@ -248,6 +248,18 @@
                 $toast = $(this).find('.toast');
                 $toast.addClass('toast-show');
                 setTimeout(() => { $toast.removeClass('toast-show') });
+            },
+
+            toggleAspectRatio: function() {
+                var aspect = model._get('list.aspect');
+                if (aspect === 'square') {
+                    model._set('list.aspect', 'portrait');
+                } else if (aspect === 'portrait') {
+                    delete model.list.aspect;
+                    model._refresh();
+                } else {
+                    model._set('list.aspect', 'square');
+                }
             }
         }, globalModel);
 

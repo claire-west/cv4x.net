@@ -57,11 +57,23 @@
 
 #content-tierlist .tierlist-item {
     cursor: pointer;
+    width: unset;
 }
 
 #content-tierlist .tierlist-item span,
 #content-tierlist .tierlist-item img {
     align-self: center;
+    width: 8rem;
+}
+
+#content-tierlist .tierlist-item.square span,
+#content-tierlist .tierlist-item.square img,
+#content-tierlist .tierlist-item.portrait span {
+    width: 6.5rem;
+}
+
+#content-tierlist .tierlist-item.portrait img {
+    width: 5rem;
 }
 
 #content-tierlist .tierlist-trash {

@@ -1,8 +1,8 @@
 {
-  "name": "moonlitclaire deploy",
+  "name": "cv4x deploy",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^1.6.1",
     "grunt-contrib-copy": "^1.0.0"
   }
 }
