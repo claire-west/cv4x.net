@@ -17,6 +17,8 @@
     ).done((modules, bind, model, globalModel, download, hashWatch, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
+        var imageRegex = /http(.*)\.(jpg|jpeg|png|webp|avif|gif|svg)(\?.*)?$/;
+
         function getTierLetter(i) {
             i = Number(i);
             if (isNaN(i)) {
@@ -178,7 +180,7 @@
                 return this.parent().parent().attr('z--index') === String(model.list.tiers.length - 1);
             },
             isImageLink: function(text) {
-                return text && text.startsWith('http') && (text.endsWith('.png') || text.endsWith('.jpeg') || text.endsWith('.gif') || text.endsWith('.gif'));
+                return text && text.startsWith('http') && imageRegex.test(text);
             },
             filterImageLink: function(text) {
                 if (model.isImageLink(text)) {
