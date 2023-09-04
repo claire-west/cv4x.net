@@ -154,6 +154,10 @@ button[disabled] {
     background-color: #1d1d1d;
 }
 
+body.light button.active:not([disabled]) {
+    color: hsla(0,0%,100%,.85);
+}
+
 /* large format nav bar */
 @media screen and (min-width: 641px) {
     #main > nav {
