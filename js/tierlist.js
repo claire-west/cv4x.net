@@ -12,6 +12,7 @@
             anime: 'anime'
         }),
         dynCore.js('https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js'),
+        dynCore.js('https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'),
         dynCore.css('tierlist', 'app.tierlist')
     ).done((modules, bind, model, globalModel, download, hashWatch, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
@@ -46,7 +47,7 @@
         function getHashList() {
             if (window.location.hash) {
                 try {
-                    var list = JSON.parse(decodeURI(atob(window.location.hash.substr(1))));
+                    var list = JSON.parse(Base64.decode(window.location.hash.substr(1)));
                     history.replaceState("", document.title, window.location.pathname);
                     return list;
                 } catch (e) {
@@ -236,7 +237,7 @@
             },
 
             copyPermalink: function() {
-                var url = window.location.href + '#' + btoa(encodeURI(JSON.stringify(model.list)));
+                var url = window.location.href + '#' + Base64.encode(JSON.stringify(model.list));
                 navigator.clipboard.writeText(url);
                 $toast = $(this).find('.toast');
                 $toast.addClass('toast-show');
