@@ -4,7 +4,8 @@
             'lib.bind',
             'lib.model',
             'app.globalModel',
-            'lib.download'
+            'lib.download',
+            'lib.hashWatch'
         ]),
         dynCore.jsonBundle('app.json.tierlist', {
             blank: 'blank',
@@ -12,7 +13,7 @@
         }),
         dynCore.js('https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js'),
         dynCore.css('tierlist', 'app.tierlist')
-    ).done((modules, bind, model, globalModel, download, json) => {
+    ).done((modules, bind, model, globalModel, download, hashWatch, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         function getTierLetter(i) {
@@ -42,11 +43,28 @@
             return JSON.parse(JSON.stringify(json.blank));
         };
 
+        function getHashList() {
+            if (window.location.hash) {
+                try {
+                    var list = JSON.parse(decodeURI(atob(window.location.hash.substr(1))));
+                    history.replaceState("", document.title, window.location.pathname);
+                    return list;
+                } catch (e) {
+                    history.replaceState("", document.title, window.location.pathname);
+                }
+            }
+        };
+
+        function getInitialList() {
+            return getHashList() || newTierlist();
+        };
+
         var model = model({
             allLists: [],
-            list: newTierlist(),
+            list: getInitialList(),
 
             onSelectChange: function(model) {
+                model._set('newItem', '');
                 model._set('list', model._get('allLists')[this.selectedIndex])
             },
 
@@ -194,9 +212,20 @@
                 if (this.files.length) {
                     this.files[0].text().then((jsonString) => {
                         var list = JSON.parse(jsonString);
+                        model._set('newItem', '');
                         model._set('list', list);
                     });
                 }
+            },
+
+            resetTierList: function() {
+                var items = model.list.unassigned;
+                for (var tier of model.list.tiers) {
+                    items = items.concat(tier.items);
+                    tier.items = [];
+                }
+                model._set('list.unassigned', items);
+                console.log(items)
             },
 
             newTierList: function() {
@@ -204,6 +233,14 @@
                 model._set('list.title', '');
                 model._set('list.tiers', []);
                 model._set('list', newTierlist());
+            },
+
+            copyPermalink: function() {
+                var url = window.location.href + '#' + btoa(encodeURI(JSON.stringify(model.list)));
+                navigator.clipboard.writeText(url);
+                $toast = $(this).find('.toast');
+                $toast.addClass('toast-show');
+                setTimeout(() => { $toast.removeClass('toast-show') });
             }
         }, globalModel);
 
@@ -295,6 +332,16 @@
                 });
             }
         };
+
+        hashWatch((args) => {
+            return window.location.pathname.substr(1) === 'tierlist';
+        }, () => {
+            var list = getHashList();
+            if (list) {
+                model._set('newItem', '');
+                model._set('list', list);
+            }
+        });
 
         return bind($page, model).done(function() {
             model._refresh();
