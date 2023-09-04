@@ -294,11 +294,11 @@
         function onSort(e) {
             // undo the move in html (https://github.com/SortableJS/Sortable/issues/837#issuecomment-894882604)
             e.clone.remove();
-            var items = e.from.getElementsByTagName(e.item.tagName);
-            if (e.oldIndex > e.newIndex) {
-                e.from.insertBefore(e.item, items[e.oldIndex + 1]);
+            var siblings = e.from.getElementsByTagName(e.item.tagName);
+            if (e.to === e.from && e.oldIndex > e.newIndex) {
+                e.from.insertBefore(e.item, siblings[e.oldIndex + 1]);
             } else {
-                e.from.insertBefore(e.item, items[e.oldIndex]);
+                e.from.insertBefore(e.item, siblings[e.oldIndex]);
             }
 
             // process reorder in the model instead

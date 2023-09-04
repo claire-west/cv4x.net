@@ -71,8 +71,8 @@
 #content-tierlist .tierlist-trash i {
     font-size: 2rem;
 }
-#content-tierlist .tierlist-trash .tierlist-item {
-    display: none;
+#content-tierlist .tierlist-trash .tierlist-item.sortable-ghost {
+    display: none !important;
 }
 
 #content-tierlist .tierlist-add textarea {
@@ -104,6 +104,9 @@
 
 #content-tierlist div.tierlist-unassigned {
     margin-bottom: 1.25rem;
+}
+#content-tierlist div.tierlist-unassigned .tierlist-sortable {
+    min-height: 6.5rem;
 }
 
 #content-tierlist .tierlist-toolbox > *:not(:last-child) {
