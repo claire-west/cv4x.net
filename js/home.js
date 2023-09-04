@@ -5,7 +5,8 @@
         dynCore.require([
             'lib.bind',
             'lib.model',
-            'app.globalModel'
+            'app.globalModel',
+            'app.hashless'
         ]),
         dynCore.jsonBundle('app.json', {
             activity: 'activity',
@@ -13,12 +14,11 @@
         }),
         dynCore.css('home', 'app.home'),
         dynCore.require('lib.arraySort')
-    ).done((modules, bind, model, globalModel, json) => {
+    ).done((modules, bind, model, globalModel, hashless, json) => {
         var dateCompare = function(a, b) {
             return b.date.toLocaleLowerCase().localeCompare(a.date.toLocaleLowerCase());
         };
         var model = model({
-            test: "testing home model",
             activity: json.activity.sort(dateCompare),
             changelog: json.changelog.sort(dateCompare),
             parseHref: function(text) {
@@ -36,6 +36,7 @@
         var $page = $('#content-home');
         return bind($page, model).done(function() {
             model._refresh();
+            hashless.bindNav($page.find('a'));
             dynCore.declare('app.home');
         });
     });

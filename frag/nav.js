@@ -1,23 +1,12 @@
 ((dynCore) => {
-    dynCore.declare('app.nav', dynCore.require([
+    dynCore.declare('frag.nav', dynCore.require([
         'lib.fragment',
         'app.hashless'
     ]), (modules, fragment, hashless) => {
         fragment.controller('frag.nav', {
             onInit: function() {
                 var $links = this.$fragment.find('a');
-                $links.on('click', function(e) {
-                    if (this.href.includes(location.origin)) {
-                        e.preventDefault();
-                        if (this.href !== location.href) {
-                            window.history.pushState({},'', this.href.replace(location.origin, ''));
-                            if (window.innerWidth < 641) {
-                                $('body').addClass('nav');
-                            }
-                            hashless();
-                        }
-                    }
-                });
+                hashless.bindNav($links);
 
                 // if window resizes from or to "small", reset the navbar
                 var previousWidth = window.innerWidth;

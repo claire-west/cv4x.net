@@ -1,6 +1,10 @@
 #content-home .activity > div > div:not(:first-child) > p:first-child {
     margin-top: 1.5rem;
 }
+#content-home .activity > div > div > p:not(:first-child) {
+    margin-top: 0.75rem;
+    margin-left: 1rem;
+}
 
 #content-home .activity > div > div > p:not(:first-child) span.small {
     display: none;

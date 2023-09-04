@@ -61,38 +61,43 @@
             return promise;
         };
 
-        var initialBinding = $.Deferred();
         var initialPage = window.location.pathname.substr(1) || 'home';
         titles[initialPage] = $title.text();
 
         var $inner = $content.children('[z--controller]');
+        var initialLoad = $.Deferred().resolve();
         if ($inner.length) {
             $inner.removeAttr('z--controller');
-            dynCore.require('app.' + initialPage).done(function() {
-                bind($('body'), globalModel).done(function() {
-                    initialBinding.resolve();
-                });
-            });
-        } else {
-            bind($('body'), globalModel).done(function() {
-                initialBinding.resolve();
-            });
+            initialLoad = dynCore.require('app.' + initialPage);
         }
 
-        initialBinding.done(function() {
-            var $nav = $('#main > nav');
-            init().done(() => {
-                $content.show();
-                $nav.show();
+        initialLoad.done(function() {
+            bind($('body'), globalModel).done(function() {
+                var $nav = $('#main > nav');
+                init().done(() => {
+                    $content.show();
+                    $nav.show();
+                });
             });
         });
 
-        return function(fn) {
-            if (typeof(fn) === 'function') {
-
-            } else {
-                init.call(this);
+        return Object.assign(init, {
+            bindNav: function($elements) {
+                $elements.filter(function() {
+                    return $(this).data('z--nav') !== true;
+                }).data('z--nav', true).on('click', function(e) {
+                    if (this.href.includes(location.origin)) {
+                        e.preventDefault();
+                        if (this.href !== location.href) {
+                            window.history.pushState({},'', this.href.replace(location.origin, ''));
+                            if (window.innerWidth < 641) {
+                                $('body').addClass('nav');
+                            }
+                            init();
+                        }
+                    }
+                });
             }
-        }
+        });
     });
 })(window.dynCore);
