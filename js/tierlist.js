@@ -17,7 +17,11 @@
     ).done((modules, bind, model, globalModel, download, hashWatch, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
-        var imageRegex = /http(.*)\.(jpg|jpeg|png|webp|avif|gif|svg)(\?.*)?$/;
+        var imageRegex = /^http(.*)\.(jpg|jpeg|png|webp|avif|gif|svg)(\?.*)?$/;
+        var colorRegex = /^\#([0-9A-Fa-f]{3}){1,2}$/;
+
+        var defaultColors = [ '#FF7F7F', '#FFBF7F', '#FFDF7F', '#FFFF7F', '#BFFF7F', '#7FBFFF', '#7F7FFF', '#BF7FBF' ];
+        var fallbackColor = '#858585';
 
         function getTierLetter(i) {
             i = Number(i);
@@ -63,41 +67,84 @@
         };
 
         function scrollUp() {
-            $('#content,html').scrollTop(0);
+            var $scrollContainer = $('#content,html');
+            $scrollContainer.animate({ scrollTop: 0 }, 100);
+        };
+
+        function scrollDown() {
+            var $scrollContainer = $('#content,html');
+            $scrollContainer.animate({ scrollTop: $scrollContainer.prop("scrollHeight") }, 250);
         };
 
         var model = model({
             allLists: [],
             list: getInitialList(),
+            colors: defaultColors.slice(),
 
             onSelectChange: function(model) {
                 model._set('newItem', '');
                 model._set('list', JSON.parse(JSON.stringify(model._get('allLists')[this.selectedIndex])));
+                model.setColorsFromList();
                 scrollUp();
             },
 
             onSetSelectedList: function(title) {
                 // do this at the end of the execution queue since <option/> elements might not exist yet
-                setTimeout(() => { this.val(title); }, 0);
+                setTimeout(() => { this.val(title); });
             },
 
             addTier: function() {
-                model.list.tiers.push({
+                var newTier = {
                     text: getTierLetter(model.list.tiers.length),
                     items: []
-                });
+                };
+                var newIndex = model.list.tiers.length;
+                if (model.colors[newIndex] !== defaultColors[newIndex]) {
+                    newTier.color = model.colors[newIndex];
+                }
+                model.list.tiers.push(newTier);
                 model._refresh();
             },
 
             moveUp: function() {
                 var index = Number($(this).parent().parent().attr('z--index'));
-                model.list.tiers.splice(index - 1, 0, model.list.tiers.splice(index, 1)[0]);
+                var tier = model.list.tiers[index];
+                var targetIndex = index - 1;
+                // preserve color order
+                var color = tier.color;
+                if (model.list.tiers[targetIndex].color) {
+                    tier.color = model.list.tiers[targetIndex].color;
+                } else {
+                    delete tier.color;
+                }
+                if (color) {
+                    model.list.tiers[targetIndex].color = color;
+                } else {
+                    delete model.list.tiers[targetIndex].color;
+                }
+
+                model.list.tiers.splice(targetIndex, 0, model.list.tiers.splice(index, 1)[0]);
                 model._refresh();
             },
 
             moveDown: function() {
                 var index = Number($(this).parent().parent().attr('z--index'));
-                model.list.tiers.splice(index + 1, 0, model.list.tiers.splice(index, 1)[0]);
+                var tier = model.list.tiers[index];
+                var targetIndex = index + 1;
+                // preserve color order
+                var color = tier.color;
+                if (model.list.tiers[targetIndex].color) {
+                    tier.color = model.list.tiers[targetIndex].color;
+                } else {
+                    delete tier.color;
+                }
+                if (color) {
+                    model.list.tiers[targetIndex].color = color;
+                } else {
+                    delete model.list.tiers[targetIndex].color;
+                }
+
+                model.list.tiers.splice(targetIndex, 0, model.list.tiers.splice(index, 1)[0]);
                 model._refresh();
             },
 
@@ -213,7 +260,7 @@
             },
 
             saveTierList: function(model) {
-                download('data:text/json;charset=utf-8,' + JSON.stringify(model.list), model.list.title + '.json');
+                download('data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(model.list)), model.list.title + '.json');
             },
 
             loadTierList: function() {
@@ -222,6 +269,7 @@
                         var list = JSON.parse(jsonString);
                         model._set('newItem', '');
                         model._set('list', list);
+                        model.setColorsFromList();
                         scrollUp();
                     });
                 }
@@ -239,6 +287,7 @@
             newTierList: function() {
                 model._set('newItem', '');
                 model._set('list', newTierlist());
+                model._set('colors', defaultColors.slice());
                 scrollUp();
             },
 
@@ -250,18 +299,59 @@
                 setTimeout(() => { $toast.removeClass('toast-show') });
             },
 
-            toggleAspectRatio: function() {
-                var aspect = model._get('list.aspect');
-                if (aspect === 'square') {
-                    model._set('list.aspect', 'portrait');
-                } else if (aspect === 'portrait') {
-                    delete model.list.aspect;
+            setAspect: function() {
+                $this = $(this);
+                var aspect = $this.data('aspect');
+                var value = $this.data('value');
+                if (!value && model.list.config && model.list.config.aspect) {
+                    delete model.list.config.aspect[aspect];
                     model._refresh();
                 } else {
-                    model._set('list.aspect', 'square');
+                    model._set('list.config.aspect.' + aspect, value);
                 }
+            },
+
+            toggleConfigPanel: function() {
+                model._set('showConfig', !model._get('showConfig'));
+                if (model.showConfig) {
+                    scrollDown();
+                }
+            },
+
+            setColorsFromList: function() {
+                for (var i = 0; i < model.list.tiers.length; i++) {
+                    var color = model.list.tiers[i].color;
+                    if (colorRegex.test(color)) {
+                        model._set('colors.' + i, color);
+                    } else {
+                        model._set('colors.' + i, defaultColors[i] || fallbackColor);
+                    }
+                }
+            },
+            onColorChange: function(color) {
+                var $this = $(this);
+                var index = $this.parent().attr('z--index');
+                if (model.list.tiers[index]) {
+                    if (colorRegex.test(color) && color !== defaultColors[index] && color !== fallbackColor) {
+                        model._set('list.tiers.' + index + '.color', color);
+                    } else {
+                        delete model.list.tiers[index].color;
+                        model._refresh();
+                    }
+                }
+            },
+            revertColor: function() {
+                var $this = $(this);
+                var index = $this.parent().attr('z--index');
+                var color = defaultColors[index] || fallbackColor;
+                if (model.list.tiers[index]) {
+                    delete model.list.tiers[index].color;
+                }
+                model._set('colors.' + index, color);
             }
         }, globalModel);
+
+        model.setColorsFromList();
 
         for (let prop in json) {
             model.allLists = model.allLists.concat(json[prop]);
@@ -359,6 +449,7 @@
             if (list) {
                 model._set('newItem', '');
                 model._set('list', list);
+                model.setColorsFromList();
             }
         });
 

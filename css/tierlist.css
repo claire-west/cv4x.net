@@ -6,6 +6,8 @@
     text-align: center;
     justify-content: center;
     overflow: hidden;
+    -webkit-transition: width 0.1s;
+    transition: width 0.1s;
 }
 
 #content-tierlist .tierlist-category {
@@ -64,15 +66,23 @@
 #content-tierlist .tierlist-item img {
     align-self: center;
     width: 8rem;
+    -webkit-transition: width 0.1s;
+    transition: width 0.1s;
 }
 
-#content-tierlist .tierlist-item.square span,
-#content-tierlist .tierlist-item.square img,
-#content-tierlist .tierlist-item.portrait span {
+#content-tierlist.header-square .tierlist-category,
+#content-tierlist.text-square .tierlist-item span,
+#content-tierlist.img-square .tierlist-item img,
+#content-tierlist.header-square .tierlist-add,
+#content-tierlist.header-square .tierlist-trash {
     width: 6.5rem;
 }
 
-#content-tierlist .tierlist-item.portrait img {
+#content-tierlist.header-portrait .tierlist-category,
+#content-tierlist.text-portrait .tierlist-item span,
+#content-tierlist.img-portrait .tierlist-item img,
+#content-tierlist.header-portrait .tierlist-add,
+#content-tierlist.header-portrait .tierlist-trash {
     width: 5rem;
 }
 
@@ -110,7 +120,8 @@
     line-height: 1.2;
     cursor: pointer;
 }
-#content-tierlist .tierlist-reorder i:hover {
+#content-tierlist .tierlist-reorder i:hover,
+#content-tierlist .tierlist-config .tierlist-colors i:hover {
     background-color: hsla(218,5%,47%,.6);
 }
 
@@ -127,4 +138,34 @@
 #content-tierlist .tierlist-toolbox i {
     font-size: 1.4rem;
     font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+#content-tierlist .tierlist-config {
+    max-height: 0;
+    overflow-y: hidden;
+}
+
+#content-tierlist .tierlist-config.show-config {
+    max-height: 999rem;
+    margin-bottom: 1rem;
+    -webkit-transition: max-height 0.25s ease;
+    transition: max-height 0.25s ease;
+}
+#content-tierlist .tierlist-config .flex-v .flex > :first-child {
+    min-width: 5rem;
+}
+
+#content-tierlist .tierlist-config .tierlist-colors span {
+    align-self: start;
+    margin-top: 0.5rem;
+}
+#content-tierlist .tierlist-config .tierlist-colors input {
+    width: 5rem;
+    margin-bottom: 0.125rem;
+    padding: 0.25rem;
+}
+#content-tierlist .tierlist-config .tierlist-colors i {
+    width: 2rem;
+    margin-left: 0.25rem;
+    cursor: pointer;
 }
