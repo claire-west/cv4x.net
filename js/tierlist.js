@@ -62,13 +62,18 @@
             return getHashList() || newTierlist();
         };
 
+        function scrollUp() {
+            $('#content,html').scrollTop(0);
+        };
+
         var model = model({
             allLists: [],
             list: getInitialList(),
 
             onSelectChange: function(model) {
                 model._set('newItem', '');
-                model._set('list', model._get('allLists')[this.selectedIndex])
+                model._set('list', JSON.parse(JSON.stringify(model._get('allLists')[this.selectedIndex])));
+                scrollUp();
             },
 
             onSetSelectedList: function(title) {
@@ -217,6 +222,7 @@
                         var list = JSON.parse(jsonString);
                         model._set('newItem', '');
                         model._set('list', list);
+                        scrollUp();
                     });
                 }
             },
@@ -228,12 +234,12 @@
                     tier.items = [];
                 }
                 model._set('list.unassigned', items);
-                console.log(items)
             },
 
             newTierList: function() {
                 model._set('newItem', '');
                 model._set('list', newTierlist());
+                scrollUp();
             },
 
             copyPermalink: function() {
