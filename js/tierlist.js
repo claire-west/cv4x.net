@@ -231,8 +231,6 @@
 
             newTierList: function() {
                 model._set('newItem', '');
-                model._set('list.title', '');
-                model._set('list.tiers', []);
                 model._set('list', newTierlist());
             },
 
