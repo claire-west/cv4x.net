@@ -432,7 +432,8 @@ i.svg-icon:hover {
 /* small */
 @media screen and (max-width: 420px) {
     html {
-        font-size: 13px;
+        /*font-size: 13px;*/
+        font-size: 81.25%;
     }
 
     .top-bar {
@@ -455,7 +456,8 @@ i.svg-icon:hover {
 /* very small */
 @media screen and (max-width: 360px) {
     html {
-        font-size: 10px;
+        /*font-size: 10px;*/
+        font-size: 62.5%;
     }
 
     .top-bar {
