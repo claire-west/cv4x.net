@@ -413,6 +413,7 @@ i.svg-icon:hover {
     }
 }
 
+/* medium */
 @media screen and (max-width: 680px) {
     body {
         margin: 0 0.75rem 0.825rem;
@@ -428,28 +429,50 @@ i.svg-icon:hover {
     }
 }
 
+/* small */
 @media screen and (max-width: 420px) {
-    .link-bar-items a i {
-        font-size: 1.25rem;
+    html {
+        font-size: 13px;
+    }
+
+    .top-bar {
+        height:3.25rem;
+    }
+
+    .link-bar-items a i,
+    .top-bar .top-bar-nav i {
+        font-size: 1.75rem;
     }
 
     .link-bar-items .mal-icon i,
     .link-bar-items .pixiv-icon i,
     .link-bar-items .kofi-icon i {
-        height: 1.25rem;
-        width: 1.25rem;
+        height: 1.75rem;
+        width: 1.75rem;
     }
 }
 
+/* very small */
 @media screen and (max-width: 360px) {
-    .link-bar-items a i {
-        font-size: 1rem;
+    html {
+        font-size: 10px;
+    }
+
+    .top-bar {
+        height:3.5rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.125rem;
+    }
+
+    .link-bar-items a i,
+    .top-bar .top-bar-nav i {
+        font-size: 2rem;
     }
 
     .link-bar-items .mal-icon i,
     .link-bar-items .pixiv-icon i,
     .link-bar-items .kofi-icon i {
-        height: 1rem;
-        width: 1rem;
+        height: 2;
+        width: 2rem;
     }
 }
