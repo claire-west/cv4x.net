@@ -173,7 +173,7 @@
     "春": {
         "schedule": {
             "日": [
-                "❓0900 Blue Orchestra",
+                "❌0900 Blue Orchestra",
                 "🟠0930 Mobile Suit Gundam: The Witch from Mercury s2",
                 "🟠1300 The Aristocrat's Otherworldly Adventure",
                 "🟠1330 My Clueless First Friend",
@@ -244,6 +244,7 @@
         "schedule": {
             "日": [
                 "🟠0800 Zom 100: Bucket List of the Dead",
+                "❌0900 Blue Orchestra",
                 "🟠1400 The Duke of Death and His Maid s2",
                 "🟠1430 Class Room✿For Heroes",
                 "🟠1445 Yohane of the Parhelion",
@@ -281,7 +282,7 @@
             ],
             "金": [
                 "🟠1300 Sugar Apple Fairy Tale part 2",
-                "❓1600 Noble Farmer",
+                "❌1600 Noble Farmer",
                 "🟠1630 Reign of the Seven Spellblades",
                 "🟠1830 Rent-a-Girlfriend s3",
                 "🟠1845 The Masterful Cat Is Depressed Again Today",
@@ -325,13 +326,13 @@
                 "🟠1530 Dead Mount Death Play part 2",
                 "🟠1600 SHY",
                 "🟠1630 I'm in Love with the Villainess",
-                "🟠1700 A Certain Middle-Aged Man's VRMMO Activity Log",
-                "🟦1730 The Demon Sword Master of Excalibur Academy"
+                "🟦1700 The Demon Sword Master of Excalibur Academy",
+                "🟠1700 A Certain Middle-Aged Man's VRMMO Activity Log"
             ],
             "火": [
                 "🟠1500 The Saint's Magic Power is Omnipotent s2",
                 "❓1500 Paradox Live",
-                "❓1600 Tokyo Revengers s3",
+                "💫1600 Tokyo Revengers s3",
                 "🟦1830 Helck",
                 "🟠???? Heaven Official's Blessing s2"
             ],
@@ -341,7 +342,7 @@
                 "🟦1430 The Eminence in Shadow s2",
                 "❓1600 Uma Musume: Pretty Derby s3",
                 "🟠1600 GOD.app",
-                "❓1600 Kizuna no Allele s2",
+                "🟠1600 Kizuna no Allele s2",
                 "🟠1630 16bit Sensation: Another Layer",
                 "🟠1730 Berserk of Gluttony"
             ],
@@ -364,7 +365,7 @@
                 "🟠1600 Hypnosis Mic: Division Rap Battle s2",
                 "🟠1700 Goblin Slayer s2",
                 "🟠1700 Arknights: Perish in Frost",
-                "❓1730 Undead Unluck",
+                "💫1730 Undead Unluck",
                 "🟠1800 The Kingdoms of Ruin",
                 "🟠1830 Girlfriend, Girlfriend s2"
             ],
@@ -372,14 +373,14 @@
                 "🟠0930 Firefighter Daigo",
                 "❓1030 Kibou no Chikara: Otona Precure",
                 "🟠1400 The Faraway Paladin s2",
-                "🟦1430 The Vexations of a Shut-In Vampire Princess",
+                "🟦1400 The Vexations of a Shut-In Vampire Princess",
                 "❓1500 Spy x Family s2",
                 "🟠1530 My New Boss Is Goofy ",
+                "🟦1630 Ragna Crimson",
                 "🟠1600 A Returner's Magic Should Be Special",
                 "🟠1630 Butareba: The Story of a Man Turned Into a Pig",
                 "🟠1700 The Apothecary Diaries",
                 "🟠1700 Tearmoon Empire",
-                "🟦1700 Ragna Crimson",
                 "🟠1730 Our Rainy Protocol",
                 "🟠1800 I Shall Survive Using Potions!"
             ],
