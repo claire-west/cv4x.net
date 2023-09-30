@@ -21,6 +21,7 @@
                 "items": [
                     "Kimetsu no Yaiba: Swordsmith Village Arc",
                     "Dead Mount Death Play",
+                    "Insomniacs After School",
                     "Birdie Wing s2",
                     "My Love Story with Yamada-kun at Lv999",
                     "Aiyou de Mishi (X&Y)"
@@ -35,8 +36,7 @@
             {
                 "text": "Fell behind, but plan to finish",
                 "items": [
-                    "Heavenly Delusion",
-                    "Insomniacs After School"
+                    "Heavenly Delusion"
                 ]
             },
             {
@@ -51,7 +51,7 @@
         "unassigned": []
     },
     {
-        "title": "Seasonal Anime – Summer 2023 (mid-season)",
+        "title": "Seasonal Anime – Summer 2023",
         "tiers": [
             {
                 "text": "Peak media",
@@ -68,17 +68,22 @@
                 ]
             },
             {
-                "text": "So far so good",
+                "text": "I enjoyed it",
                 "items": [
-                    "Reborn as a Vending Machine",
-                    "Helck"
+                    "Helck",
+                    "Reborn as a Vending Machine"
                 ]
             },
             {
                 "text": "Hmm",
                 "items": [
                     "Reign of the Seven Spellblades",
-                    "The Most Heretical Last Boss Queen",
+                    "The Most Heretical Last Boss Queen"
+                ]
+            },
+            {
+                "text": "Lost interest",
+                "items": [
                     "Dark Gathering"
                 ]
             }

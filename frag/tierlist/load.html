@@ -1,0 +1,16 @@
+<div>
+    <div>
+        <label class="button" title="Load Tier List" for="tierListFileLoader">
+            <i class="bi bi-folder2-open"></i>
+            <span>Load From File
+        </label>
+    </div>
+    <div class="tierlist-load-list flex align-end">
+        <div class="flex-v align-start flex-grow" z--iterate="allLists">
+            <button class="s12 margin-bottom-0" z--text=">title" z--click="onSelectList" z--template></button>
+        </div>
+        <div class="options">
+            <button z--click="^closeModal">Close</button>
+        </div>
+    </div>
+</div>

@@ -173,3 +173,10 @@
     margin-left: 0.25rem;
     cursor: pointer;
 }
+
+.dialog .tierlist-load-list > div.flex-v {
+    max-height: 50vh;
+    overflow-y: auto;
+    gap: 0.125rem;
+    margin-bottom: 1rem;
+}

@@ -9,7 +9,7 @@
         ]),
         dynCore.jsonBundle('app.json.tierlist', {
             blank: 'blank',
-            anime: 'anime'
+            anime: 'anime.2023'
         }),
         dynCore.js('https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js'),
         dynCore.js('https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'),
@@ -85,6 +85,14 @@
                 model._set('newItem', '');
                 model._set('list', JSON.parse(JSON.stringify(model._get('allLists')[this.selectedIndex])));
                 model.setColorsFromList();
+                scrollUp();
+            },
+
+            onSelectList: function(list) {
+                model._set('newItem', '');
+                model._set('list', JSON.parse(JSON.stringify(list)));
+                model.setColorsFromList();
+                globalModel.closeModal.call(this);
                 scrollUp();
             },
 
@@ -261,6 +269,10 @@
 
             saveTierList: function(model) {
                 download('data:application/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(model.list)), model.list.title + '.json');
+            },
+
+            openLoadModal: function(model) {
+                globalModel.openModal('tierlist-load', model);
             },
 
             loadTierList: function() {

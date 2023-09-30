@@ -291,20 +291,21 @@ tr.v-top {
 }
 
 .modal .dialog label {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .modal .dialog .options {
+    float: right;
     position: relative;
     text-align: right;
-    width: 100%;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 .modal .dialog .options button {
     margin-left: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .cookie-indicator {

@@ -150,16 +150,16 @@
                     <button class="button" title="Save Tier List" z--click="saveTierList">
                         <i class="bi bi-download"></i>
                     </button>
-                    <label class="button" title="Load Tier List" for="tierListFileLoader">
+                    <button class="button" title="Load Tier List" z--click="openLoadModal">
                         <i class="bi bi-folder2-open"></i>
-                    </label>
+                    </button>
                     <input id="tierListFileLoader" type="file" accept="application/json" z--change="loadTierList" hidden />
                     <button class="button" title="Reset All Items" z--click="resetTierList">
                         <i class="bi bi-recycle"></i>
                     </button>
-                    <button class="button" title="Start Over" z--click="newTierList">
+                    <!-- <button class="button" title="Start Over" z--click="newTierList">
                         <i class="bi bi-trash"></i>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <div class="col flex justify-center tierlist-config" z--class='{
@@ -236,14 +236,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col mOffset3 m6">
+            <!-- <div class="col mOffset3 m6">
                 <select class="appearance-auto" name="tierlist" z--iterate="allLists" z--bind='{
                     "path": "=list.title",
                     "fn": "onSetSelectedList"
                 }' z--change="onSelectChange">
                     <option z--bind=">title" z--text=">title" z--template></option>
                 </select>
-            </div>
+            </div> -->
         </section>
     </section>
 </div>
