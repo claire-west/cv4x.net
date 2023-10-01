@@ -11,6 +11,8 @@
     ).done((modules, bind, model, globalModel, download, hashWatch) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
+        var maxYear = 2024;
+
         var convertTZ = function(time) {
             if (time === '0000' || time === '????') {
                 return '????';
@@ -124,8 +126,11 @@
             },
 
             model: model({
+                // default to current year, unless beyond the maximum allowed year
+                year: globalModel.year <= maxYear ? globalModel.year : maxYear,
+
                 isNotLastYear: function(year) {
-                    return year < globalModel.year;
+                    return year < maxYear;
                 },
 
                 // change hash based on navigation controls
