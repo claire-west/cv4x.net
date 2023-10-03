@@ -5,10 +5,12 @@
             'lib.model',
             'app.globalModel',
             'lib.download',
-            'lib.hashWatch'
+            'lib.hashWatch',
+            'app.hashless'
         ]),
+        dynCore.js('https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'),
         dynCore.css('anime', 'app.anime')
-    ).done((modules, bind, model, globalModel, download, hashWatch) => {
+    ).done((modules, bind, model, globalModel, download, hashWatch, hashless) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var maxYear = 2024;
@@ -192,6 +194,25 @@
 
                 malHref: function(mal) {
                     return 'https://myanimelist.net/anime/' + mal;
+                },
+
+                makeTierList: function() {
+                    let allItems = [];
+                    let schedule = controller.model._get('yearData.' + controller.model._get('season') + '.schedule');
+                    for (let day in schedule) {
+                        if (Array.isArray(schedule[day])) {
+                            allItems.push(...schedule[day].map((title) => {
+                                return title.substr(title.indexOf(' ') + 1);
+                            }));
+                        }
+                    }
+
+                    let marked = controller.model._get('marked');
+                    let items = allItems.filter((title) => {
+                        return marked[title];
+                    });
+
+                    hashless.navTo('/tierlist#' + Base64.encode(JSON.stringify(items)));
                 },
 
                 twemojify: globalModel.twemojify_custom // function binding doesn't traverse models (yet)

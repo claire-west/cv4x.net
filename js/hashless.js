@@ -7,7 +7,7 @@
         var $title = $('title');
         var currentPage;
         var titles = {};
-        var init = function() {
+        var processRoute = function() {
             var page = window.location.pathname.substr(1) || 'home';
             if (page === currentPage) {
                 return;
@@ -54,7 +54,7 @@
                 }).fail(function() {
                     currentPage = 'home';
                     window.history.replaceState({},'', '/');
-                    init();
+                    processRoute();
                 });
             }
 
@@ -74,14 +74,14 @@
         initialLoad.done(function() {
             bind($('body'), globalModel).done(function() {
                 var $nav = $('#main > nav');
-                init().done(() => {
+                processRoute().done(() => {
                     $content.show();
                     $nav.show();
                 });
             });
         });
 
-        return Object.assign(init, {
+        return Object.assign(processRoute, {
             bindNav: function($elements) {
                 $elements.filter(function() {
                     return $(this).data('z--nav') !== true;
@@ -93,10 +93,19 @@
                             if (window.innerWidth < 641) {
                                 $('body').addClass('nav');
                             }
-                            init();
+                            processRoute();
                         }
                     }
                 });
+            },
+
+            navTo: function(href) {
+                window.history.pushState({},'', href);
+                processRoute();
+
+                if (href.includes('#')) {
+                    window.dispatchEvent(new HashChangeEvent("hashchange"))
+                }
             }
         });
     });

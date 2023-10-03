@@ -54,6 +54,9 @@
             if (window.location.hash) {
                 try {
                     var list = JSON.parse(Base64.decode(window.location.hash.substr(1)));
+                    if (Array.isArray(list)) {
+                        list = Object.assign(newTierlist(), { unassigned: list });
+                    }
                     history.replaceState("", document.title, window.location.pathname);
                     return list;
                 } catch (e) {

@@ -109,24 +109,27 @@
                             "eq": "wrap-up"
                         }'>Wrap-up</button>
                 </div> -->
-                <div class="flex align-center">
+                <div class="flex align-center"
+                    z--visible='{
+                        "path": "tab",
+                        "eq": "schedule"
+                    }'>
                     <button class="button showHideButton"
                         title="Only Show Marked Items"
-                        z--click="toggleShowHide"
-                        z--visible='{
-                            "path": "tab",
-                            "eq": "schedule"
-                        }'>
+                        z--click="toggleShowHide">
                         <i class="fa bi-eye-slash" z--visible="!hideUnmarked"></i>
                         <i class="fa bi-eye" z--visible="hideUnmarked"></i>
                     </button>
                     <button class="button screenshotButton"
                         title="Download Schedule"
-                        z--click="downloadSchedule"
-                        z--visible='{
-                            "path": "tab",
-                            "eq": "schedule"
-                        }'><i class="fa bi-camera"></i></button>
+                        z--click="downloadSchedule">
+                        <i class="fa bi-camera"></i>
+                    </button>
+                    <button class="button screenshotButton"
+                        title="Create tier list from marked items"
+                        z--click="makeTierList">
+                        <i class="fa bi-filter-square"></i>
+                    </button>
                 </div>
             </div>
 
