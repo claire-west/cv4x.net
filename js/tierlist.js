@@ -285,6 +285,7 @@
                         model._set('newItem', '');
                         model._set('list', list);
                         model.setColorsFromList();
+                        globalModel.closeModal.call(this);
                         scrollUp();
                     });
                 }

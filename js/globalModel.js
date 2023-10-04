@@ -58,7 +58,7 @@
                 $fragment.show();
                 $('body').addClass('noscroll');
                 $('.modal').show().find('.dialog').scrollTop(0);
-                promise.resolve();
+                promise.resolve($fragment);
             });
             return promise;
         });
