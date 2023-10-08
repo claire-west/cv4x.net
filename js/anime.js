@@ -16,7 +16,7 @@
         var maxYear = 2024;
 
         var convertTZ = function(time) {
-            if (time === '0000' || time === '????') {
+            if (time[0] === '?') {
                 return '????';
             }
             // parse hhmm as UTC+0

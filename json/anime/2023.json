@@ -309,12 +309,11 @@
     "秋": {
         "schedule": {
             "日": [
-                "❓0100 The iDOLM@STER Million Live!",
-                "❓0830 The Seven Deadly Sins s6",
+                "📉0830 The Seven Deadly Sins s6",
                 "🟠0930 Shangri-La Frontier",
+                "🟠1400 The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
                 "🟠1415 The Family Circumstances of the Irregular Witch",
                 "🟠1430 Overtake!",
-                "❓1430 The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
                 "🟦1700 Dark Gathering",
                 "🟠1730 Berserk of Gluttony"
             ],
@@ -340,7 +339,6 @@
                 "🟠1300 Bullbuster",
                 "🟠1315 I'm Giving the Disgraced Noble Lady I Rescued a Crash Course in Naughtiness",
                 "🟦1430 The Eminence in Shadow s2",
-                "❓1600 Uma Musume: Pretty Derby s3",
                 "🟠1645 Kizuna no Allele s2",
                 "🟠1700 16bit Sensation: Another Layer",
                 "🟠1725 KamiErabi GOD.app"
@@ -352,10 +350,10 @@
                 "🟠1600 The Yuzuki Family's Four Sons",
                 "🟠1615 A Girl & Her Guard Dog",
                 "🟠1700 Jujutsu Kaisen s2",
-                "❓1700 Rail Romanesque s2",
                 "🟠1745 Under Ninja",
                 "🟠1800 Rurouni Kenshin",
-                "🟠1800 After-School Hanako-kun"
+                "🟠1800 After-School Hanako-kun",
+                "🟠0000 Uma Musume: Pretty Derby s3"
             ],
             "金": [
                 "🟠1230 The Rising of the Shield Hero s3",
@@ -382,7 +380,8 @@
                 "🟠1700 The Apothecary Diaries",
                 "🟠1700 Butareba: The Story of a Man Turned Into a Pig",
                 "🟠1730 I Shall Survive Using Potions!",
-                "🟠1800 Protocol: Rain"
+                "🟠1800 Protocol: Rain",
+                "🟠0145 The iDOLM@STER Million Live!"
             ],
             "❓": []
         }
