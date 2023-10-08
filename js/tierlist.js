@@ -252,6 +252,18 @@
                 return '';
             },
 
+            adjustTextHeight: function(text) {
+                var element = $(this).get(0);
+                setTimeout(() => {
+                    while (element.offsetHeight > element.parentElement.offsetHeight) {
+                        let fontSize = Number(element.style.fontSize.replace('%', '')) || 100;
+                        element.style.fontSize = (fontSize - 1) + '%';
+                    }
+                });
+
+                return text;
+            },
+
             addItem: function() {
                 model.list.unassigned.push(model.newItem);
                 model.newItem = '';

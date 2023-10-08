@@ -1,5 +1,8 @@
 <div class="flex tierlist-item">
-    <span z--bind=">" z--visible='{
+    <span z--bind='{
+        "path": ">",
+        "fn": "adjustTextHeight"
+    }' z--visible='{
         "path": ">",
         "fn": "isImageLink",
         "eq": false
