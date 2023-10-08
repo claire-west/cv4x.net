@@ -253,10 +253,11 @@
             },
 
             adjustTextHeight: function(text) {
-                var element = $(this).get(0);
+                var element = this[0];
                 setTimeout(() => {
+                    element.style.fontSize = '100%';
                     while (element.offsetHeight > element.parentElement.offsetHeight) {
-                        let fontSize = Number(element.style.fontSize.replace('%', '')) || 100;
+                        let fontSize = Number(element.style.fontSize.replace('%', ''));
                         element.style.fontSize = (fontSize - 1) + '%';
                     }
                 });
