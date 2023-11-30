@@ -22,7 +22,6 @@
             "❓": [
                 "❓???? Solo Leveling",
                 "❓???? Dungeon Meshi",
-                "❓???? Whisper Me a Love Song",
                 "❓???? Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
                 "❓???? Classroom of the Elite s3",
                 "❓???? Tsukimichi -Moonlit Fantasy- s2",
@@ -56,11 +55,73 @@
                 "❓???? Sengoku Youko",
                 "❓???? Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!",
                 "❓???? The Strongest Tank's Labyrinth Raids",
-                "❓???? Synduality: Noir part 2"
+                "❓???? Synduality: Noir part 2",
+                "❓???? The Foolish Angel Dances with the Devil",
+                "❓???? Gushing over Magical Girls",
+                "❓???? The Unwanted Undead Adventurer",
+                "❓???? Sasaki and Peeps"
             ]
         }
     },
-    "春": null,
-    "夏": null,
+    "春": {
+        "schedule": {
+            "日": [
+            ],
+            "月": [
+            ],
+            "火": [
+            ],
+            "水": [
+            ],
+            "木": [
+            ],
+            "金": [
+            ],
+            "土": [
+            ],
+            "❓": [
+                "❓???? Yuru Camp△ s3",
+                "❓???? Hibike! Euphonium s3",
+                "❓???? Whisper Me a Love Song",
+                "❓???? Kaiju No. 8",
+                "❓???? That Time I Got Reincarnated as a Slime s3",
+                "❓???? Mushoku Tensei s2 part 2",
+                "❓???? Alya Sometimes Hides Her Feelings in Russian",
+                "❓???? I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability",
+                "❓???? Bartender: Glass of God",
+                "❓???? A Condition Called Love",
+                "❓???? Wind Breaker",
+                "❓???? As a Reincarnated Aristocrat, I'll Use My Appraisal Skill to Rise in the World",
+                "❓???? Jellyfish Can't Swim in the Night",
+                "❓???? Mysteries, Maidens, And Mysterious Disappearances",
+                "❓???? Highspeed Etoile",
+                "❓???? The Fable",
+                "❓???? The iDOLM@STER Shiny Colors",
+                "❓???? Quality Assurance in Another World",
+                "❓???? Rinkai!"
+            ]
+        }
+    },
+    "夏": {
+        "schedule": {
+            "日": [
+            ],
+            "月": [
+            ],
+            "火": [
+            ],
+            "水": [
+            ],
+            "木": [
+            ],
+            "金": [
+            ],
+            "土": [
+            ],
+            "❓": [
+                "❓???? Tower of God s2"
+            ]
+        }
+    },
     "秋": null
 }
