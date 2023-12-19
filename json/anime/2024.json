@@ -2,64 +2,70 @@
     "冬": {
         "schedule": {
             "日": [
-                "🟠0930 Shangri-La Frontier"
+                "🟠0930 Shangri-La Frontier",
+                "🟠1400 Fluffy Paradise",
+                "🟠1430 Banished From The Hero's Party, I Decided To Live A Quiet Life In The Countryside s2",
+                "🟠1500 Meiji Gekken: 1874",
+                "🟠1500 The Fire Hunter s2",
+                "🟠1530 7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!",
+                "❓1735 Mr. Villain's Day Off"
             ],
             "月": [
+                "🟠1200 High Card s2",
+                "🟠1300 The Unwanted Undead Adventurer",
+                "🟠1400 Tsukimichi -Moonlit Fantasy- s2",
+                "❓1600 'Tis Time for \"Torture,\" Princess",
+                "❓1600 Synduality: Noir part 2",
+                "🟠1630 Hokkaido Gals Are Super Adorable!",
+                "🟠1730 The Foolish Angel Dances with the Devil"
             ],
             "火": [
+                "🟠1530 Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
+                "❓1600 Shaman King s2"
             ],
             "水": [
+                "🟠1300 Bottom-Tier Character Tomozaki-kun s2",
+                "🟠1330 Doctor Elise: The Royal Lady with the Lamp",
+                "🟠1430 Classroom of the Elite s3",
+                "❓1530 Gushing over Magical Girls",
+                "🟠1600 Sengoku Youko",
+                "❓1600 Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!",
+                "🟠1655 Metallic Rouge",
+                "❓???? Ishura"
             ],
             "木": [
+                "❓1430 Dungeon Meshi",
+                "❓1500 Chained Soldier",
+                "🟠1530 Delusional Monthly Magazine",
+                "❓1600 Bang Brave Bang Bravern",
+                "🟠1730 The Witch and the Beast",
+                "🟦1755 Urusei Yatsura s2"
             ],
             "金": [
-                "🟠1500 Frieren: Beyond Journey's End"
+                "🟠1300 Sasaki and Peeps",
+                "❓1400 The Legend of Super normal Pref. CHIBA",
+                "🟠1500 Frieren: Beyond Journey's End",
+                "❓1500 The Weakest Tamer Began a Journey to Pick Up Trash",
+                "🟠1600 The Demon Prince of Momochi House",
+                "🟠1630 The Wrong Way to Use Healing Magic",
+                "💫1730 Undead Unluck",
+                "❓1755 Pon no Michi"
             ],
             "土": [
+                "🟠1330 Tales of Wedding Rings",
+                "🟠1430 A Sign of Affection",
+                "🟠1500 Bucchigiri?!",
+                "🟠1530 Mashle s2",
+                "🟠1600 Solo Leveling",
+                "❓1600 Kingdom s5",
+                "🟠1630 Blue Exorcist s3",
                 "🟦1630 Ragna Crimson",
+                "❓1630 My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!",
+                "🟦1730 The Dangers in My Heart s2",
+                "❓1800 The Strongest Tank's Labyrinth Raids",
                 "🟠1805 The Apothecary Diaries"
             ],
             "❓": [
-                "❓???? Solo Leveling",
-                "❓???? Dungeon Meshi",
-                "❓???? Villainess Level 99: I May Be the Hidden Boss but I'm Not the Demon Lord",
-                "❓???? Classroom of the Elite s3",
-                "❓???? Tsukimichi -Moonlit Fantasy- s2",
-                "❓???? Mashle s2",
-                "❓???? Bottom-Tier Character Tomozaki-kun s2",
-                "❓???? Chained Soldier",
-                "❓???? The Dangers in My Heart s2",
-                "❓???? Banished From The Hero's Party, I Decided To Live A Quiet Life In The Countryside s2",
-                "❓???? Blue Exorcist s3",
-                "❓???? Hokkaido Gals Are Super Adorable!",
-                "❓???? A Sign of Affection",
-                "❓???? Urusei Yatsura s2",
-                "❓???? Shaman King s2",
-                "❓???? Kingdom s5",
-                "❓???? High Card s2",
-                "❓???? My Instant Death Ability is So Overpowered, No One in This Other World Stands a Chance Against Me!",
-                "❓???? The Witch and the Beast",
-                "❓???? The Wrong Way to Use Healing Magic",
-                "❓???? Tales of Wedding Rings",
-                "❓???? Metallic Rouge",
-                "❓???? Surgeon Elise",
-                "❓???? The Weakest Tamer Began a Journey to Pick Up Trash",
-                "❓???? Ishura",
-                "❓???? Fluffy Paradise",
-                "❓???? Bucchigiri?!",
-                "❓???? Mr. Villain's Day Off",
-                "❓???? Pon no Michi",
-                "❓???? 7th Time Loop: The Villainess Enjoys a Carefree Life Married to Her Worst Enemy!",
-                "❓???? The Fire Hunter s2",
-                "❓???? 'Tis Time for \"Torture,\" Princess",
-                "❓???? Sengoku Youko",
-                "❓???? Cherry Magic! Thirty Years of Virginity Can Make You a Wizard?!",
-                "❓???? The Strongest Tank's Labyrinth Raids",
-                "❓???? Synduality: Noir part 2",
-                "❓???? The Foolish Angel Dances with the Devil",
-                "❓???? Gushing over Magical Girls",
-                "❓???? The Unwanted Undead Adventurer",
-                "❓???? Sasaki and Peeps"
             ]
         }
     },
@@ -72,8 +78,11 @@
             "火": [
             ],
             "水": [
+                "🟠1600 Sengoku Youko"
             ],
             "木": [
+                "❓1430 Dungeon Meshi",
+                "🟦1755 Urusei Yatsura s2"
             ],
             "金": [
             ],
@@ -84,7 +93,10 @@
                 "❓???? Hibike! Euphonium s3",
                 "❓???? Whisper Me a Love Song",
                 "❓???? Kaiju No. 8",
+                "❓???? Kimetsu no Yaiba: Hashira Training Arc",
+                "❓???? Black Butler: Public School Edition",
                 "❓???? That Time I Got Reincarnated as a Slime s3",
+                "❓???? Boku no Hero Academia s7",
                 "❓???? Mushoku Tensei s2 part 2",
                 "❓???? Alya Sometimes Hides Her Feelings in Russian",
                 "❓???? I Was Reincarnated as the 7th Prince so I Can Take My Time Perfecting My Magical Ability",
@@ -98,7 +110,18 @@
                 "❓???? The Fable",
                 "❓???? The iDOLM@STER Shiny Colors",
                 "❓???? Quality Assurance in Another World",
-                "❓???? Rinkai!"
+                "❓???? Rinkai!",
+                "❓???? Unnamed Memory",
+                "❓???? Mission: Yozakura Family",
+                "❓???? A Story About a Grandpa and Grandma Who Returned Back to Their Youth",
+                "❓???? Studio Apartment, Good Lighting, Angel Included",
+                "❓???? Vampire Dormitory",
+                "❓???? Re:Monster",
+                "❓???? Boukyaku Battery",
+                "❓???? Tonari no Youkai-san",
+                "❓???? Astro Note",
+                "❓???? The Crow Does Not Choose the Lord",
+                "❓???? Ooi! Tonbo"
             ]
         }
     },
