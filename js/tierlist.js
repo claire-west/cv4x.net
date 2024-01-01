@@ -497,7 +497,7 @@
                 new Sortable(sortable, {
                     group: 'tierlist-sortable',
                     draggable: '.tierlist-item',
-                    animation: 20,
+                    // animation: 20,
                     onEnd: onSort
                 });
             }
