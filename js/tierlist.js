@@ -491,15 +491,21 @@
             model._refresh();
         };
 
+        var allSortables = [];
         function makeSortable() {
+            allSortables.forEach(s => {
+                s.destroy();
+            });
+            allSortables = [];
+
             var sortables = $page.find('.tierlist-sortable').get();
             for (var sortable of sortables) {
-                new Sortable(sortable, {
+                allSortables.push(new Sortable(sortable, {
                     group: 'tierlist-sortable',
                     draggable: '.tierlist-item',
                     // animation: 20,
                     onEnd: onSort
-                });
+                }));
             }
         };
 
