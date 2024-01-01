@@ -319,7 +319,7 @@
                     items = items.concat(tier.items);
                     tier.items = [];
                 }
-                model._set('list.unassigned', items);
+                model._set('list.unassigned', items.sort());
             },
 
             newTierList: function() {
