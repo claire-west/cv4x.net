@@ -9,7 +9,8 @@
         ]),
         dynCore.jsonBundle('app.json.tierlist', {
             blank: 'blank',
-            anime: 'anime.2023'
+            animeSimulcast: 'anime.simulcast',
+            //animeTheme: 'anime.theme'
         }),
         dynCore.js('https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js'),
         dynCore.js('https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'),
@@ -52,6 +53,14 @@
 
         function getHashList() {
             if (window.location.hash) {
+                if (window.location.hash.startsWith('#list=')) {
+                    var listName = decodeURIComponent(window.location.hash.split('=').slice(1).join('='));
+                    var list = getListByName(listName);
+                    if (list) {
+                        history.replaceState("", document.title, window.location.pathname);
+                        return JSON.parse(JSON.stringify(list));
+                    }
+                }
                 try {
                     var list = JSON.parse(Base64.decode(window.location.hash.substr(1)));
                     if (Array.isArray(list)) {
@@ -81,7 +90,7 @@
 
         var model = model({
             allLists: [],
-            list: getInitialList(),
+            list: {},
             colors: defaultColors.slice(),
 
             onSelectChange: function(model) {
@@ -321,7 +330,7 @@
             },
 
             copyPermalink: function() {
-                var url = window.location.href + '#' + Base64.encode(JSON.stringify(model.list));
+                var url = window.location.origin + window.location.pathname + window.location.search + '#' + Base64.encode(JSON.stringify(model.list));
                 navigator.clipboard.writeText(url);
                 $toast = $(this).find('.toast');
                 $toast.addClass('toast-show');
@@ -397,11 +406,17 @@
             }
         }, globalModel);
 
-        model.setColorsFromList();
-
         for (let prop in json) {
             model.allLists = model.allLists.concat(json[prop]);
         }
+
+        model._set('list', getInitialList());
+        model.setColorsFromList();
+
+        function getListByName(listName) {
+            var list = model.allLists.find(l => l.title === listName);
+            return list ? list : newTierList();
+        };
 
         function addUnassignedItems(input) {
             if (typeof(input) === 'string') {
@@ -497,7 +512,7 @@
                 model._set('list', list);
                 model.setColorsFromList();
             }
-        });
+        }, true);
 
         return bind($page, model).done(function() {
             model._refresh();
@@ -506,6 +521,18 @@
             makeSortable();
             model._track('list', makeSortable);
             model._track('list.tiers', makeSortable);
-        });
+
+            // on initial load, long texts don't get adjusted because their target height is zero
+            (function waitForVisible() {
+                if ($page.is(":visible")) {
+                    let $items = $page.find('.tierlist-item');
+                    $items.get().forEach(i => {
+                        model.adjustTextHeight.call(i.children, i.textContent.trim());
+                    });
+                } else {
+                    setTimeout(waitForVisible);
+                }
+            })();
+        })
     });
 })(window.dynCore);
