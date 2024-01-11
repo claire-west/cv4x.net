@@ -74,8 +74,14 @@
             }
         };
 
+        function getCachedList() {
+            try {
+                return JSON.parse(localStorage.getItem('tierlist.current'));
+            } catch (e) {}
+        };
+
         function getInitialList() {
-            return getHashList() || newTierlist();
+            return getHashList() || getCachedList() || newTierlist();
         };
 
         function scrollUp() {
@@ -519,6 +525,12 @@
                 model.setColorsFromList();
             }
         }, true);
+
+        setInterval(() => {
+            if ($page.is(':visible')) {
+                localStorage.setItem('tierlist.current', JSON.stringify(model.list));
+            }
+        }, 5 * 1000);
 
         return bind($page, model).done(function() {
             model._refresh();
