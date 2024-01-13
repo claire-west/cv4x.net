@@ -5,15 +5,45 @@
             'lib.model',
             'app.globalModel',
             'lib.download',
+            'app.emojify',
             'lib.hashWatch',
             'app.hashless'
         ]),
         dynCore.js('https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'),
         dynCore.css('anime', 'app.anime')
-    ).done((modules, bind, model, globalModel, download, hashWatch, hashless) => {
+    ).done((modules, bind, model, globalModel, download, emojify, hashWatch, hashless) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
         var maxYear = 2024;
+
+        var emojiMap = {
+            '🟠': {
+                src: '/img/emoji/crunchyroll.png',
+                alt: 'Crunchyroll'
+            },
+            '🟦': {
+                src: '/img/emoji/hidive.png',
+                alt: 'HIDIVE'
+            },
+            '💫': {
+                src: '/img/emoji/disney+.png',
+                alt: 'Disney+'
+            },
+            '📉': {
+                src: '/img/emoji/netflix.png',
+                alt: 'Netflix'
+            },
+            '❓': {
+                src: '/img/emoji/unknown.png',
+                alt: 'Unknown'
+            },
+            '❌': {
+                src: '/img/emoji/none.png',
+                alt: 'No Licensor'
+            }
+        };
+
+        emojify.preload(Object.values(emojiMap).map(e => e.src));
 
         var convertTZ = function(time) {
             if (time[0] === '?') {
@@ -215,7 +245,14 @@
                     hashless.navTo('/tierlist#' + Base64.encode(JSON.stringify(items)));
                 },
 
-                twemojify: globalModel.twemojify_custom // function binding doesn't traverse models (yet)
+                twemojify: globalModel.twemojify_custom, // function binding doesn't traverse models (yet)
+
+                emojify: function(text) {
+                    setTimeout(() => {
+                        emojify(this.get(0), emojiMap, { title: true });
+                    });
+                    return text;
+                }
             }, globalModel)
         };
 
