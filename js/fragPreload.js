@@ -1,0 +1,742 @@
+((dynCore) => {
+    dynCore.declare('app.fragPreload', dynCore.require([
+        'lib.fragment'
+    ]), (modules, fragment) => {
+
+        fragment.preload('frag.anime.scheduleitem', `<p z--click='{
+    "path": "toggleMarked",
+    "args": [ "marked", "./" ]
+}'
+z--class='{
+    "class": "marked",
+    "path": "updateMarked",
+    "args": [ "marked", ">" ],
+    "fn": "isMarked"
+}'
+z--bind='{
+    "path": ">",
+    "fn": "emojify"
+}'></p>`);
+        fragment.preload('frag.faves.vocalsynthmusic', `<div class="col">
+    <p>This is a list of my favorite vocal synth music. I've tried to limit it to one song from each of the following categories per vocal synth, with some exceptions (can you really pick just one Miku or Flower song?).</p>
+    <ol>
+        <li>A "high-profile" song is one that has gained wide attention from the fandom, or even from outside the usual listening audience. Not every vocal synth even has a truly high-profile song, so it's a flexible category by necessity.</li>
+        <li>"Under the Radar" means something that tends to be lesser-known, either relative to other songs using the same voice or other works by the artist. Most English songs fall into this category.</li>
+        <li>I didn't only want to list original songs, but I also don't want to only mention a cover for any particular vocal synth, so I've opted to give covers their own category.</li>
+    </ol>
+    <p>Picking single favorites is kind of impossible, so treat this as a recommendation list more than anything.</p>
+</div>
+<div class="col scroll-x">
+    <table>
+        <thead>
+            <tr>
+                <th>Vocal Synth</th>
+                <th>High-profile</th>
+                <th>Under the Radar</th>
+                <th>Cover / Remix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+             -->
+            <tr>
+                <td>Aido Ishiame</td>
+                <td><a href="https://youtu.be/JvcOcnFK2oc">Spectrum</a></td>
+                <td><a href="https://youtu.be/8niwf05VPOA">Decay</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Aoki Lapis</td>
+                <td><a href="https://youtu.be/Y6BzgR7a_QM">Confession</a></td>
+                <td><a href="https://youtu.be/WYdXc6-HswI">Magica Toxica</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>AVANNA</td>
+                <td><a href="https://youtu.be/HAIDqt2aUek">Sad Machine</a></td>
+                <td><a href="https://youtu.be/iOC6wulFFsc">Calm Before the Storm</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <!-- <tr>
+                <td>Cangqiong</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr> -->
+            <!-- <tr>
+                <td>Chis-A</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr> -->
+            <tr>
+                <td>Chiyu</td>
+                <td><a href="https://www.bilibili.com/video/BV1ba4y1x7pg/">404 Not Found</a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://www.bilibili.com/video/BV1A54y1U7Ft/">Childish War</a></td>
+            </tr>
+            <tr>
+                <td>COKO</td>
+                <td><a href="https://youtu.be/VOx12VDOkQY">Hello World !</a></td>
+                <td><a href="https://youtu.be/yNfkSiBxQAk">dislike</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <!-- <tr>
+                <td>DAINA</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr> -->
+            <!-- <tr>
+                <td>DEX</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr> -->
+            <tr>
+                <td>Eleanor Forte</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/mZ07zwW2hPI">Blindsided</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr><td colspan="4" class="text-center">This is The Flower Zone</td></tr>
+            <tr class="v-top">
+                <td>Flower</td>
+                <td>
+                    <a href="https://youtu.be/rpEObcGvxP4">8.32</a><br/>
+                    <a href="https://youtu.be/VHgiGuVdLEA">Lonely Universe</a><br/>
+                    <a href="https://youtu.be/qfrp_dFLAJY">Ramune</a><br/>
+                    <a href="https://youtu.be/p9FJXfGHtDA">Villain</a><br/>
+                    <a href="https://youtu.be/HR7YwGmP6mA">Mayday</a><br/>
+                    <a href="https://youtu.be/oRJBwaZ59fQ">Venom</a><br/>
+                    <a href="https://youtu.be/gy_uVLgFsQQ">Ivory</a><br/>
+                    <a href="https://youtu.be/QprnVxCveSY">Egoist</a><br/>
+                    <a href="https://youtu.be/_xXenYRkbKs">I Think I Just Died</a><br/>
+                    <a href="https://youtu.be/qEqxCtv5KEM">Rinkai Diver</a><br/>
+                    <a href="https://youtu.be/srH34Tjjo9U">Fixer</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/4UYqQwHmSVo">Deception</a><br/>
+                    <a href="https://youtu.be/nrsr_-QXCv4">Better Off Worse</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/T9iFcb5yfAc">Close to You</a><br/>
+                </td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>Fukase</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/_xGk3OY-uxM">Near</a></td>
+            </tr>
+            <tr>
+                <td>Futaba Minato</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/dtZeG89YW4g">Airborne Aspiration</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr><td colspan="4" class="text-center">This is The Gummy Zone</td></tr>
+            <tr class="v-top">
+                <td>GUMI</td>
+                <td>
+                    <a href="https://youtu.be/PnM_uVGKKl0">Black Out</a><br/>
+                    <a href="https://youtu.be/HNIypYrVlkA">MONSTER</a><br/>
+                    <a href="https://youtu.be/w2ySuxC2SNI">Defeated Boy</a><br/>
+                    <a href="https://youtu.be/cm-l2h6GB8Q">KING</a><br/>
+                    <a href="https://youtu.be/sFhKP57Nk1U">All Night Thinking of You</a><br/>
+                    <a href="https://youtu.be/sSHkXxADtaE">EYE</a><br/>
+                    <a href="https://youtu.be/5nSThlXtc4k">PLATONIC GIRL</a><br/>
+                    <a href="https://youtu.be/bcLYdxMusHc">TOKIO FUNKA</a><br/>
+                    <a href="https://youtu.be/cm-l2h6GB8Q">KING</a><br/>
+                    <a href="https://youtu.be/cQKGUgOfD8U">ECHO</a><br/>
+                    <a href="https://youtu.be/vB8sxY_PJ_w">Unaware Drunkard</a><br/>
+                    <a href="https://youtu.be/Fw2kDbfP06A">Ladylike</a><br/>
+                    <a href="https://youtu.be/KFCaSz_yYCM">QUEEN</a><br/>
+                    <a href="https://youtu.be/grdy6rLbQ-c">Dear Doppelganger</a><br/>
+                    <a href="https://youtu.be/Ey_NHZNYTeE">Brain Fluid Explosion Girl</a><br/>
+                    <a href="https://youtu.be/Q_QEPrkwZ-Q">Copycat</a><br/>
+                    <a href="https://youtu.be/qYjvgYYlwSY">Games</a><br/>
+                    <a href="https://youtu.be/TAjrPYzqs2w">Machine Gun</a><br/>
+                    <a href="https://youtu.be/5Pbx04sT-sU">Fraudulent Life Game</a><br/>
+                    <a href="https://youtu.be/rFLn-2ocnY8">Piece of Art</a><br/>
+                    <a href="https://youtu.be/Om3MTou2kPg">Six Trillion Years and Overnight Story</a><br/>
+                    <a href="https://youtu.be/vXSpdipuiFs">Invisible</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/Cn4aFEDHeaI">browser history</a>
+                </td>
+                <td>
+                    <a href="https://youtu.be/z-UcGqEVQq8">Interstellar Flight</a><br/>
+                    <a href="https://youtu.be/hUVXgY9OWEw">I Think I Just Died</a><br/>
+                </td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>Haiyi</td>
+                <td><a href="https://www.bilibili.com/video/BV1j7411z7Ep/">Talking to the Rain</a></td>
+                <td><a href="https://youtu.be/XTnCmxCz4Cc">Enough</a></td>
+                <td><a href="https://youtu.be/eV3TPNSVdSk">MIRA</a></td>
+            </tr>
+            <tr>
+                <td>Hanakuma Chifuyu</td>
+                <td><a href="https://youtu.be/AHV1sv0yGqc">Sensei ano Ne</a></td>
+                <td><a href="https://youtu.be/v3unqnO6Njg">Da Da Dawn</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr><td colspan="4" class="text-center">This is The Miku Zone</td></tr>
+            <tr>
+                <th>2008 - 2019</th>
+                <th>2020 Onward</th>
+                <th>Under the Radar</th>
+                <th>Cover / Remix</th>
+            </tr>
+            <tr class="v-top">
+                <td>
+                    <a href="https://youtu.be/VHgiGuVdLEA">Lonely Universe</a><br/>
+                    <a href="https://youtu.be/byl48g8AINc">I hate bad end movies</a><br/>
+                    <a href="https://youtu.be/TcHvEFxk_78">YY</a><br/>
+                    <a href="https://youtu.be/2kZVEUGLgy4">METEOR</a><br/>
+                    <a href="https://youtu.be/TkroHwQYpFE">Hibikase</a><br/>
+                    <a href="https://youtu.be/bCrOOJDek84">Sleeping Awake</a><br/>
+                    <a href="https://youtu.be/vnw8zURAxkU">Rolling Girl</a><br/>
+                    <a href="https://youtu.be/RL7g862A9n4">DARK ROM SYNCER</a><br/>
+                    <a href="https://www.nicovideo.jp/watch/sm35330510">Reunion</a><br/>
+                    <a href="https://youtu.be/Fb1_fpuYX1I">Is There a Life In It?</a><br/>
+                    <a href="https://youtu.be/o1iz4L-5zkQ">Kimagure Mercy</a><br/>
+                    <a href="https://youtu.be/ZEy36W1xX8c">Melty Land Nightmare</a><br/>
+                    <a href="https://youtu.be/EgOWe9ByNaE">Time Machine</a><br/>
+                    <a href="https://youtu.be/243vPl8HdVk">Redial</a><br/>
+                    <a href="https://youtu.be/P_CSdxSGfaA">Unknown Mother-Goose</a><br/>
+                    <a href="https://youtu.be/7zwCIz-Ohn4">Otome Dissection</a><br/>
+                    <a href="https://youtu.be/TXzfQ0cP1P0">Love Trial</a><br/>
+                    <a href="https://youtu.be/9hRF60wm3Co">B.B.F.</a><br/>
+                    <a href="https://youtu.be/mXfnndMDFPs">Centrillon</a><br/>
+                    <a href="https://youtu.be/XSLhsjepelI">Greenlights Serenade</a><br/>
+                    <a href="https://youtu.be/DxAo9E7OOCk">i DO what i WANT</a><br/>
+                    <a href="https://youtu.be/7Y9sJvLI3Po">Gehenna</a><br/>
+                    <a href="https://youtu.be/Tq49NR_HzfY">Aster</a><br/>
+                    <a href="https://youtu.be/06d8SwcSm_Q">Weekender Girl</a><br/>
+                    <a href="https://youtu.be/zweVJrnE1uY">DECORATOR</a><br/>
+                    <a href="https://youtu.be/sK92X82T3Sk">Blue Star</a><br/>
+                    <a href="https://youtu.be/SXC2wO1XdMI">Airhead</a><br/>
+                    <a href="https://youtu.be/L2pXPO2tf5o">BEAT SYNCER</a><br/>
+                    <a href="https://youtu.be/x64etY04Cvo">Romeo and Cinderella</a><br/>
+                    <a href="https://youtu.be/ZB75e7vzX0I">World's End Dancehall</a><br/>
+                    <a href="https://youtu.be/ajlDAQeWQKE">Next Nest</a><br/>
+                    <a href="https://youtu.be/RKtoreimcQ8">Hand in Hand</a><br/>
+                    <a href="https://youtu.be/sl1Hb2zl4V4">I Lost Your Love</a><br/>
+                    <a href="https://youtu.be/PLevj9bdRRA">I'm glad you're evil too</a><br/>
+                    <a href="https://youtu.be/Ey_NHZNYTeE">Brain Fluid Explosion Girl</a><br/>
+                    <a href="https://youtu.be/OuLZlZ18APQ">39Music!</a><br/>
+                    <a href="https://youtu.be/pqiJ7krbEDM">Catch the Wave</a><br/>
+                    <a href="https://youtu.be/5m1D2SEKAYo">I (don't) love you</a><br/>
+                    <a href="https://youtu.be/LE1XskraNfI">Heart a la Mode</a><br/>
+                    <a href="https://youtu.be/HUzLUGKwQJc">ODDS & ENDS</a><br/>
+                    <a href="https://youtu.be/_of2sKbRUko">Snow Fairy Story</a><br/>
+                    <a href="https://www.nicovideo.jp/watch/sm1715919">Melt</a><br/>
+                    <a href="https://youtu.be/xxFkW3PCT5M">Karakuri Pierrot</a><br/>
+                    <a href="https://youtu.be/sjr-tPFADpM">Brain Revolution Girl</a><br/>
+                    <a href="https://youtu.be/VE4wegMHIMk">Psychogram</a><br/>
+                    <a href="https://youtu.be/_XB3PxNZpT4">Secret Police</a><br/>
+                    <a href="https://youtu.be/Z4LiNMCTV20">Hyper Reality Show</a><br/>
+                    <a href="https://youtu.be/uwwU55zBYlQ">Ageage Again</a><br/>
+                    <a href="https://youtu.be/PRzirzL54Iw">Chain Girl -Re Alive-</a><br/>
+                    <a href="https://youtu.be/KmvydnVTriE">FREELY TOMORROW</a><br/>
+                    <a href="https://youtu.be/DlIREQyaxu8">Alter Ego</a><br/>
+                    <a href="https://youtu.be/y3yyYYLyVzw">Ohedo Julia-Night</a><br/>
+                    <a href="https://youtu.be/zkLJoFp2UAE">Ai Dee</a><br/>
+                    <a href="https://youtu.be/79N1O0lF0GY">Love! Snow! Really Magic</a><br/>
+                    <a href="https://youtu.be/WiUjG9fF3zw">Viva Happy</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/QcpjV43ALCA">Ours</a><br/>
+                    <a href="https://youtu.be/zAWu9BK_V5M">Last Score</a><br/>
+                    <a href="https://youtu.be/7lMt4I5ufHE">Ultra Elegy</a><br/>
+                    <a href="https://youtu.be/AufydOsiD6M">Lucky☆Orb</a><br/>
+                    <a href="https://youtu.be/gtYydJJtQdg">Awake Now</a><br/>
+                    <a href="https://youtu.be/XAg1jDDG49Y">Ready Steady</a><br/>
+                    <a href="https://youtu.be/pRZwLHrMsvM">Realize</a></br/>
+                    <a href="https://youtu.be/7j0mQH0BtEU">FUTURE EVE</a><br/>
+                    <a href="https://youtu.be/_fC4gB841VI">Digital Girl</a><br/>
+                    <a href="https://youtu.be/2KrCmAWrrKI">Brand New Day</a><br/>
+                    <a href="https://youtu.be/WXvm5XfkXrk">Ice Drop</a><br/>
+                    <a href="https://youtu.be/2nhB7Mf46xI">A Summer That Won't Fade</a><br/>
+                    <a href="https://youtu.be/KhAcM0Nbtr8">Clipping Radio</a><br/>
+                    <a href="https://youtu.be/i5rl-NGSYoo">Color of Drops</a><br/>
+                    <a href="https://youtu.be/YVD1RLI7klc">STAGE OF SEKAI</a><br/>
+                    <a href="https://youtu.be/mMiLWxuffdQ">From Tokyo</a><br/>
+                    <a href="https://youtu.be/6NdOqVypgCM">Worldwide Wander</a><br/>
+                    <a href="https://youtu.be/purlnb5K_jM">Reborn</a><br/>
+                    <a href="https://youtu.be/AYUNaQaDfa8">Highlight</a><br/>
+                    <a href="https://youtu.be/iksyHmE1JAQ">SnowMix♪</a><br/>
+                    <a href="https://youtu.be/g6sYNwl1EWg">Hello Marina</a><br/>
+                    <a href="https://youtu.be/adGhT_-JbZI">Cinderella</a><br/>
+                    <a href="https://youtu.be/EHBFKhLUVig">God-ish</a><br/>
+                    <a href="https://youtu.be/43gCuHxQDy0">Mafia</a><br/>
+                    <a href="https://youtu.be/juOJFUVF12k">The Bubble Future</a><br/>
+                    <a href="https://youtu.be/N9-M-avUjO8">OGRE</a><br/>
+                    <a href="https://youtu.be/EEbWRjavSVw">Cinema</a><br/>
+                    <a href="https://youtu.be/0ahJ3_4hcL0">ONESELF</a><br/>
+                    <a href="https://youtu.be/wvlUWjqGQSA">Awaiting Clear Skies</a><br/>
+                    <a href="https://youtu.be/lWuJRRCTHrg">Seraphim On The Ring</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/0SRTVJmyEUI">White</a><br/>
+                    <a href="https://youtu.be/thK7ybhF-MI">Check This Out</a><br/>
+                    <a href="https://youtu.be/_qphimgwzI4">Lovely Assassin</a><br/>
+                    <a href="https://youtu.be/8Ko11LuJDck">Show Time</a><br/>
+                    <a href="https://youtu.be/lnJbVe8UflU">Revolution</a><br/>
+                    <a href="https://youtu.be/hA6iBjxqDro">Puzzle</a><br/>
+                    <a href="https://youtu.be/urLuTAKEdmY">The Zenith</a><br/>
+                    <a href="https://youtu.be/sC8svfushU8">Summer Sky and Contrails</a><br/>
+                    <a href="https://youtu.be/ducYrKbWebc">Natsuiro, Sorairo</a><br/>
+                    <a href="https://youtu.be/zDjWYyfu6fE">Secret Lie</a><br/>
+                    <a href="https://www.nicovideo.jp/watch/sm42549111">Miracle Future Rise!!</a><br/>
+                    <a href="https://youtu.be/lBs5_3DoOkY">Makeup</a><br/>
+                    <a href="https://youtu.be/lsrrtGLbEgM">Sprout Bloom</a><br/>
+                    <a href="https://youtu.be/n37kZTKbpSM">Dance With Me</a><br/>
+                    <a href="https://youtu.be/6S6P6VKCHnI">Ending B</a><br/>
+                    <a href="https://youtu.be/Rb4YtJZ_giE">Lazy Slight Fever</a><br/>
+                    <a href="https://youtu.be/tqDckDVjZlE">Orca</a><br/>
+                    <a href="https://youtu.be/VygBey2ib4o">MOViNG ON</a><br/>
+                    <a href="https://youtu.be/f9DzbpmWbMo">Rainy Step</a><br/>
+                    <a href="https://youtu.be/LbZRhLtil-U">Aquamarine</a><br/>
+                </td>
+                <td>
+                    <a href="https://youtu.be/Emz99Wt4FVM">Kimagure Mercy</a> (irucaice remix)<br/>
+                    <a href="https://youtu.be/0MZJduzi1OU">Idol</a> (Bibi cover)<br/>
+                    <a href="https://youtu.be/EDjYDfRunUk">Otome Dissection</a> (TeddyLoid Allies remix)<br/>
+                    <a href="https://youtu.be/TXfJVNqaHiM">Failure Girl</a> (MARETU remix)<br/>
+                    <a href="https://youtu.be/C0PuZImysRo">Ghost Rule</a> (crusher remix)<br/>
+                    <a href="https://youtu.be/u_QS0sjg6YU?t=142">Hibikase x Echo</a> (live version)<br/>
+                </td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>IA</td>
+                <td><a href="https://youtu.be/HhmCvEEBqsA">Our Summer Will Come Again</a></td>
+                <td><a href="https://youtu.be/W-3ZZ_sy0lE">The Same Tomorrow</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kaai Yuki</td>
+                <td><a href="https://youtu.be/2_93SNGYgYs">Anticyclone</a></td>
+                <td><a href="https://youtu.be/CM3Op5bRC4s">The Decisive Hour</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>KAFU</td>
+                <!-- <td><a href="https://youtu.be/I9VfWCyCagQ">I am, We are</a></td> -->
+                <td><a href="https://youtu.be/hcjyRnPbCWc">Boi</a></td>
+                <td><a href="https://youtu.be/QggCIx9mHwc">My Doppelganger</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kagamine Duo</td>
+                <td><a href="https://youtu.be/oEkGC2HV7rc">BRING IT ON!</a></td>
+                <td><a href="https://youtu.be/leZeMa3ectA">Devil of Ifreann</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kagamine Len</td>
+                <td><a href="https://youtu.be/8Zds1FvEtKw">Pulse of the Meteor</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kagamine Rin</td>
+                <td><a href="https://youtu.be/I25Cqlr5_Sc">KOISURU☆BEAM</a></td>
+                <td><a href="https://youtu.be/B5qGaADwJoQ">No Overtaking</a></td>
+                <td>Karma (Circus 715 mix)</td>
+            </tr>
+            <tr>
+                <td>KAITO</td>
+                <td><a href="https://youtu.be/ccdn1a5LOwk">1/4</a></td>
+                <td><a href="https://youtu.be/kQDzUpCdLD0">Marco Polo</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kasane Teto (SV)</td>
+                <td><a href="https://youtu.be/oePX92KTE_M">Miihaa</a></td>
+                <td><a href="https://youtu.be/_5pzCR_VJx8">What it Takes to Break</a></td>
+                <td><a href="https://youtu.be/R8fuPgbOhTM">Odds & Ends</a></td>
+            </tr>
+            <tr>
+                <td>Kasane Teto (UTAU)</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/4llHpe3WlFw">Burn it Down</a></td>
+                <td><a href="https://youtu.be/X2IzkM7gtPY">Love is War</a></td>
+            </tr>
+            <tr>
+                <td>Kevin</td>
+                <td><a href="https://youtu.be/EYKrl61cUsY">Reckless Battery Burns</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Koharu Rikka</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/C06uXutyqAY">Reminiscent Poem</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Kotonoha Akane / Aoi</td>
+                <td><a href="https://youtu.be/j4ZuoUOkjSY">ムシ</a></td>
+                <td><a href="https://youtu.be/AUqIZJ9Z9MY">Polar Girls</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Megurine Luka</td>
+                <td><a href="https://youtu.be/e0ddGWxyhUQ">Leia - Remind</a></td>
+                <td><a href="https://youtu.be/ew1Ww-_7L8A">Dream</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>LUMi</td>
+                <td><a href="https://youtu.be/GDV32AUXgsw">This Earth, for You</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Luo Tianyi</td>
+                <td><a href="https://www.bilibili.com/video/BV16x411P7Dh/">I’m Gonna Buy! Buy! Buy!</a></td>
+                <td><a href="https://www.bilibili.com/video/av7331553/">Pink Lemon</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Macne Nana</td>
+                <td><a href="https://youtu.be/dnO0_ZGOJJY">Heal Me</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>MEIKO</td>
+                <td><a href="https://youtu.be/t4gP6cC55p0">Fräulein=Biblioteka</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>MEDIUM⁵</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/FKL9bGkkIkA">Star</a></td>
+            </tr>
+            <tr>
+                <td>Meika Mikoto</td>
+                <td><a href="https://youtu.be/2Tv1t-8VAmI">Scattered Glass</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Mo Qingxian</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://www.bilibili.com/video/BV1fz4y1k7wG/">失眠飞行</a></td>
+            </tr>
+            <tr>
+                <td>Natsuki Karin</td>
+                <td><a href="https://youtu.be/0MKomCQ_KSA">Datte</a></td>
+                <td><a href="https://youtu.be/aEtwA-iwoCQ?t=205">Makka</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Otomachi Una</td>
+                <td><a href="https://youtu.be/ZhjfsY49JhY">初恋日記</a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/S_EWAw7Eg7w">Melt</a></td>
+            </tr>
+            <tr>
+                <td>POPY</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/_VYKvorTmx0">Konpeito-san Extremist</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Po-uta</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/dLOwi89C7gg">Right as Rain</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Rana</td>
+                <td><a href="https://youtu.be/7yjzo8qnenk">Someday in that Summer</a></td>
+                <td><a href="https://youtu.be/EfnIP2URJ5k">Kimi wo Sagasu</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>RIME</td>
+                <td><a href="https://youtu.be/xn4qndSd3vs">Sinktank</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>ROSE</td>
+                <td><a href="https://youtu.be/4dHeI8NOFLQ">SUSHI-GO-ROUND</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td><a href="https://youtu.be/qYjvgYYlwSY">Games</a></td>
+                <td><a href="https://youtu.be/BTcHx3Afw-8">Blink</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Ryo</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/RC0dOBMIqJ4">eavesdrop</a></td>
+                <td><a href="https://youtu.be/MPUrlqO3_-o">Defeated Boy</a></td>
+            </tr>
+            <tr>
+                <td>SEKAI</td>
+                <td><a href="https://youtu.be/fweAU03-7b0">The Melancholy of Erika</a></td>
+                <td><a href="https://youtu.be/1vndn0-qFgg">Bullet Shark</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>SF-A2 miki</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/D-OBnxKA3TE">Toosenbo</a></td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr><td colspan="4" class="text-center">This is The Shian Zone</td></tr>
+            <tr class="v-top">
+                <td>Shian</td>
+                <td>
+                    <a href="https://www.bilibili.com/video/av825751194/">惊蛰正中央</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1xK411w7tB/">猫一跃而下，随后死亡</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1np4y1X7L9/">She Chased the End of the Moonlight</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1CL4y147jA/">The Last Guardian</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1q4411u7As/">Caramel Star</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1e7411u7ce/">silent spiral</a><br/>
+                </td>
+                <td>
+                    <a href="https://www.bilibili.com/video/BV1pa411B78v/">Brown Sugar Milk Tea</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1Dy4y1C7S2/">A Slow Death</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1ri4y1G7NJ/">我弄丢了我最喜欢的折伞</a><br/>
+                    <a href="https://youtu.be/I2VAwWJNgBI">Sunflower Field</a><br/>
+                    <a href="https://www.bilibili.com/video/BV1DX4y1k79q/">春天没有落花</a><br/>
+                    <a href="https://www.bilibili.com/video/BV19X4y117y9/">Anaerobic</a><br/>
+                    <a href="https://www.bilibili.com/video/BV17B4y1F7ZJ/">Confession</a><br/>
+                </td>
+                <td>
+                    <a href="https://www.bilibili.com/video/BV1dm4y1D7oF/">Say So</a><br/>
+                </td>
+            </tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr>
+                <td>SOLARIA</td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/F8fbq7V3qes">Untied Laces</a></td>
+                <td><a href="https://youtu.be/OpEMzwzifHk">Lower One's Eyes</a></td>
+            </tr>
+            <tr>
+                <td>Tokyo6 Trio</td>
+                <td><a href=""></a></td>
+                <td><a href="https://www.nicovideo.jp/watch/sm42549111">Miracle Future Rise!!</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Tsurumaki Maki</td>
+                <td><a href="https://youtu.be/kYwB-kZyNU4">Post Shelter</a></td>
+                <td><a href="https://youtu.be/oKyqHbk_WlU">Self Proclaimed Angel</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Utatane Piko</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/BN1NhQ3_tao">I Hate Bad End Movies</a></td>
+            </tr>
+            <tr>
+                <td>VY1</td>
+                <td><a href="https://youtu.be/GZ_rBWYwv-Y">Perfect Piece</a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://youtu.be/7yLnea9NO_M">Henceforth</a></td>
+            </tr>
+            <tr>
+                <td>Xingchen (Stardust Infinity)</td>
+                <td><a href="https://www.bilibili.com/video/BV1yj411g7Lo/">妄语人间</a></td>
+                <td><a href="https://youtu.be/NFqVMz-LOqE">E S P R</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Xingchen (Stardust V4)</td>
+                <td><a href="https://www.bilibili.com/video/BV1j7411z7Ep/">Talking to the Rain</a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://www.bilibili.com/video/av7331553/">粉色柠檬</a></td>
+            </tr>
+            <tr>
+                <td>Yamine Renri</td>
+                <td><a href="https://youtu.be/hFg3WRqpQmg">Cynic</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Yuezheng Ling</td>
+                <td><a href="https://www.bilibili.com/video/av19962860/">Tears</a></td>
+                <td><a href="https://youtu.be/34n_RcEv_Wk">Wrong + Right</a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr>
+                <td>Zhiyu Moke</td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href="https://www.bilibili.com/video/BV1fz4y1k7wG/">失眠飞行</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+            <!--
+            <tr>
+                <td></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+             -->
+        </tbody>
+    </table>
+</div>
+<div class="col">
+    <p>TLDR: I like *Luna, Aqu3ra, and Inabakumori</p>
+</div>`);
+        fragment.preload('frag.footer', `<div class="flex">
+    <p>© <span z--bind="year"></span> cv4x</p>
+</div>`);
+        fragment.preload('frag.header', `<div class="top-bar">
+    <nav class="top-bar-nav">
+        <div>
+            <div class="top-bar-left">
+                <a class="button" z--click="onToggleNav" title="Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+            <div class="top-bar-right">
+                <a class="button" z--click="onToggleTheme" title="Toggle Theme">
+                    <i class="far fa-lightbulb"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="link-bar">
+    <div class="link-bar-items flex">
+        <a class="button" href="https://twitter.com/cvv4x" title="Twitter">
+            <i class="bi bi-twitter"></i>
+        </a>
+        <a class="button" href="https://www.youtube.com/@vera_prod" title="Music YouTube">
+            <i class="bi bi-youtube"></i>
+        </a>
+        <a class="button svg-icon mal-icon" href="https://myanimelist.net/animelist/claire-cv" title="MyAnimeList">
+            <i></i>
+        </a>
+        <a class="button" href="https://github.com/claire-west" title="Github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="button" href="https://www.tumblr.com/claire-cv" title="Tumblr">
+            <i class="fa-brands fa-square-tumblr"></i>
+        </a>
+        <a class="button" href="https://vocalounge.cafe/@claire" title="Mastodon (vocalounge.cafe)">
+            <i class="bi bi-mastodon"></i>
+        </a>
+        <a class="button svg-icon pixiv-icon" href="https://www.pixiv.net/en/users/68837438" title="Pixiv">
+            <i></i>
+        </a>
+        <a class="button svg-icon kofi-icon" href="https://ko-fi.com/claaaire" title="Ko-fi">
+            <i></i>
+        </a>
+    </div>
+</div>`);
+        fragment.preload('frag.nav', `<div class="flex-v" z--controller>
+    <a class="button" href="/" title="Home">
+        <i class="fa fa-home"></i>
+        <span>Home</span>
+    </a>
+    <h3><span>Projects</span></h3>
+    <a class="button" href="https://www.youtube.com/playlist?list=PLb8TvTJ0fv5hKWP20aQ16oXiymSI_58Et" target="_blank" title="Music Production">
+        <i class="bi bi-music-note-list"></i>
+        <span>Music</span>
+    </a>
+    <a class="button" href="https://manual.synthv.info" target="_blank" title="SynthV Studio User Manual">
+        <i class="bi bi-book"></i>
+        <span>SynthV Manual</span>
+    </a>
+    <h3><span>Interests</span></h3>
+    <a class="button" href="/anime" title="Anime">
+        <i class="bi bi-collection-play"></i>
+        <span>Anime</span>
+    </a>
+    <a class="button" href="/faves" title="Favorites">
+        <i class="bi bi-heart"></i>
+        <span>Favorites</span>
+    </a>
+    <a class="button" href="/tierlist" title="Tier Lists">
+        <i class="bi bi-filter-square"></i>
+        <span>Tier Lists</span>
+    </a>
+    <!-- <a class="button" href="/music" title="Music">
+        <i class="bi bi-music-note-beamed"></i>
+        <span>Music</span>
+    </a>
+    <a class="button" href="/rhythm" title="Rhythm Games">
+        <i class="bi bi-vinyl"></i>
+        <span>Rhythm Games</span>
+    </a> -->
+</div>`);
+        fragment.preload('frag.tierlist.colorpicker', `<div class="flex align-center">
+    <input type="color" z--bind=">" z--change="onColorChange" />
+    <i title="Reset to Default" class="bi bi-arrow-counterclockwise text-center" z--click="revertColor"></i>
+</div>`);
+        fragment.preload('frag.tierlist.item', `<div class="flex tierlist-item">
+    <span z--bind='{
+        "path": ">",
+        "fn": "adjustTextHeight"
+    }' z--visible='{
+        "path": ">",
+        "fn": "isImageLink",
+        "eq": false
+    }'></span>
+    <img z--bind='{
+        "path": ">",
+        "fn": "filterImageLink"
+    }' z--visible='{
+        "path": ">",
+        "fn": "isImageLink"
+    }' />
+</div>`);
+        fragment.preload('frag.tierlist.load', `<div>
+    <div>
+        <input id="tierListFileLoader" type="file" accept="application/json" z--change="loadTierList" hidden />
+        <label class="button" title="Load Tier List" for="tierListFileLoader">
+            <i class="bi bi-folder2-open"></i>
+            <span>Load From File
+        </label>
+    </div>
+    <div class="tierlist-load-list flex align-end">
+        <div class="flex-v align-start flex-grow" z--iterate="allLists">
+            <button class="s12 margin-bottom-0" z--text=">title" z--click="onSelectList" z--template></button>
+        </div>
+        <div class="options">
+            <button z--click="^closeModal">Close</button>
+        </div>
+    </div>
+</div>`);
+
+        return fragment;
+    });
+})(window.dynCore);

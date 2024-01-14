@@ -1,7 +1,8 @@
 ((dynCore) => {
     dynCore.declare('app.hashless', dynCore.require([
         'lib.bind',
-        'app.globalModel'
+        'app.globalModel',
+        'app.fragPreload'
     ]), (modules, bind, globalModel) => {
         var $content = $('#content');
         var $title = $('title');
