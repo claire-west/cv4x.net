@@ -1,0 +1,48 @@
+name: build-pages
+
+# only run on changes to main
+on:
+  push:
+    branches:
+      - main
+
+concurrency: # prevent concurrent deploys doing strange things
+  group: build-and-push
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+    - name: Install deps and build
+      run: |
+        npm i
+        grunt
+    - name: Fix permissions
+      run: |
+        chmod -c -R +rX "deploy/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+        done
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: deploy/
+
+  deploy:
+    needs: build
+    permissions:
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3
