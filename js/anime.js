@@ -34,12 +34,10 @@
                 alt: 'Netflix'
             },
             '❓': {
-                src: '/img/emoji/unknown.png',
-                alt: 'Unknown'
+                src: '/img/emoji/unknown.png'
             },
             '❌': {
-                src: '/img/emoji/none.png',
-                alt: 'No Licensor'
+                src: '/img/emoji/none.png'
             }
         };
 
