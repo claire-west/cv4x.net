@@ -33,6 +33,10 @@
                 src: '/img/emoji/netflix.png',
                 alt: 'Netflix'
             },
+            '💸': {
+                src: '/img/emoji/prime.png',
+                alt: 'Prime Video'
+            },
             '❓': {
                 src: '/img/emoji/unknown.png'
             },
