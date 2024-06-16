@@ -147,13 +147,75 @@
     "夏": {
         "schedule": {
             "日": [
+                "❓0830 Wistoria's Wand and Sword",
+                "❓0930 Fairy Tail: 100 Years Quest",
+                "❓1500 Tower of God s2",
+                "❓1530 My Deer Friend Nokotan",
+                "❓1545 Narenare -Cheer for You!-",
+                "❓1630 VTuber Legend: How I Went Viral after Forgetting to Turn Off My Stream",
+                "❓1750 A Journey Through Another World: Raising Kids While Adventuring"
+            ],
+            "月": [
+                "❓1430 Midnight Punch",
+                "❓1600 Shy s2",
+                "❓1800 The Rookie Middle-Aged Adventurer Was Trained to Death by the Most Powerful Party"
+            ],
+            "火": [
+                "❓1500 The Magical Girl and the Evil Lieutenant Used to Be Archenemies",
+                "❓1500 My Wife Has No Emotion",
+                "❓1530 Isekai Shikkaku"
+            ],
+            "水": [
+                "❓1400 The Strongest Magician in the Demon Lord's Army Was a Human",
+                "❓1530 Love Is Indivisible by Twins",
+                "❓1530 Alya Sometimes Hides Her Feelings in Russian",
+                "🟠1630 Sengoku Youko s2",
+                "❓1730 Our Last Crusade or the Rise of a New World"
+            ],
+            "木": [
+                "❓1300 Days with My Step Sister",
+                "🟦1500 \"Oshi no Ko\" s2",
+                "❓1530 Twilight Out of Focus",
+                "❓1600 Failure Frame: I Became the Strongest and Annihilated Everything With Low-Level Spells",
+                "🟦1600 I Parry Everything",
+                "❓1630 Pseudoharem",
+                "❓1630 Delico's Nursery",
+                "❓1630 The Café Terrace and Its Goddesses s2",
+                "❓1700 Senpai Is an Otokonoko",
+                "❓1830 Quality Assurance in Another World"
+            ],
+            "金": [
+                "🟦1430 2.5 Dimensional Seduction",
+                "❓1530 NieR:Automata Ver1.1a part 2",
+                "❓1530 Bye-Bye, Earth",
+                "❓1630 Isekai Suicide Squad",
+                "🟦1700 Dungeon People"
+            ],
+            "土": [
+                "❓1300 Dahliya in Bloom",
+                "❓1400 A Nobody's Way Up to an Exploration Hero LV",
+                "❓1430 Why Does Nobody Remember My World?",
+                "❓1530 The Elusive Samurai",
+                "❓1600 Atri: My Dear Moments",
+                "❓1630 Too Many Losing Heroines!",
+                "❓1730 How to Become Ordinary",
+                "🟦1730 Plus-Sized Elf"
+            ],
+            "❓": [
+                "❓???? Kimi ni Todoke: From Me to You s3",
+                "❓???? Monogatari Series: Off & Monster Season"
+            ]
+        }
+    },
+    "秋": {
+        "schedule": {
+            "日": [
             ],
             "月": [
             ],
             "火": [
             ],
             "水": [
-                "🟠1630 Sengoku Youko"
             ],
             "木": [
             ],
@@ -162,19 +224,32 @@
             "土": [
             ],
             "❓": [
-                "❓???? Tower of God s2",
-                "❓???? 2.5 Dimensional Seduction",
-                "❓???? Days with My Step Sister",
-                "❓???? Isekai Shikkaku",
-                "❓???? Midnight Punch",
-                "❓???? Quality Assurance in Another World",
-                "❓???? Red Cat Ramen",
-                "❓???? Shoushimin",
-                "❓???? The Café Terrace and Its Goddesses s2",
-                "❓???? The Magical Girl and the Evil Lieutenant Used to Be Archenemies",
-                "❓???? Wistoria's Wand and Sword"
+                "❓???? Re:ZERO s3",
+                "❓???? Shangri-La Frontier s2",
+                "❓???? Blue Lock s2",
+                "❓???? Natsume Yuujinchou s7",
+                "❓???? Rurouni Kenshin s2",
+                "❓???? Arifureta s3",
+                "❓???? Sword Art Online Alternative: Gun Gale Online s2",
+                "❓???? Blue Exorcist s4",
+                "❓???? Ron Kamonohashi's Forbidden Deductions s2",
+                "❓???? Love Live! Superstar!! s3",
+                "❓???? The Seven Deadly Sins: Four Knights of the Apocalypse s2",
+                "🟦???? Is It Wrong to Try to Pick Up Girls in a Dungeon? s5",
+                "❓???? Dandadan",
+                "❓???? Blue Box",
+                "❓???? I'll Become a Villainess That Will Go Down in History",
+                "❓???? Magilumiere Magical Girls Inc.",
+                "❓???? Kimi wa Meido-sama.",
+                "❓???? Demon Lord 2099",
+                "❓???? The Do-Over Damsel Conquers the Dragon Emperor",
+                "❓???? Nina the Starry Bride",
+                "❓???? Loner Life in Another World",
+                "❓???? The Blue Wolves of Mibu",
+                "❓???? Tying the Knot with an Amagami Sister",
+                "❓???? Good Bye, Dragon Life",
+                "❓???? The Healer Who Was Banished From His Party, Is Actually the Strongest"
             ]
         }
-    },
-    "秋": null
+    }
 }
