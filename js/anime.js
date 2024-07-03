@@ -37,6 +37,10 @@
                 src: '/img/emoji/prime.png',
                 alt: 'Prime Video'
             },
+            '🤮': {
+                src: '/img/emoji/hulu.png',
+                alt: 'Hulu and/or HBO Max'
+            },
             '❓': {
                 src: '/img/emoji/unknown.png'
             },
