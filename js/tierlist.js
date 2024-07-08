@@ -18,6 +18,8 @@
     ).done((modules, bind, model, globalModel, download, hashWatch, json) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
+        globalModel.addTitle('tierlist', 'Tierlist Maker');
+
         var imageRegex = /^http(.*)\.(jpg|jpeg|png|webp|avif|gif|svg)(\?.*)?$/;
         var colorRegex = /^\#([0-9A-Fa-f]{3}){1,2}$/;
 

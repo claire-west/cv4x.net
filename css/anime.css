@@ -15,7 +15,7 @@
     color: hsla(218,5%,47%,.6);
 }
 
-body.light #content-anime > div:first-child button {
+/*body.light #content-anime > div:first-child button {
     color: #2a2a2a;
     background-color: hsla(218,5%,47%,.6)
 }
@@ -29,7 +29,7 @@ body.light #content-anime > div:first-child button:not([disabled]) {
 }
 body.light #content-anime > div:first-child button.active:not([disabled]) {
     background-color: #2B4880;
-}
+}*/
 
 #content-anime > .flex {
     gap: 0 0.9rem;

@@ -48,8 +48,14 @@ body.light .top-bar .top-bar-nav {
 }
 
 .link-bar-items.flex {
-    flex-flow: wrap;
+    /*flex-wrap: wrap;*/
     align-items: center;
+}
+
+.link-bar-items h1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    color: hsla(0,0%,100%,.85);
 }
 
 #main {
@@ -139,7 +145,11 @@ body.light #main > nav a:hover > span {
 @media screen and (min-width: 641px) {
     #content {
         overflow-y: scroll;
-        max-height: 83vh;
+        /*max-height: 83vh;*/
+        height: calc(100vh - 7.25rem);
+    }
+    header .link-bar-items {
+        height: 2.6rem;
     }
 }
 

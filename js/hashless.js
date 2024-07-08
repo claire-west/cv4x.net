@@ -17,7 +17,13 @@
             $content.children().hide();
 
             var app = 'app.' + page;
-            var promise = $.Deferred();
+            var promise = $.Deferred().done(() => {
+                var headerTitles = globalModel._get('titles');
+                if (page !== 'home' && !headerTitles[page]) {
+                    headerTitles[page] = titles[page];
+                }
+                globalModel.setTitle(page);
+            });
 
             var $page = $('#content-' + page);
             if ($page.length) {
@@ -25,6 +31,7 @@
                 $title.text(titles[page] || titles.home);
                 promise.resolve();
             } else {
+                globalModel._set('title', '');
                 $.ajax('/' + (page === 'home' ? 'index' : page) + '.html').done(function(html) {
                     var $html = $($.parseHTML(html));
                     for (var i = 0; i < $html.length; i++) {

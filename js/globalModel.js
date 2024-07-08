@@ -7,6 +7,19 @@
     ]), (modules, bind, fragment, globalModel, isMobile) => {
         globalModel._set('isMobile', isMobile());
         globalModel._set('year', new Date().getFullYear());
+        globalModel._set('titles', {
+            home: 'cv4x.net'
+        });
+        globalModel._set('addTitle', (path, title) => {
+            globalModel._get("titles")[path] = title;
+        });
+        globalModel._set('setTitle', (path) => {
+            var titles = globalModel._get("titles");
+            if (!titles[path]) {
+                path = 'home';
+            }
+            globalModel._set('title', titles[path]);
+        });
 
         globalModel._set('onToggleTheme', () => {
             var $body = $('body');

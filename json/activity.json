@@ -3,8 +3,7 @@
         "date": "2022.12.18",
         "text": [
             "Today I made this website! With Twitter attempting to block other platforms and things like Linktree, it seems now's the time to finally get this up and running.",
-            "I probably won't update this super often, but lately I've been trying to learn more about music production, in addition to my usual excessive anime-watching.",
-            "I at least know enough about SynthV to have made an info site about it ([synthv.info](https://synthv.info)), so that's pretty neat. I hope to expand that knowledge to include other engines like Vocaloid and CeVIO."
+            "I probably won't update this super often, but lately I've been trying to learn more about music production."
         ]
     },
     {
@@ -18,21 +17,20 @@
     {
         "date": "2023.09.04",
         "text": [
-            "I made a new page for listing a bunch of my favorite stuff but so far [it's just vocal synth music](/faves). I haven't decided on a good way to navigate a large number of pages so it'll probably stay that way for a good while.",
-            "Then I went ahead and made a whole [tier list maker thing](/tierlist) because TierMaker is so damn bad."
+            "I made a new [tier list maker thing](/tierlist) because TierMaker doesn't work the way I want it to. My app isn't a complete replacement, and there's still a lot missing, but I already prefer it."
         ]
     },
     {
         "date": "2023.12.08",
         "text": [
-            "I've expanded on the [SynthV Buyer's Guide](https://synthv.info/resource-voices#voices/ai) I've been maintaining to include a lot more information. You can also filter the list now, which is nice.",
-            "There are so many new SynthV voices coming out... I still haven't picked up Sora and now I want Ayame, but also ROSE and GUMI are just around the corner...",
-            "...maybe I should focus on actually using the voices I own first."
+            "I've expanded on the [SynthV Buyer's Guide](https://synthv.info/resource-voices#voices/ai) I've been maintaining to include a lot more information, like the most popular songs made with the software. You can also filter the list of AI voice databases now."
         ]
     },
     {
-        "date": "",
+        "date": "2024.07.07",
         "text": [
+            "Dreamtonics finally released their official SynthV Studio user manual, so I've discontinued my unofficial one. It was a fun project while it lasted, but now I should have more time to dive into new programming topics, which I'm looking forward to.",
+            "I did a bit of clean-up on this website today as well, though I'm hesitant to continue work on it too much since it's based on my old JS framework that's been somewhat bodged together over the years."
         ]
     }
 ]
