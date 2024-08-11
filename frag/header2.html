@@ -1,10 +1,12 @@
 <div class="link-bar">
     <div class="link-bar-items flex flex-nowrap" style="justify-content: space-between; margin-top: 1rem;padding: 0rem 0.25rem;">
-        <a class="button" z--click="onToggleNav" title="Navigation" style="flex: 1;">
-            <i class="fas fa-bars"></i>
-        </a>
+        <div class="flex flex-1">
+            <a class="button" z--click="onToggleNav" title="Navigation">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
         <h1 z--bind="title"></h1>
-        <div class="flex" style="flex: 1; justify-content: end;">
+        <div class="flex flex-1 justify-end">
             <a class="button toggleWide" z--click="onToggleLayout" title="Toggle Full-width Layout">
                 <i class="fas fa-arrows-left-right-to-line"></i>
             </a>
