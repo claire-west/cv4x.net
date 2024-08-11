@@ -12,7 +12,7 @@
     <meta name="twitter:card" content="summary" />
 
     <link id="favicon" rel="icon" href="/favicon.ico" />
-    <link href="https://lib.claire-west.ca/vend/fonts/fontawesome-all-6.2.0.min.css" rel="stylesheet" />
+    <link href="https://lib.claire-west.ca/vend/fonts/fontawesome-all-6.6.0.min.css" rel="stylesheet" />
     <link href="https://lib.claire-west.ca/vend/bootstrap-icons.css" rel="stylesheet" />
     <script src="https://lib.claire-west.ca/vend/js/twemoji.min.js"></script>
     <script src="/js/twemoji.min.js"></script>
@@ -253,6 +253,10 @@
 
 <script src="https://lib.claire-west.ca/vend/js/jquery.min.js"></script>
 <script>
+    var layout = localStorage.getItem('layout');
+    if (layout) {
+        $('body').addClass(layout);
+    }
     var theme = localStorage.getItem('theme');
     if (theme) {
         $('body').addClass(theme);

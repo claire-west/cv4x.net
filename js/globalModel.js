@@ -21,6 +21,16 @@
             globalModel._set('title', titles[path]);
         });
 
+        globalModel._set('onToggleLayout', () => {
+            var $body = $('body');
+            $body.toggleClass('wide');
+            if ($body.hasClass('wide')) {
+                localStorage.setItem('layout', 'wide');
+            } else {
+                localStorage.removeItem('layout');
+            }
+        });
+
         globalModel._set('onToggleTheme', () => {
             var $body = $('body');
             $body.toggleClass('light');

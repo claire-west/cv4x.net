@@ -522,9 +522,9 @@ label.row {
         font-size: 1.25rem;
     }
 
-    .app.row {
+    /* .app.row {
         padding-top: 0rem;
-    }
+    } */
 
     .breadcrumb {
         margin-top: 0.25rem;
