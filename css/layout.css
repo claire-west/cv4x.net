@@ -1,3 +1,11 @@
+@font-face {
+    font-family: Roboto;
+    src:
+        url("/font/Roboto-Regular.ttf"),
+        url("/font/Roboto-Italic.ttf"),
+        url("/font/Roboto-Bold.ttf");
+}
+
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,7 +19,7 @@ html {
 body {
     padding: 0;
     margin: 0;
-    font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
     font-weight: 400;
     line-height: 1.5;
     color: hsla(0,0%,100%,.85);
@@ -32,7 +40,7 @@ body.light {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Liberation Sans,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Liberation Sans,Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji";
     font-weight: 400;
     font-style: normal;
     color: inherit;
