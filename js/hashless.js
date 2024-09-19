@@ -72,6 +72,11 @@
         var initialPage = window.location.pathname.substr(1) || 'home';
         titles[initialPage] = $title.text();
 
+        // redirect to anime page as main page because i don't actually maintain the home page
+        if (initialPage.startsWith('home')) {
+            window.history.replaceState({},'', '/anime');
+        }
+
         var $inner = $content.children('[z--controller]');
         var initialLoad = $.Deferred().resolve();
         if ($inner.length) {
