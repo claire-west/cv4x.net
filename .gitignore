@@ -7,3 +7,4 @@ build
 deploy
 preload.min.js
 fragPreload.js
+.env
