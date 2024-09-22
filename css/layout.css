@@ -331,11 +331,6 @@ footer .flex {
     flex-flow: wrap;
 }
 
-footer span:hover {
-    color: #c7c7c7;
-    cursor: pointer;
-}
-
 footer .flex *+*:before {
     color: #888;
     padding: 0.5rem;
