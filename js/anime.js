@@ -41,6 +41,10 @@
                 src: '/img/emoji/hulu.png',
                 alt: 'Hulu and/or HBO Max'
             },
+            '🏊': {
+                src: '/img/emoji/adultswim.svg',
+                alt: 'Adult Swim'
+            },
             '❓': {
                 src: '/img/emoji/unknown.png'
             },
