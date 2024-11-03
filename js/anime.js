@@ -14,7 +14,7 @@
     ).done((modules, bind, model, globalModel, download, emojify, hashWatch, hashless) => {
         dynCore.js('https://lib.claire-west.ca/vend/js/html2canvas.min.js');
 
-        var maxYear = 2024;
+        var maxYear = 2025;
 
         var emojiMap = {
             '🟠': {

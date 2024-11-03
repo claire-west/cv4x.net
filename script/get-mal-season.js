@@ -38,7 +38,7 @@ async function getSeasonalAnime(year, season) {
     const schedule = makeSchedule(responses.filter(anime => anime.media_type === "tv").map(mapDetails));
 
     const filename = `${year}-${season}.json`;
-    fs.writeFileSync(filename, JSON.stringify(schedule, null, 4));
+    fs.writeFileSync(filename, JSON.stringify(schedule, null, 2));
     console.info(`Saved ${filename}`);
 }
 
