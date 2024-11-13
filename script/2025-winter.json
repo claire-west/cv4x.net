@@ -7,13 +7,23 @@
   "月": [],
   "火": [],
   "水": [],
-  "木": ["❓1500 BanG Dream! Ave Mujica"],
-  "金": ["❓1500 The Apothecary Diaries Season 2"],
-  "土": ["❓1800 Witchy Pretty Cure! Season 2"],
+  "木": [
+    "❓1500 BanG Dream! Ave Mujica"
+  ],
+  "金": [
+    "❓1500 The Apothecary Diaries Season 2"
+  ],
+  "土": [
+    "❓1530 UniteUp! -Uni:Birth-",
+    "❓1730 I'm Living with an Otaku NEET Kunoichi!?",
+    "❓1730 Medalist",
+    "❓1800 Witchy Pretty Cure! Season 2"
+  ],
   "❓": [
     "❓???? Akuyaku Reijou Tensei Ojisan",
     "❓???? Ameku M.D.: Doctor Detective",
     "❓???? Anyway, I'm Falling in Love with You.",
+    "❓???? Aquarion: Myth of Emotions",
     "❓???? Blue Exorcist Season 5",
     "❓???? Can You Keep a Secret?",
     "❓???? Cardfight!! Vanguard: Divinez Deluxe-hen",
@@ -33,19 +43,15 @@
     "❓???? Magic Maker: Isekai Mahou no Tsukurikata",
     "❓???? Mashin Souzouden Wataru",
     "❓???? Medaka Kuroiwa Is Impervious to My Charms",
-    "❓???? Medalist",
     "❓???? Momentary Lily",
     "❓???? My Happy Marriage Season 2",
-    "❓???? NEET Kunoichi to Nazeka Dousei Hajimemashita",
     "❓???? Okinawa de Suki ni Natta Ko ga Hougen Sugite Tsurasugiru",
     "❓???? Sakamoto Days",
     "❓???? Solo Leveling Season 2: Arise from the Shadow",
     "❓???? Someday Will I Be the Greatest Alchemist?",
     "❓???? Sorairo Utility (TV)",
-    "❓???? Sousei no Aquarion: Myth of Emotions",
     "❓???? Tasokare Hotel",
     "❓???? The Red Ranger Becomes an Adventurer in Another World",
-    "❓???? UniteUp! -Uni:Birth-",
     "❓???? Unnamed Memory Act.2",
     "❓???? Welcome to Japan, Ms. Elf!"
   ]
